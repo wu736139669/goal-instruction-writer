@@ -213,6 +213,7 @@ Waiting for a maintainer, owner, or missing dataset is not a reason to invent mo
 - [Drift detection and recovery](references/drift-control.md)
 - [Coding, research, and open-source examples](references/examples.md)
 - [Launch kit with ready-to-post copy](docs/launch-kit.md)
+- [Independent Goal evaluation](docs/evaluations/2026-10-11-independent-goal-evaluation.md)
 - [Contributing guide](CONTRIBUTING.md)
 - [GitHub Discussions](https://github.com/wu736139669/goal-instruction-writer/discussions)
 - [Chinese documentation](docs/README.zh-CN.md)

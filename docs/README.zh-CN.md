@@ -197,6 +197,8 @@ GOAL BLOCKED: <具体原因>；四轮仍未完成则 GOAL TIMEBOXED: <状态>。
 - [循环预览格式和流程图](../references/loop-preview.md)
 - [漂移检测和恢复](../references/drift-control.md)
 - [编码、研究和开源案例](../references/examples.md)
+- [独立 Goal 测试报告](evaluations/2026-10-11-independent-goal-evaluation.zh-CN.md)
+- [Independent Goal evaluation（English）](evaluations/2026-10-11-independent-goal-evaluation.md)
 - [发布工具包](launch-kit.md)
 - [贡献指南](../CONTRIBUTING.md)
 - [GitHub Discussions](https://github.com/wu736139669/goal-instruction-writer/discussions)
@@ -219,4 +221,3 @@ npx --yes skills add . --list
 ## License
 
 MIT，见 [LICENSE](../LICENSE)。
-
