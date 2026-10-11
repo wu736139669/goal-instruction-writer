@@ -63,6 +63,16 @@ Use $goal-instruction-writer to draft the final Goal for this task.
 
 ## Install
 
+Using the open agent skills CLI (recommended):
+
+```bash
+npx skills add wu736139669/goal-instruction-writer \
+  --skill goal-instruction-writer -g -a codex -y
+```
+
+The command has been verified against this repository and detects one skill:
+`goal-instruction-writer`.
+
 Clone the skill into the Codex skill directory:
 
 ```bash

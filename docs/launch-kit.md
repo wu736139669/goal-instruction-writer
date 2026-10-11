@@ -27,6 +27,7 @@ and stop cleanly when the work is complete, blocked, or off target.
 - [x] `v0.1.0` release
 - [x] Issue templates and contribution guide
 - [x] Social preview asset at `assets/social-preview.png`
+- [x] Verified installation through the open agent skills CLI
 - [ ] Upload the social preview in GitHub repository settings
 - [ ] Publish the first community posts
 - [ ] Collect three real use cases and turn them into examples
@@ -103,3 +104,19 @@ Track these signals weekly:
 The first milestone is three independent use cases that improve the reference
 examples. The second is a contributor who changes a rule or adds an adapter
 without needing a private explanation.
+
+## Directory submissions
+
+The repository can be installed directly through the open agent skills CLI:
+
+```bash
+npx skills add wu736139669/goal-instruction-writer \
+  --skill goal-instruction-writer -g -a codex -y
+```
+
+When submitting to a curated Codex or agent-skills directory, use this entry:
+
+```text
+- [goal-instruction-writer](https://github.com/wu736139669/goal-instruction-writer)
+  - Preview agent loops and write drift-resistant Goal instructions with explicit evidence and terminal states.
+```
