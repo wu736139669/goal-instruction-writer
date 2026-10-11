@@ -97,6 +97,76 @@ Return the comparison, recommendation, uncertainty, sources, and terminal
 label.
 ```
 
+## Open source: publish a skill with an external maintainer gate
+
+Weak request:
+
+> Promote the skill everywhere and get it merged into a curated list.
+
+Better Goal:
+
+```markdown
+# Goal: Make the skill discoverable and leave the curated-list submission reviewable
+
+## Objective
+Publish a validated skill package, create one reviewable distribution
+submission, and record the exact external dependency if a maintainer must merge
+it.
+
+## Goal anchor
+- Outcome: the skill is installable from its source repository and its curated-list submission has a durable status.
+- Criteria: C1 package validation; C2 one distribution submission; C3 feedback and blocker record.
+- Frozen scope: no new social accounts, mass posting, repeated maintainer pings, or silent scope expansion.
+- Current phase: launch and first feedback.
+
+## Baseline and scope
+- Baseline: the current repository revision, release metadata, and existing
+  installation command.
+- Allowed scope: the skill repository, one curated-list submission, and one
+  feedback thread.
+- Authority: the agent may edit the repository and submit or update its own
+  contribution; only the upstream maintainer may merge the external PR.
+
+## Acceptance criteria
+- [ ] The skill validator and installation smoke test pass.
+- [ ] One public submission links to the repository and explains how to install it.
+- [ ] The feedback thread records the use case, current status, and exact
+  unblock needed for any external gate.
+
+## Execution loop
+Repeat one bounded work unit at a time:
+1. Inspect the repository, release, submission, and feedback-thread status.
+2. Select one open criterion, expected evidence, and scope reason.
+3. Make one focused documentation, packaging, or submission update.
+4. Verify the result with a validator, link, commit, or platform status.
+5. Classify it as `ON_TARGET`, `SIDE_QUEST`, or `DRIFTED`, then record the next
+   cursor.
+
+## Drift control
+- Re-read the Anchor before each public post, version change, or new submission.
+- Defer unrelated channels, feature ideas, and promotional experiments.
+- If a maintainer gate is the only remaining work, stop waiting as a named
+  dependency instead of repeatedly contacting the maintainer.
+- If the scope expands or no criterion moves for two equivalent iterations,
+  emit `GOAL PAUSED: realignment required`.
+
+## Limits and no-op rule
+- Use at most three iterations and one maintainer follow-up until new review
+  evidence arrives.
+- Do not repeat a post or submission without a material change in evidence.
+
+## Termination
+- `GOAL COMPLETE` when the package, submission, and status record are verified.
+- `GOAL BLOCKED: upstream maintainer review required` when only the external
+  merge remains and the submission is clean.
+- `GOAL TIMEBOXED: <state>` when the launch window ends with the verified
+  progress and next safe action recorded.
+
+## Reporting
+Return the release or revision, validation evidence, submission URL, current
+external status, deferred side quests, remaining gap, and terminal label.
+```
+
 ## Chinese output shape
 
 When the user asks in Chinese, keep the same contract and translate the labels
