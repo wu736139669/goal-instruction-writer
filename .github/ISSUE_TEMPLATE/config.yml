@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a workflow question
+    url: https://github.com/wu736139669/goal-instruction-writer/discussions
+    about: Ask how to shape a Goal, preview a loop, or handle drift.

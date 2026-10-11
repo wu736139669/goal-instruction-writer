@@ -1,0 +1,35 @@
+name: Bug report
+description: Report a confusing, incorrect, or incomplete Goal-writing behavior.
+title: "[bug] "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: request
+    attributes:
+      label: Original request
+      description: Paste a redacted request that reproduces the behavior.
+      placeholder: I asked the skill to...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should the preview or final Goal have said?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What did the skill produce instead?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Include the mode, relevant files, and any constraints. Remove secrets.
+    validations:
+      required: false

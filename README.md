@@ -1,75 +1,115 @@
 # Goal Instruction Writer
 
-一个帮助 AI agent 写出可执行 Goal 指令的 Codex skill。它把模糊任务整理成三层契约：
+[![Latest release](https://img.shields.io/github/v/release/wu736139669/goal-instruction-writer?display_name=tag)](https://github.com/wu736139669/goal-instruction-writer/releases)
+[![GitHub stars](https://img.shields.io/github/stars/wu736139669/goal-instruction-writer)](https://github.com/wu736139669/goal-instruction-writer/stargazers)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-1. **目标（Goal）**：要交付什么可观察结果，如何验收。
-2. **循环（Loop）**：每轮如何检查、选择、执行、验证并记录进展。
-3. **结束（Termination）**：什么时候完成，什么时候阻塞、暂停、超时或停止。
+> **Preview the loop before you run the Goal.**
 
-这样可以避免“继续做下去”“直到满意”这类没有边界的指令，也能让另一个 agent 从最后的游标继续工作。
+![Goal Instruction Writer social preview](assets/social-preview.png)
 
-## 先看循环，再生成 Goal
+`goal-instruction-writer` is a Codex skill for turning vague requests into
+bounded, evidence-driven Goal instructions. It is designed for work that runs
+long enough to drift: coding tasks, research, automation, and multi-stage
+agent workflows.
 
-对于长任务，可以先让技能只输出循环预览，不直接生成最终指令：
+它解决的是一个具体问题：AI agent 做了很久之后，仍然在“努力工作”，但已经偏离了真正目标。技能会先让你检查循环，再生成带验收标准、漂移检查和明确终态的 Goal。
+
+## What it does
+
+- **Preview first:** inspect the iteration flow, branches, evidence, drift
+  gates, and stop conditions before a final Goal is written.
+- **Write the contract:** define an observable objective, baseline, scope,
+  acceptance criteria, authority, and deliverable.
+- **Keep long runs on target:** bind every iteration to a criterion and expected
+  evidence; park side quests; pause when alignment is lost.
+- **Stop cleanly:** distinguish `GOAL COMPLETE`, `GOAL BLOCKED`,
+  `GOAL PAUSED`, `GOAL TIMEBOXED`, and `GOAL STOPPED`.
+
+## 60-second demo
+
+Start with a rough request:
 
 ```text
-Use $goal-instruction-writer in Preview mode. 先展示循环的具体步骤、分支、
-防偏航检查和结束条件，等我确认后再生成最终 Goal。
+I need an agent to improve our importer. It can keep trying until it works.
 ```
 
-预览会展示起始状态、一次迭代、成功/失败/旁支/偏航分支、证据、阶段闸门和终态。
-用户确认后，技能才把预览转成可执行 Goal；预览阶段不会执行外部操作。
+Ask for a loop preview before generating the Goal:
 
-## 长任务如何防止偏航
+```text
+Use $goal-instruction-writer in Preview mode.
+先展示循环的具体步骤、成功/失败分支、防偏航检查和结束条件，确认后再生成最终 Goal。
+```
 
-技能会为长循环建立一个不可静默修改的 **Goal Anchor**，并要求每轮写清楚：
+The preview makes the hidden decisions reviewable:
 
-- 这轮推进哪个验收标准；
-- 预期会出现什么新证据；
-- 为什么仍在允许范围内。
+```text
+Inspect the baseline → choose one criterion → make one bounded change
+→ verify evidence → classify ON_TARGET / SIDE_QUEST / DRIFTED
+→ continue, defer, block, or realign
+```
 
-每轮结束标记为 `ON_TARGET`、`SIDE_QUEST` 或 `DRIFTED`。旁支任务进入 deferred list，
-不直接扩张 Goal；连续两轮没有验收进展、目标/范围被悄悄改变，或无法说明下一步如何服务
-Anchor 时，暂停并要求重新对齐。技能还会在每 3–5 轮、阶段边界和高风险操作前执行 phase gate。
-详细流程见 [`references/drift-control.md`](references/drift-control.md)。
+After you confirm the loop, ask:
 
-## 安装
+```text
+确认这个循环，生成最终 Goal 指令。
+```
 
-把 `goal-instruction-writer` 目录复制到 Codex 技能目录：
+For a short, reversible task, you can skip the preview and ask directly:
+
+```text
+Use $goal-instruction-writer to draft the final Goal for this task.
+```
+
+## Install
+
+Clone the skill into the Codex skill directory:
+
+```bash
+git clone https://github.com/wu736139669/goal-instruction-writer.git \
+  "${CODEX_HOME:-$HOME/.codex}/skills/goal-instruction-writer"
+```
+
+Or copy the folder if you already downloaded the repository:
 
 ```bash
 cp -R goal-instruction-writer "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
-然后可以显式调用：
+The skill is discoverable automatically and can also be invoked explicitly as
+`$goal-instruction-writer`.
 
-```text
-Use $goal-instruction-writer to turn this task into a clear goal with a bounded loop and explicit stop conditions.
-```
+## The contract
 
-技能默认支持自动发现。`SKILL.md` 是运行时入口；详细字段契约在
-[`references/goal-contract.md`](references/goal-contract.md)，示例在
-[`references/examples.md`](references/examples.md)。
+Every final Goal is organized around three layers:
 
-## 设计原则
+| Layer | Question | Required proof |
+| --- | --- | --- |
+| Goal | What observable result should exist? | Acceptance criteria and evidence |
+| Loop | How does one iteration produce progress? | Target criterion, expected delta, verification, cursor |
+| Termination | When does the work legally end? | Complete, blocked, paused, timeboxed, or stopped state |
 
-- **结果优先**：目标描述交付物、行为、决策或已验证事实，而不是活动清单。
-- **证据绑定**：每个验收标准都要对应可复核证据。
-- **有界循环**：每轮都产生可观察进展，并有时间、预算、尝试次数或工作单元上限。
-- **拒绝空转**：同一失败没有新信息就不重复；重复阻塞要报告原因和解锁条件。
-- **防止偏航**：每轮绑定验收标准和预期证据；旁支任务延后；阶段闸门重新读取 Anchor。
-- **先审循环**：长任务先展示循环和分支，再根据确认结果生成最终 Goal。
-- **终态明确**：完成、阻塞、暂停、超时/预算耗尽、停止分别处理。
-- **不越权**：技能只整理用户已经授权的范围，不会凭空增加权限或外部副作用。
+Long-running work also gets a **Goal Anchor**. The Anchor freezes the outcome,
+criteria, scope, and authority. A new discovery may change the plan, but it
+cannot silently change the Goal.
 
-## 输出结构
+## Resources
 
-技能通常会返回：
+- [Skill entrypoint](SKILL.md)
+- [Goal contract and ready-to-paste skeleton](references/goal-contract.md)
+- [Loop preview format and flow diagram](references/loop-preview.md)
+- [Drift detection and recovery](references/drift-control.md)
+- [Coding and research examples](references/examples.md)
+- [Contributing guide](CONTRIBUTING.md)
 
-1. 简短设计说明、假设和高价值待确认项；
-2. 一段可直接粘贴使用的 Goal 指令；
-3. 对已有指令的审计意见（如果用户要求 refine 或 audit）。
+## Contributing
+
+Have a real use case, a confusing preview, or a better drift rule? Open a
+[Discussion](https://github.com/wu736139669/goal-instruction-writer/discussions)
+for a workflow question, or open an issue for a focused change. Small pull
+requests are welcome when they preserve the three-layer contract and include a
+clear reason or example.
 
 ## License
 
-MIT，见 [`LICENSE`](LICENSE)。
+MIT. See [LICENSE](LICENSE).
