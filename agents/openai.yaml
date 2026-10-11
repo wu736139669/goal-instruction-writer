@@ -1,0 +1,7 @@
+interface:
+  display_name: "Goal Instruction Writer"
+  short_description: "Draft bounded goals with loops and stop conditions"
+  default_prompt: "Use $goal-instruction-writer to turn this task into a clear goal with a bounded loop and explicit stop conditions."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,96 @@
+# Goal Contract Reference
+
+This reference defines the fields used by `goal-instruction-writer`. It is a
+compact design contract rather than a generic project-management checklist.
+
+## Why the three layers matter
+
+An agent can fail in three different ways:
+
+1. The **Goal** is vague, so activity is mistaken for progress.
+2. The **Loop** is unbounded, so the agent repeats work or drifts out of scope.
+3. The **Termination** rule is missing, so the agent cannot distinguish success
+   from a blocker, a pause, or an exhausted budget.
+
+The three layers are evaluated together. A precise objective with no evidence
+is not complete; a good loop with no limit can still run forever; a stop rule
+with no progress signal can stop at the wrong time.
+
+## Field guide
+
+| Field | Required question | Good evidence |
+| --- | --- | --- |
+| Objective | What observable end state should exist? | A file, behavior, decision, or verified fact |
+| Baseline | What is authoritative now? | Revision, URL, dataset snapshot, or current finding |
+| Allowed scope | What may change? | Named files, systems, sources, or decision boundary |
+| Frozen scope | What must remain unchanged? | Explicitly protected behavior, data, or external state |
+| Acceptance criteria | How will a reviewer know it is done? | Test result, diff, artifact, cited source, or checklist |
+| Work unit | What is one iteration small enough to verify? | One hypothesis, patch, experiment, or review slice |
+| Progress signal | What changes after a useful iteration? | New evidence, reduced gap, changed artifact, or decision |
+| Limit | When must the loop yield? | Time, attempts, token/tool budget, or finite queue |
+| No-op rule | What prevents repetition? | Change approach after failure; stop after repeated blocker |
+| Terminal states | What are the legal endings? | Complete, blocked, paused, timeboxed/budgeted, stopped |
+| Report | What survives the final response? | Status, evidence, remaining gap, cursor, next action |
+
+## Ready-to-paste skeleton
+
+```markdown
+# Goal: <verb + observable outcome>
+
+## Objective
+Produce <artifact/behavior/decision> so that <user or system value>.
+
+## Baseline and scope
+- Baseline: <authoritative revision, source, or current state>.
+- Allowed scope: <files, systems, sources, or decisions that may change>.
+- Frozen scope: <invariants and forbidden side effects>.
+- Authority: <tools and approvals available; owner-only gates>.
+
+## Acceptance criteria
+- [ ] <observable criterion with its evidence>
+- [ ] <observable criterion with its evidence>
+- [ ] <observable criterion with its evidence>
+
+## Execution loop
+Repeat one bounded work unit at a time:
+1. Inspect <state and last cursor>.
+2. Select the smallest action that advances one unmet criterion.
+3. Act within Allowed scope and Authority.
+4. Verify the result and capture evidence.
+5. Record the delta, remaining gap, and next cursor.
+
+## Limits and no-op rule
+- Limit: <timebox, budget, attempt cap, or finite work-unit list>.
+- Do not repeat an action without new information. After <N> materially
+  equivalent failures, change the hypothesis or terminate as blocked.
+
+## Termination
+- `GOAL COMPLETE` when all acceptance criteria are verified and the deliverable
+  is available.
+- `GOAL BLOCKED: <reason>` when the next meaningful action needs a named
+  dependency, owner decision, or unresolved failure; include the unblock needed.
+- `GOAL PAUSED: <reason>` only after an explicit owner pause; preserve the
+  cursor.
+- `GOAL TIMEBOXED: <state>` when the limit is reached; report progress and the
+  safest next action.
+- `GOAL STOPPED: <reason>` when the owner cancels or authority would be
+  exceeded.
+
+## Reporting
+After each iteration and at termination, report the terminal label (if any),
+verified evidence, remaining gap, and next cursor or unblock.
+```
+
+## Quality checks
+
+Before returning a Goal, check:
+
+- The objective describes an end state rather than a list of activities.
+- Every acceptance criterion can be checked from named evidence.
+- The next iteration is selected from current state, not from a fixed script
+  that ignores results.
+- The loop has a progress signal, a limit, and a no-op rule.
+- Complete, blocked, pause, and budget endings are distinguishable.
+- The instruction does not grant new access or external side effects that the
+  user did not authorize.
+- The final report leaves a durable cursor another agent could resume.
