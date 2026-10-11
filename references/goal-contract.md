@@ -21,12 +21,17 @@ with no progress signal can stop at the wrong time.
 | Field | Required question | Good evidence |
 | --- | --- | --- |
 | Objective | What observable end state should exist? | A file, behavior, decision, or verified fact |
+| Goal anchor | What must remain true across iterations? | One-sentence outcome, criterion IDs, frozen scope, current phase |
 | Baseline | What is authoritative now? | Revision, URL, dataset snapshot, or current finding |
 | Allowed scope | What may change? | Named files, systems, sources, or decision boundary |
 | Frozen scope | What must remain unchanged? | Explicitly protected behavior, data, or external state |
 | Acceptance criteria | How will a reviewer know it is done? | Test result, diff, artifact, cited source, or checklist |
 | Work unit | What is one iteration small enough to verify? | One hypothesis, patch, experiment, or review slice |
 | Progress signal | What changes after a useful iteration? | New evidence, reduced gap, changed artifact, or decision |
+| Alignment check | How is each iteration tied back to the Goal? | Target criterion, expected delta, scope reason, alignment label |
+| Drift trigger | When must the loop stop and realign? | No criterion moved, silent scope change, repeated no-progress iterations |
+| Phase gate | When is the Anchor re-read? | Every 3–5 iterations, milestone, or before irreversible work |
+| Decision log | What prevents rationale from being lost? | Decision, evidence, criterion, rejected side quest, scope impact |
 | Limit | When must the loop yield? | Time, attempts, token/tool budget, or finite queue |
 | No-op rule | What prevents repetition? | Change approach after failure; stop after repeated blocker |
 | Terminal states | What are the legal endings? | Complete, blocked, paused, timeboxed/budgeted, stopped |
@@ -39,6 +44,12 @@ with no progress signal can stop at the wrong time.
 
 ## Objective
 Produce <artifact/behavior/decision> so that <user or system value>.
+
+## Goal anchor
+- Outcome: <one immutable sentence>
+- Criteria: <C1, C2, C3>
+- Frozen scope: <invariants and forbidden side effects>
+- Current phase: <phase or milestone>
 
 ## Baseline and scope
 - Baseline: <authoritative revision, source, or current state>.
@@ -54,10 +65,19 @@ Produce <artifact/behavior/decision> so that <user or system value>.
 ## Execution loop
 Repeat one bounded work unit at a time:
 1. Inspect <state and last cursor>.
-2. Select the smallest action that advances one unmet criterion.
+2. Select one unmet criterion, expected delta, and scope reason.
 3. Act within Allowed scope and Authority.
 4. Verify the result and capture evidence.
-5. Record the delta, remaining gap, and next cursor.
+5. Classify the iteration as `ON_TARGET`, `SIDE_QUEST`, or `DRIFTED`.
+6. Record the delta, remaining gap, decision, and next cursor.
+
+## Drift control
+- Re-read the Goal anchor every 3–5 iterations, at phase gates, and before
+  irreversible or high-cost actions.
+- Park side quests in a deferred list; do not expand the Goal silently.
+- If no criterion moves for two consecutive iterations, or the Anchor/scope
+  changes without owner approval, stop and emit `GOAL PAUSED: realignment required`.
+- Resume only after recording the re-aligned next action and its expected delta.
 
 ## Limits and no-op rule
 - Limit: <timebox, budget, attempt cap, or finite work-unit list>.
@@ -86,10 +106,13 @@ verified evidence, remaining gap, and next cursor or unblock.
 Before returning a Goal, check:
 
 - The objective describes an end state rather than a list of activities.
+- The Goal anchor is short enough to re-read and is not silently mutable.
 - Every acceptance criterion can be checked from named evidence.
+- Every iteration names one criterion, an expected delta, and a scope reason.
 - The next iteration is selected from current state, not from a fixed script
   that ignores results.
-- The loop has a progress signal, a limit, and a no-op rule.
+- The loop has a progress signal, a limit, a no-op rule, and a drift trigger.
+- Phase gates and a decision log make long runs resumable and auditable.
 - Complete, blocked, pause, and budget endings are distinguishable.
 - The instruction does not grant new access or external side effects that the
   user did not authorize.

@@ -1,6 +1,6 @@
 ---
 name: goal-instruction-writer
-description: Draft, refine, or audit durable Goal instructions for agents. Use when a task needs a clear observable outcome, a bounded execution loop, measurable acceptance evidence, and explicit complete, blocked, paused, or timeboxed states; do not use for ordinary one-shot prompts.
+description: Draft, refine, or audit durable, drift-resistant Goal instructions for agents. Use when a task needs a clear observable outcome, a bounded execution loop, measurable acceptance evidence, and explicit complete, blocked, paused, or timeboxed states; do not use for ordinary one-shot prompts.
 ---
 
 # Goal Instruction Writer
@@ -11,7 +11,9 @@ the user's intent, language, authority boundaries, and requested scope.
 
 Read [references/goal-contract.md](references/goal-contract.md) when drafting
 or auditing a Goal. Read [references/examples.md](references/examples.md) only
-when a worked example would clarify the requested task.
+when a worked example would clarify the requested task. For work that spans
+multiple phases, artifacts, or more than a few iterations, also read
+[references/drift-control.md](references/drift-control.md).
 
 ## Choose the mode
 
@@ -49,16 +51,47 @@ Prefer one load-bearing outcome per Goal. Split unrelated outcomes into
 separate Goals. Replace vague verbs such as “improve,” “handle,” or “finish”
 with a measurable result.
 
+## Prevent drift in long-running work
+
+For a long or multi-stage Goal, freeze a compact **Goal Anchor** before the
+first iteration: the one-sentence outcome, criterion IDs, frozen scope, and
+current phase. Treat it as an invariant. A new discovery may change the plan,
+but it must not silently change the outcome, acceptance criteria, or authority.
+An explicit owner decision creates a new Goal version or scope-change record.
+
+At every iteration, record three links before acting:
+
+1. **Target criterion:** which acceptance criterion this work advances.
+2. **Expected delta:** what observable evidence should change if it works.
+3. **Scope reason:** why this action is inside the frozen boundary now.
+
+After verification, classify the result as:
+
+- `ON_TARGET`: the named criterion moved and evidence supports the next step.
+- `SIDE_QUEST`: useful but not required for this Goal; park it in a deferred
+  list instead of expanding the loop.
+- `DRIFTED`: no criterion moved, the action changed the goal or scope, or the
+  next step cannot be justified from the Anchor; stop and realign.
+
+Run a phase gate every 3–5 iterations by default, at each milestone, and before
+an irreversible or high-cost action. Re-read the Anchor, compare the current
+state with the baseline, mark criteria open or verified, review deferred side
+quests, and choose one justified next action. Never rewrite criteria to make
+completed work appear on target.
+
 ### 2. Loop: define how progress is made
 
 Use a bounded iteration with a visible progress signal:
 
 1. **Inspect** the current state and the last durable cursor.
-2. **Select** the smallest next work unit that can move an acceptance criterion.
+2. **Select** the smallest next work unit, name its target criterion, expected
+   delta, and scope reason.
 3. **Act** within the allowed scope and authority.
 4. **Verify** the result against the relevant criterion; capture the evidence.
-5. **Record** the delta, remaining gap, and next cursor before another
-   iteration.
+5. **Classify** the result as `ON_TARGET`, `SIDE_QUEST`, or `DRIFTED` and apply
+   the corresponding drift rule.
+6. **Record** the delta, remaining gap, decision, and next cursor before
+   another iteration.
 
 State the iteration limit that fits the task: a timebox, tool or token budget,
 maximum attempts, or a finite work-unit list. Add a no-op rule: do not repeat
@@ -80,11 +113,15 @@ Make the terminal states explicit and mutually understandable:
   verified progress, remaining gap, and the safest next action.
 - **Stopped:** the owner cancels the work or an action would exceed the granted
   authority; do not silently continue.
+- **Realignment required:** a drift check fails; stop the current loop, preserve
+  the checkpoint, and resume only after the next action is re-anchored. Use
+  `GOAL PAUSED: realignment required` when a local terminal label is needed.
 
 Do not use “continue until satisfied,” “try indefinitely,” or a success claim
 based only on effort. If the task has a local convention for terminal strings,
 preserve it; otherwise give each state a short, exact label and require the
-final response to include it.
+final response to include it. A goal or acceptance criterion cannot be changed
+just because the current work became difficult or interesting.
 
 ## Produce the answer
 
@@ -92,10 +129,12 @@ Return the result in the user's language. Unless they request another format,
 use this order:
 
 1. **Design notes:** one short paragraph explaining the objective, loop, and
-   termination choices; list assumptions or high-value open questions.
+   termination and drift-control choices; list assumptions or high-value open
+   questions.
 2. **Ready-to-paste Goal:** include the full instruction in a fenced block with
-   `Objective`, `Baseline and scope`, `Acceptance criteria`, `Execution loop`,
-   `Limits and no-op rule`, `Termination`, and `Reporting` sections.
+   `Objective`, `Goal anchor`, `Baseline and scope`, `Acceptance criteria`,
+   `Execution loop`, `Drift control`, `Limits and no-op rule`, `Termination`,
+   and `Reporting` sections.
 3. **Audit notes:** if refining or auditing, name each remaining ambiguity and
    the smallest change that resolves it.
 
