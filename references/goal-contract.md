@@ -22,6 +22,7 @@ with no progress signal can stop at the wrong time.
 | --- | --- | --- |
 | Objective | What observable end state should exist? | A file, behavior, decision, or verified fact |
 | Goal anchor | What must remain true across iterations? | One-sentence outcome, criterion IDs, frozen scope, current phase |
+| Loop preview | What will one iteration and each branch look like? | State transitions, first work unit, evidence, gates, terminal states |
 | Baseline | What is authoritative now? | Revision, URL, dataset snapshot, or current finding |
 | Allowed scope | What may change? | Named files, systems, sources, or decision boundary |
 | Frozen scope | What must remain unchanged? | Explicitly protected behavior, data, or external state |
@@ -105,6 +106,8 @@ verified evidence, remaining gap, and next cursor or unblock.
 
 Before returning a Goal, check:
 
+- For preview-first work, the loop was shown and confirmed before the final Goal
+  was generated.
 - The objective describes an end state rather than a list of activities.
 - The Goal anchor is short enough to re-read and is not silently mutable.
 - Every acceptance criterion can be checked from named evidence.

@@ -1,6 +1,6 @@
 ---
 name: goal-instruction-writer
-description: Draft, refine, or audit durable, drift-resistant Goal instructions for agents. Use when a task needs a clear observable outcome, a bounded execution loop, measurable acceptance evidence, and explicit complete, blocked, paused, or timeboxed states; do not use for ordinary one-shot prompts.
+description: Preview, draft, refine, or audit durable, drift-resistant Goal instructions for agents. Use when a task needs a clear observable outcome, a bounded execution loop, measurable acceptance evidence, and explicit complete, blocked, paused, or timeboxed states; do not use for ordinary one-shot prompts.
 ---
 
 # Goal Instruction Writer
@@ -13,7 +13,8 @@ Read [references/goal-contract.md](references/goal-contract.md) when drafting
 or auditing a Goal. Read [references/examples.md](references/examples.md) only
 when a worked example would clarify the requested task. For work that spans
 multiple phases, artifacts, or more than a few iterations, also read
-[references/drift-control.md](references/drift-control.md).
+[references/drift-control.md](references/drift-control.md). For preview-first
+workflows, read [references/loop-preview.md](references/loop-preview.md).
 
 ## Choose the mode
 
@@ -24,10 +25,35 @@ multiple phases, artifacts, or more than a few iterations, also read
   and unsafe or unauthorized transitions; propose the smallest fixes.
 - **Convert:** turn a checklist, ticket, or project brief into a Goal without
   expanding its scope.
+- **Preview:** show the concrete loop, branches, drift gates, and stop
+  conditions before writing the final Goal. Do not emit an executable Goal or
+  perform external work in this mode.
 
 If the mode is not stated, infer it from the input. Ask only questions whose
 answers would change the objective, authority, acceptance evidence, or legal
 terminal state. Otherwise state assumptions and continue.
+
+## Preview before drafting
+
+Use preview-first when the user asks to “先看循环”, “preview”, “先设计流程”,
+or similar. Also prefer it for multi-stage, costly, irreversible, or materially
+uncertain work. For a short, reversible task, a direct draft is enough.
+
+The preview is a design checkpoint, not an approval to execute:
+
+1. State the provisional outcome, baseline, and assumptions.
+2. Show the loop as concrete state transitions, including the first work unit,
+   success and failure branches, progress evidence, drift checks, phase gates,
+   and legal stop states.
+3. List the decisions that could change the loop or its scope.
+4. End with a clear handoff: wait for the user to confirm or revise the loop
+   before generating the final Goal.
+
+When the user confirms, carry the accepted preview into the final Goal without
+quietly changing its loop, scope, or terminal rules. If the user revises it,
+regenerate the preview or record the changed decision first. A preview response
+must not claim that the Goal is complete and must not perform external side
+effects merely because a loop was described.
 
 ## Build the three-layer contract
 
@@ -131,11 +157,14 @@ use this order:
 1. **Design notes:** one short paragraph explaining the objective, loop, and
    termination and drift-control choices; list assumptions or high-value open
    questions.
-2. **Ready-to-paste Goal:** include the full instruction in a fenced block with
-   `Objective`, `Goal anchor`, `Baseline and scope`, `Acceptance criteria`,
-   `Execution loop`, `Drift control`, `Limits and no-op rule`, `Termination`,
-   and `Reporting` sections.
-3. **Audit notes:** if refining or auditing, name each remaining ambiguity and
+2. **Loop preview:** in Preview mode, show the state transitions, branches,
+   evidence, drift gates, terminal states, and unresolved decisions; stop there
+   and wait for confirmation.
+3. **Ready-to-paste Goal:** in Draft, Refine, or Convert mode, include the full
+   instruction in a fenced block with `Objective`, `Goal anchor`, `Baseline and
+   scope`, `Acceptance criteria`, `Execution loop`, `Drift control`, `Limits
+   and no-op rule`, `Termination`, and `Reporting` sections.
+4. **Audit notes:** if refining or auditing, name each remaining ambiguity and
    the smallest change that resolves it.
 
 The ready-to-paste block must be executable as an instruction, not a discussion
