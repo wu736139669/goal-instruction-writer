@@ -27,6 +27,10 @@ agent workflows.
 - **Stop cleanly:** distinguish `GOAL COMPLETE`, `GOAL BLOCKED`,
   `GOAL PAUSED`, `GOAL TIMEBOXED`, and `GOAL STOPPED`.
 
+The skill improves the contract an agent follows. Runtime access, permissions,
+and approval for external side effects remain controlled by the host agent and
+the user.
+
 ## 60-second demo
 
 Start with a rough request:

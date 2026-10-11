@@ -8,6 +8,8 @@ description: Preview, draft, refine, or audit durable, drift-resistant Goal inst
 Turn a vague request into a ready-to-run Goal instruction that an agent can
 execute without guessing what success, progress, or stopping means. Preserve
 the user's intent, language, authority boundaries, and requested scope.
+This skill designs and audits the instruction contract; runtime access,
+permissions, and external approvals still come from the host agent and user.
 
 Read [references/goal-contract.md](references/goal-contract.md) when drafting
 or auditing a Goal. Read [references/examples.md](references/examples.md) only

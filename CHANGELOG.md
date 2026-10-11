@@ -3,6 +3,7 @@
 ## [Unreleased]
 
 - Add a GitHub Actions packaging smoke test for required files and Skills CLI discovery.
+- Document that runtime access and external approvals remain host- and user-controlled.
 
 ## [0.1.0] - 2026-10-11
 
