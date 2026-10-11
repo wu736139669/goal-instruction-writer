@@ -100,6 +100,7 @@ cannot silently change the Goal.
 - [Loop preview format and flow diagram](references/loop-preview.md)
 - [Drift detection and recovery](references/drift-control.md)
 - [Coding and research examples](references/examples.md)
+- [Launch kit with ready-to-post copy](docs/launch-kit.md)
 - [Contributing guide](CONTRIBUTING.md)
 
 ## Contributing
