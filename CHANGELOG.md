@@ -1,5 +1,9 @@
 # Changelog
 
+## [Unreleased]
+
+- Add a GitHub Actions packaging smoke test for required files and Skills CLI discovery.
+
 ## [0.1.0] - 2026-10-11
 
 Initial public release.

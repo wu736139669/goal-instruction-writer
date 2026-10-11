@@ -2,6 +2,7 @@
 
 [![Latest release](https://img.shields.io/github/v/release/wu736139669/goal-instruction-writer?display_name=tag)](https://github.com/wu736139669/goal-instruction-writer/releases)
 [![GitHub stars](https://img.shields.io/github/stars/wu736139669/goal-instruction-writer)](https://github.com/wu736139669/goal-instruction-writer/stargazers)
+[![Validate skill](https://github.com/wu736139669/goal-instruction-writer/actions/workflows/validate.yml/badge.svg)](https://github.com/wu736139669/goal-instruction-writer/actions/workflows/validate.yml)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 > **Preview the loop before you run the Goal.**
@@ -72,6 +73,9 @@ npx skills add wu736139669/goal-instruction-writer \
 
 The command has been verified against this repository and detects one skill:
 `goal-instruction-writer`.
+
+Every push and pull request runs the same local discovery check in GitHub
+Actions so packaging errors are caught before release.
 
 Clone the skill into the Codex skill directory:
 

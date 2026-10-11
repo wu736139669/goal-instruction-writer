@@ -30,3 +30,12 @@ focused improvement.
 - Every new acceptance rule has observable evidence.
 - Drifted, blocked, paused, and timeboxed work remain distinguishable.
 - Markdown links and code fences render correctly.
+
+Before opening a pull request, run the packaging smoke test from the repository
+root:
+
+```bash
+npx --yes skills add . --list
+```
+
+The same check runs automatically in GitHub Actions.
