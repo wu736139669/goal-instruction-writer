@@ -115,7 +115,8 @@ it.
 
 ## Goal anchor
 - Outcome: the skill is installable from its source repository and its curated-list submission has a durable status.
-- Criteria: C1 package validation; C2 one distribution submission; C3 feedback and blocker record.
+- Criteria: C1 package validation; C2 one distribution submission; C3 feedback
+  and blocker record; C4 one non-author response.
 - Frozen scope: no new social accounts, mass posting, repeated maintainer pings, or silent scope expansion.
 - Current phase: launch and first feedback.
 
@@ -132,6 +133,8 @@ it.
 - [ ] One public submission links to the repository and explains how to install it.
 - [ ] The feedback thread records the use case, current status, and exact
   unblock needed for any external gate.
+- [ ] At least one non-author reply records a concrete use case, result, defect,
+  or improvement; an author-only comment does not satisfy this criterion.
 
 ## Execution loop
 Repeat one bounded work unit at a time:
@@ -154,11 +157,16 @@ Repeat one bounded work unit at a time:
 - Use at most three iterations and one maintainer follow-up until new review
   evidence arrives.
 - Do not repeat a post or submission without a material change in evidence.
+- Define a feedback window before execution; if it closes without the required
+  non-author response, stop as `GOAL TIMEBOXED: awaiting first external feedback`.
 
 ## Termination
-- `GOAL COMPLETE` when the package, submission, and status record are verified.
+- `GOAL COMPLETE` when the package, submission, status record, and feedback
+  threshold are verified.
 - `GOAL BLOCKED: upstream maintainer review required` when only the external
   merge remains and the submission is clean.
+- `GOAL TIMEBOXED: awaiting first external feedback` when the feedback window
+  closes before the required non-author response arrives.
 - `GOAL TIMEBOXED: <state>` when the launch window ends with the verified
   progress and next safe action recorded.
 

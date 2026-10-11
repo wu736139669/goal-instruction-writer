@@ -77,6 +77,11 @@ Allowed authority: <tools, files, systems, and approvals>
 Current phase: <phase or milestone>
 ~~~
 
+For feedback, adoption, pilot, launch, or validation Goals, define what counts
+as evidence before execution: an entry point, at least <code>N</code> non-author
+responses, or a named cohort. Add the feedback window and do not count
+author-only activity unless the Goal explicitly chooses it.
+
 ## Drift control in one picture
 
 ~~~mermaid

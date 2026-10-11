@@ -47,7 +47,9 @@ The preview is a design checkpoint, not an approval to execute:
 2. Show the loop as concrete state transitions, including the first work unit,
    success and failure branches, progress evidence, drift checks, phase gates,
    and legal stop states.
-3. List the decisions that could change the loop or its scope.
+3. List the decisions that could change the loop or its scope. For feedback,
+   adoption, pilot, launch, or validation work, include the evidence threshold,
+   what counts, and the feedback window.
 4. End with a clear handoff: wait for the user to confirm or revise the loop
    before generating the final Goal.
 
@@ -74,6 +76,12 @@ Then make the contract concrete:
   gates the agent may or may not cross.
 - **Deliverable:** the files, decision, report, or message that will be handed
   back.
+
+For Goals about feedback, adoption, pilots, launches, or validation, define a
+**feedback evidence threshold** before drafting: what counts as feedback,
+whether an entry point is enough or at least `N` non-author responses are
+required, and the timebox or attempt window. Do not count author-only activity
+unless the user explicitly chooses that threshold.
 
 Prefer one load-bearing outcome per Goal. Split unrelated outcomes into
 separate Goals. Replace vague verbs such as “improve,” “handle,” or “finish”
@@ -164,8 +172,9 @@ use this order:
    and wait for confirmation.
 3. **Ready-to-paste Goal:** in Draft, Refine, or Convert mode, include the full
    instruction in a fenced block with `Objective`, `Goal anchor`, `Baseline and
-   scope`, `Acceptance criteria`, `Execution loop`, `Drift control`, `Limits
-   and no-op rule`, `Termination`, and `Reporting` sections.
+   scope`, `Acceptance criteria`, `Feedback evidence` when applicable,
+   `Execution loop`, `Drift control`, `Limits and no-op rule`, `Termination`,
+   and `Reporting` sections.
 4. **Audit notes:** if refining or auditing, name each remaining ambiguity and
    the smallest change that resolves it.
 

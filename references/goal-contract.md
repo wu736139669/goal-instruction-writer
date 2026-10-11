@@ -27,6 +27,7 @@ with no progress signal can stop at the wrong time.
 | Allowed scope | What may change? | Named files, systems, sources, or decision boundary |
 | Frozen scope | What must remain unchanged? | Explicitly protected behavior, data, or external state |
 | Acceptance criteria | How will a reviewer know it is done? | Test result, diff, artifact, cited source, or checklist |
+| Feedback evidence threshold | What counts as real feedback, and how much is required? | Entry point only, N non-author replies, named cohort, and a timebox |
 | Work unit | What is one iteration small enough to verify? | One hypothesis, patch, experiment, or review slice |
 | Progress signal | What changes after a useful iteration? | New evidence, reduced gap, changed artifact, or decision |
 | Alignment check | How is each iteration tied back to the Goal? | Target criterion, expected delta, scope reason, alignment label |
@@ -62,6 +63,11 @@ Produce <artifact/behavior/decision> so that <user or system value>.
 - [ ] <observable criterion with its evidence>
 - [ ] <observable criterion with its evidence>
 - [ ] <observable criterion with its evidence>
+
+## Feedback evidence (when applicable)
+- Threshold: <entry point only | N non-author responses | named cohort>
+- What counts: <concrete use case, result, defect, or decision>
+- Window: <date, number of attempts, or timebox>
 
 ## Execution loop
 Repeat one bounded work unit at a time:
@@ -111,6 +117,9 @@ Before returning a Goal, check:
 - The objective describes an end state rather than a list of activities.
 - The Goal anchor is short enough to re-read and is not silently mutable.
 - Every acceptance criterion can be checked from named evidence.
+- For feedback, adoption, pilot, launch, or validation work, the evidence
+  threshold and window are explicit; author-only activity is not counted unless
+  the Goal chooses it.
 - Every iteration names one criterion, an expected delta, and a scope reason.
 - The next iteration is selected from current state, not from a fixed script
   that ignores results.

@@ -20,7 +20,9 @@ Show these elements in order:
 7. **Terminal states:** exact complete, blocked, paused, timeboxed, and stopped
    conditions.
 8. **Decisions to confirm:** only the choices that could materially change the
-   loop, scope, evidence, or terminal rules.
+   loop, scope, evidence, or terminal rules. For feedback, adoption, pilot,
+   launch, or validation work, confirm the evidence threshold, what counts, and
+   the feedback window.
 
 End with a handoff such as: “确认这个循环后，我再生成最终 Goal 指令。” Do not
 include a final executable Goal in a preview-only response and do not perform
@@ -61,6 +63,7 @@ flowchart TD
 | Verify | What proves progress? | Evidence and pass/fail rule |
 | Branch | What happens if the result is unexpected? | Retry with a new hypothesis, defer, block, or realign |
 | Gate | When is the Anchor re-read? | Cadence, milestone, and high-risk trigger |
+| Feedback | How much evidence counts as real feedback? | Threshold, what counts, and feedback window |
 | End | What makes the work legally stop? | Complete, blocked, paused, timeboxed, stopped |
 
 ## Example preview

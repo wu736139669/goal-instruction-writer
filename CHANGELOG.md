@@ -8,6 +8,7 @@
 - Redesign the README with principle, workflow, drift-control, and usage diagrams.
 - Make the root README English-first and add a full Simplified Chinese translation.
 - Add a public independent Goal evaluation with iteration evidence and terminal results.
+- Require feedback/adoption Goals to define what counts as evidence and when the window ends.
 
 ## [0.1.0] - 2026-10-11
 
