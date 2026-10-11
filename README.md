@@ -5,63 +5,67 @@
 [![Validate skill](https://github.com/wu736139669/goal-instruction-writer/actions/workflows/validate.yml/badge.svg)](https://github.com/wu736139669/goal-instruction-writer/actions/workflows/validate.yml)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-> **写 Goal 之前，先把循环摊开。**
+[English](README.md) · [简体中文](docs/README.zh-CN.md)
+
+> **Write the Goal after you can explain the loop.**
 >
-> **Before an agent runs the Goal, make the loop reviewable.**
+> **Preview the loop before an agent starts.**
 
 ![Goal Instruction Writer social preview](assets/social-preview.png)
 
-AI agent 很少因为“不够努力”失败，更多时候是做了很久以后已经偏离了原目标。
-<code>goal-instruction-writer</code> 是一个 Codex skill，把“继续改进、直到满意”变成一份能被检查、能被暂停、能安全结束的 Goal 指令。
+AI agents rarely fail because they did too little. More often, they work for a long
+time and quietly move away from the original outcome. <code>goal-instruction-writer</code>
+turns “keep improving until it feels right” into a Goal instruction that can be
+reviewed, bounded, paused, and finished cleanly.
 
-It turns vague requests into a contract with an observable outcome, a bounded loop,
-evidence for every meaningful step, drift gates, and explicit terminal states.
+It gives every long-running task an observable outcome, a bounded loop, evidence
+for meaningful progress, drift gates, and explicit terminal states.
 
 ## The idea in one picture
 
 ~~~mermaid
 flowchart TD
-    A["粗糙请求<br/>继续改进，直到满意"] --> B{"先预览？"}
-    B -->|长任务 / 高成本 / 不确定| C["Loop Preview<br/>状态 · 分支 · 证据 · 终止"]
-    B -->|短任务 / 可逆| D["Draft Goal"]
-    C --> E{"用户确认循环"}
-    E -->|修改| C
-    E -->|确认| D
-    D --> F["Goal Anchor<br/>目标 · 准则 · 范围 · 权限"]
-    F --> G["一次迭代<br/>Inspect → Select → Act → Verify"]
-    G --> H{"对齐检查"}
-    H -->|ON_TARGET| I["记录证据和游标"]
-    I --> J{"还有未完成准则？"}
-    J -->|是| G
-    J -->|否| K["GOAL COMPLETE"]
-    H -->|SIDE_QUEST| L["延期清单"]
+    A["Vague request<br/>Keep improving until it feels right"] --> B{"Preview first?"}
+    B -->|Long / costly / uncertain| C["Loop Preview<br/>States · branches · evidence · stops"]
+    B -->|Short / reversible| D["Draft Goal"]
+    C --> E{"User confirms the loop"}
+    E -->|Revise| C
+    E -->|Confirm| D
+    D --> F["Goal Anchor<br/>Outcome · criteria · scope · authority"]
+    F --> G["One iteration<br/>Inspect → Select → Act → Verify"]
+    G --> H{"Alignment check"}
+    H -->|ON_TARGET| I["Record evidence and cursor"]
+    I --> J{"Criteria still open?"}
+    J -->|Yes| G
+    J -->|No| K["GOAL COMPLETE"]
+    H -->|SIDE_QUEST| L["Defer with a revisit condition"]
     L --> G
-    H -->|DRIFTED| M["暂停并重新对齐"]
+    H -->|DRIFTED| M["Pause and realign"]
     M --> N["GOAL PAUSED: realignment required"]
-    G --> O{"阻塞 / 预算 / 用户停止？"}
-    O -->|阻塞| P["GOAL BLOCKED"]
-    O -->|预算耗尽| Q["GOAL TIMEBOXED"]
-    O -->|用户取消或越权| R["GOAL STOPPED"]
+    G --> O{"Blocked / budgeted / owner-stopped?"}
+    O -->|Blocked| P["GOAL BLOCKED"]
+    O -->|Budget exhausted| Q["GOAL TIMEBOXED"]
+    O -->|Cancelled or beyond authority| R["GOAL STOPPED"]
 ~~~
 
 ## Why this exists
 
-| 常见问题 | 技能补上的约束 |
+| Common failure | The contract adds |
 | --- | --- |
-| 目标只有“变得更好” | 写成可观察的最终结果和验收证据 |
-| 循环只有“继续尝试” | 每轮只选一个最小工作单元，并记录预期变化 |
-| 新发现悄悄改变方向 | 用 Goal Anchor 冻结目标、准则、范围和权限 |
-| 有用的旁支吞掉主线 | 标记 <code>SIDE_QUEST</code>，放入延期清单 |
-| Agent 一直运行却没有进展 | 两轮等价无进展就暂停并重新对齐 |
-| 外部依赖让任务无限等待 | 用 <code>GOAL BLOCKED</code> 写清楚依赖和解锁动作 |
+| The goal is just “make it better” | An observable outcome and acceptance evidence |
+| The loop is just “keep trying” | One smallest work unit and an expected delta per iteration |
+| New discoveries silently change direction | A Goal Anchor that freezes outcome, criteria, scope, and authority |
+| Useful side work consumes the main task | A <code>SIDE_QUEST</code> label and a deferred list |
+| The agent keeps working without progress | A pause after two materially equivalent no-progress iterations |
+| An external dependency creates endless waiting | <code>GOAL BLOCKED</code> with the exact unblock needed |
 
 ## The three-layer contract
 
-| Layer | 要回答的问题 | 可检查的证据 |
+| Layer | Question | Reviewable proof |
 | --- | --- | --- |
-| **Goal** | 最终应该存在什么结果？ | 文件、行为、决策或已验证事实 |
-| **Loop** | 一轮怎样产生进展？ | 目标准则、预期变化、验证结果、下一游标 |
-| **Termination** | 什么时候必须结束？ | <code>COMPLETE</code>、<code>BLOCKED</code>、<code>PAUSED</code>、<code>TIMEBOXED</code>、<code>STOPPED</code> |
+| **Goal** | What observable result should exist? | A file, behavior, decision, or verified fact |
+| **Loop** | How does one iteration create progress? | Target criterion, expected delta, verification, and cursor |
+| **Termination** | When must the work legally stop? | <code>COMPLETE</code>, <code>BLOCKED</code>, <code>PAUSED</code>, <code>TIMEBOXED</code>, or <code>STOPPED</code> |
 
 Long-running work also gets a **Goal Anchor**:
 
@@ -80,17 +84,17 @@ flowchart LR
     A["Goal Anchor"] --> B["Iteration record<br/>criterion · expected delta · scope reason"]
     B --> C["Act and verify"]
     C --> D{"Alignment"}
-    D -->|ON_TARGET| E["Keep evidence<br/>choose next cursor"]
+    D -->|ON_TARGET| E["Keep evidence<br/>choose the next cursor"]
     E --> B
-    D -->|SIDE_QUEST| F["Defer<br/>add revisit condition"]
+    D -->|SIDE_QUEST| F["Defer<br/>add a revisit condition"]
     F --> B
-    D -->|DRIFTED| G["Pause<br/>preserve checkpoint"]
-    G --> H["Re-anchor after a decision"]
+    D -->|DRIFTED| G["Pause<br/>preserve the checkpoint"]
+    G --> H["Re-anchor after an owner decision"]
     H --> B
 ~~~
 
-The rule is simple: activity is not progress. An iteration counts only when it
-advances a named criterion and leaves evidence another agent can inspect.
+Activity is not progress. An iteration counts only when it advances a named
+criterion and leaves evidence another agent can inspect.
 
 ## Install
 
@@ -107,13 +111,13 @@ The command is verified against this repository and detects one skill:
 ### Git clone fallback
 
 ~~~bash
-SKILL_DIR="${CODEX_HOME:-$HOME/.codex}/skills/goal-instruction-writer"
+SKILL_ROOT="${CODEX_HOME:-$HOME/.codex}"
 git clone https://github.com/wu736139669/goal-instruction-writer.git \
-  "$SKILL_DIR"
+  "$SKILL_ROOT/skills/goal-instruction-writer"
 ~~~
 
-After installation, invoke it explicitly as <code>$goal-instruction-writer</code>, or let
-Codex discover it automatically for Goal-shaped requests.
+After installation, invoke it explicitly as <code>$goal-instruction-writer</code>, or
+let Codex discover it automatically for Goal-shaped requests.
 
 ## 30-second usage
 
@@ -121,7 +125,8 @@ Codex discover it automatically for Goal-shaped requests.
 
 ~~~text
 Use $goal-instruction-writer in Preview mode.
-先不要执行，展示目标、循环步骤、成功/失败分支、证据、漂移检查和终止条件。
+Do not execute yet. Show the objective, loop steps, success and failure branches,
+evidence, drift checks, and terminal conditions.
 ~~~
 
 The preview should expose the loop before any external side effect:
@@ -135,15 +140,18 @@ Inspect baseline → choose one criterion → make one bounded change
 ### 2. Confirm the loop
 
 ~~~text
-确认这个循环。保留当前范围和终止条件，生成最终 Goal 指令。
+The loop is confirmed. Keep the current scope and terminal rules, then generate
+the final Goal instruction.
 ~~~
 
 ### 3. Use the Goal during execution
 
 ~~~text
-每轮开始前说明：目标准则、预期证据、范围理由。
-每轮结束后说明：实际证据、对齐标签、剩余差距、下一游标。
-如果两轮没有新进展，暂停并输出：GOAL PAUSED: realignment required。
+Before each iteration, state the target criterion, expected evidence, and scope reason.
+After each iteration, state the actual evidence, alignment label, remaining gap,
+and next cursor.
+If two equivalent iterations produce no new progress, stop with:
+GOAL PAUSED: realignment required.
 ~~~
 
 For a short, reversible task, skip Preview and ask directly:
@@ -154,45 +162,48 @@ Use $goal-instruction-writer to draft the final Goal for this task.
 
 ## Modes
 
-| Mode | 什么时候用 | 结果 |
+| Mode | Use it when | Output |
 | --- | --- | --- |
-| **Preview** | 想先看循环、分支和终止条件 | 可审阅的流程，不产生可执行 Goal |
-| **Draft** | 只有一个模糊请求 | 完整的可复制 Goal |
-| **Refine** | 已有 Goal 但缺字段或边界 | 保留原意的最小修订 |
-| **Audit** | 怀疑会漂移、重复或越权 | 问题清单和最小修复 |
-| **Convert** | 有 ticket、清单或项目 brief | 不扩展范围的 Goal 转换 |
+| **Preview** | You want to inspect the loop, branches, and stops first | A reviewable flow; no executable Goal yet |
+| **Draft** | You have a rough request | A complete, ready-to-paste Goal |
+| **Refine** | An existing Goal is missing fields or boundaries | A minimal revision that preserves intent |
+| **Audit** | You suspect drift, repetition, or unauthorized transitions | Findings and the smallest fixes |
+| **Convert** | You have a ticket, checklist, or project brief | A Goal without silent scope expansion |
 
 ## A small before/after
 
 **Weak request**
 
 ~~~text
-把 importer 修好，继续尝试直到它能工作。
+Fix the importer and keep trying until it works.
 ~~~
 
 **Reviewable Goal**
 
 ~~~text
-目标：让 fixtures/quoted_multiline.csv 在现有 record model 中完整导入，行数不漂移。
+Objective: make fixtures/quoted_multiline.csv load into the existing record model
+without truncation or row-count drift.
 
-循环：检查当前失败 → 选择一个解析假设 → 做一个最小改动 → 运行聚焦测试
-      → 记录 diff 和结果 → 选择下一个未验证准则。
+Loop: inspect the current failure → choose one parsing hypothesis → make one
+focused change → run the focused test → record the diff and result → choose the
+next unmet criterion.
 
-防漂移：每轮绑定一个准则、预期证据和范围理由；无关清理放入延期清单。
+Drift control: bind every iteration to one criterion, expected evidence, and
+scope reason; put unrelated cleanup in the deferred list.
 
-结束：所有验收项通过则 GOAL COMPLETE；两次等价失败则
-GOAL BLOCKED: <具体原因>；四轮仍未完成则 GOAL TIMEBOXED: <状态>。
+Termination: emit GOAL COMPLETE when all criteria pass; emit
+GOAL BLOCKED: <reason> after two equivalent failures; emit
+GOAL TIMEBOXED: <state> after the four-iteration limit.
 ~~~
 
-## What it controls—and what it does not
+## Runtime boundary
 
 The skill designs and audits the instruction contract. Runtime access,
 permissions, tool availability, and approval for external side effects remain
 controlled by the host agent and the user.
 
-For external gates, the correct behavior is to preserve evidence and stop with
-the exact unblock needed. Waiting for a maintainer, owner, or missing dataset is
-not a reason to invent more work.
+For external gates, preserve the evidence and stop with the exact unblock needed.
+Waiting for a maintainer, owner, or missing dataset is not a reason to invent more work.
 
 ## Resources
 
@@ -204,6 +215,7 @@ not a reason to invent more work.
 - [Launch kit with ready-to-post copy](docs/launch-kit.md)
 - [Contributing guide](CONTRIBUTING.md)
 - [GitHub Discussions](https://github.com/wu736139669/goal-instruction-writer/discussions)
+- [Chinese documentation](docs/README.zh-CN.md)
 
 ## Contributing
 
