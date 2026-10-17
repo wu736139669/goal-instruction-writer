@@ -86,6 +86,25 @@ document a universal manual submission endpoint; check its current author/docs
 surface before assuming that a form, star threshold, or publishing API exists.
 This release does not claim a SkillsMP listing.
 
+## Developer-tool launches and editorial review
+
+- [Console.dev](https://console.dev/selection-criteria) accepts developer-tool
+  submissions by email at the editorial address published on that page. It
+  selects a small number of tools for review; a sent email does not imply
+  selection or publication.
+- [DevHunt](https://devhunt.org/faq) supports a free permanent tool listing after
+  sign-in. Its weekly launch, boosted launch, and sponsorships are separate paid
+  options. Use the free listing unless a paid option is explicitly requested.
+- [Product Hunt](https://help.producthunt.com/en/articles/17350772-launch-guide)
+  supports a maker-led launch with a tagline, description, gallery, demonstration,
+  and maker comment. Review the current account and publishing requirements;
+  prepared copy, a saved draft, a scheduled launch, and publication are distinct
+  states.
+
+The [English developer launch kit](developer-launch-kit.md) provides reusable
+submission fields and evidence links. Actual receipts and remaining gates are
+recorded in [submission status](submission-status.md).
+
 ## Submission material
 
 | Material | Location |
@@ -97,6 +116,7 @@ This release does not claim a SkillsMP listing.
 | Full demonstration | [v0.2.0 video](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.0/goal-overview.mp4) |
 | Release | [v0.2.2](https://github.com/wu736139669/goal-instruction-writer/releases/tag/v0.2.2) |
 | Submission receipts and platform gates | [Submission status](submission-status.md) |
+| Developer-tool listings and launch copy | [Developer launch kit](developer-launch-kit.md) |
 | Feedback | [Discussion #1](https://github.com/wu736139669/goal-instruction-writer/discussions/1) |
 
 ## 中文：怎么投到第三方
