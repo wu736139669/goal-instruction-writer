@@ -14,6 +14,9 @@ version 0.2.2. Submission copy and the case-study links are in English.
 | [SkillRepo](https://skillrepo.dev/skills/wu736139669/goal-instruction-writer) | Published as a free skill, v0.2.2 | Anonymous public access and seven-file package verified; platform analysis reports grade A, score 89 |
 | [Agent Skill Source](https://agentskillsource.com/submit.php) | Submission unavailable from the current region | Actual response: “Your country is not allowed to access this resource” |
 | [awesome-codex-skills #337](https://github.com/composio-community/awesome-codex-skills/pull/337) | Existing PR remains open | Updated the existing description with v0.2.2, the English case study, and the demo; no duplicate PR |
+| [MCP.Directory](https://mcp.directory/submit-skill) | Existing submission confirmed in the review queue | Actual response: “This skill has already been submitted. We'll review it soon!” |
+| [Awesome Skills](https://www.awesomeskills.dev/en/submit) | Source URL prepared; not yet submitted | Cloudflare human verification must be completed before the Submit Skill button is enabled; no receipt issued |
+| [Agent Skill Exchange #119](https://github.com/agentskillexchange/skills/pull/119) | New PR open; awaiting maintainer review | Seven-file skill directory submitted; focused local checks passed; GitHub Actions awaits maintainer approval |
 
 OpenAgentSkill's review notes flag executable/script files, package scan bounds,
 and command execution for deeper review. This is a saved review request, not an
@@ -42,8 +45,26 @@ metadata adds the MIT license, Codex compatibility, source version, homepage,
 case-study link, and demo link. The instruction body matches the canonical
 source, and all six supporting files match byte for byte.
 
-Both new public pages returned HTTP 200 with the expected skill content without
-account cookies. Each was explicitly published after import and account setup.
+SkillBazaar and SkillRepo returned HTTP 200 with the expected skill content
+without account cookies. Each was explicitly published after import and account
+setup.
+
+MCP.Directory received the direct canonical `SKILL.md` URL and reported that the
+skill had already been submitted and would be reviewed. This confirms an existing
+review entry; it does not establish a new public listing or a second submission.
+
+Awesome Skills has the canonical GitHub source URL prepared. Its Cloudflare
+human-verification checkbox remains incomplete, so the submit button is disabled.
+No submission, review receipt, or publication is claimed for that platform.
+
+Agent Skill Exchange received a focused PR containing the instruction body and
+six supporting files from v0.2.2. The instruction body and supporting-file bytes
+are preserved; the entry adapts frontmatter to the catalog schema and appends
+canonical Codex installation, usage, and English evidence links. Format, source,
+installation-content, and 79-pattern security checks passed locally. The
+[upstream validation workflow](https://github.com/agentskillexchange/skills/actions/runs/39006588308)
+explicitly awaits maintainer approval before running. Merging the PR and
+publishing it to the marketplace are separate maintainer steps.
 
 Screenshots and the private tracking link are retained locally. Private tracking
 tokens and contact-account data are excluded from this public record.

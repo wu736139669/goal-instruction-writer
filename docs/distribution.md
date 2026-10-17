@@ -32,6 +32,14 @@ It links to this repository in Meta & Utilities and includes installation
 instructions. As of the check date it is open, not merged. A maintainer owns
 the acceptance decision; do not open a duplicate PR.
 
+A second submission is open at
+[Agent Skill Exchange #119](https://github.com/agentskillexchange/skills/pull/119).
+Its [contribution guide](https://github.com/agentskillexchange/skills/blob/main/CONTRIBUTING.md)
+requires a complete `skills/<slug>/` entry with catalog metadata, installation
+instructions, and a source-backed use case. The seven-file entry starts at the
+`listed` tier; maintainers handle review, workflow approval, merging, and
+marketplace publication. PR creation alone does not complete those steps.
+
 For another curated collection:
 
 1. Read its current README and contribution instructions.
@@ -61,6 +69,8 @@ outstanding platform gates are recorded in [submission status](submission-status
 | [SkillBazaar](https://skillbazaar.ai/dashboard/new) | Import a public GitHub skill, review the English listing, category, and tags, then publish | Author account; valid `SKILL.md`; optional AI analysis does not gate ordinary publication |
 | [SkillRepo](https://skillrepo.dev/for-publishers) | Upload the runtime ZIP, save it, then publish the private skill to the public catalog | Free Publisher account; valid frontmatter; complete platform analysis and explicit Publish step |
 | [Agent Skill Source](https://agentskillsource.com/submit.php) | Submit metadata, source URL, execution type, runtime, and contact details | Public GitHub source; supports Prompt Only and OpenAI Codex |
+| [MCP.Directory](https://mcp.directory/submit-skill) | Submit the direct GitHub `SKILL.md` URL with a name, category, short description, and contact email | Description limit is 300 characters; an existing-submission response means review is pending |
+| [Awesome Skills](https://www.awesomeskills.dev/en/submit) | Submit a GitHub repository or skill-directory URL | Complete the Cloudflare human-verification challenge before submitting; the separate newsletter prompt is optional |
 
 Submitting a source is distinct from a completed import, public listing, or
 maintainer acceptance. Preserve the actual receipt and report its state.
