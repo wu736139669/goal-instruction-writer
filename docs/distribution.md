@@ -47,7 +47,23 @@ Suggested entry:
 - [goal-instruction-writer](https://github.com/wu736139669/goal-instruction-writer) — Preview agent loops and draft durable Goals with acceptance evidence, drift control, proportional verification, and clear stop conditions. Used in multi-hour game-development and software-delivery workflows.
 ```
 
-## 4. Other discovery sites
+## 4. Direct submission portals
+
+These submission pages were inspected on 2026-10-17. The current receipts and
+outstanding platform gates are recorded in [submission status](submission-status.md).
+
+| Portal | Submission method | Requirements shown by the portal |
+| --- | --- | --- |
+| [OpenAgentSkill](https://www.openagentskill.com/submit) | Scan a GitHub repository and submit selected skills to a review queue | Valid `SKILL.md`; zero-star repositories and anonymous submissions accepted |
+| [Skillboard](https://www.skillboard.lol/submit) | Suggest a public GitHub repository or skill directory | Valid frontmatter and a license permitting indexing/attribution |
+| [agentskill.sh](https://agentskill.sh/submit) | Import a GitHub repository or direct `SKILL.md` URL | Import must finish successfully; platform rate limits apply |
+| [SkillMD.ai](https://skillmd.ai/submit/) | Submit a GitHub source, Markdown, or ZIP, then review and publish the resulting draft | Contact email; inspect the generated files before publishing |
+| [Agent Skill Source](https://agentskillsource.com/submit.php) | Submit metadata, source URL, execution type, runtime, and contact details | Public GitHub source; supports Prompt Only and OpenAI Codex |
+
+Submitting a source is distinct from a completed import, public listing, or
+maintainer acceptance. Preserve the actual receipt and report its state.
+
+## 5. Other discovery sites
 
 [SkillsMP](https://skillsmp.com/) describes itself as an index of public GitHub
 skills. Indexing does not imply certification. Its public home page does not
@@ -64,7 +80,8 @@ This release does not claim a SkillsMP listing.
 | Real use cases and evidence limits | [Field notes](field-notes.md) |
 | Short animated preview | [GIF](../assets/goal-overview.gif) |
 | Full demonstration | [v0.2.0 video](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.0/goal-overview.mp4) |
-| Release | [v0.2.0](https://github.com/wu736139669/goal-instruction-writer/releases/tag/v0.2.0) |
+| Release | [v0.2.2](https://github.com/wu736139669/goal-instruction-writer/releases/tag/v0.2.2) |
+| Submission receipts and platform gates | [Submission status](submission-status.md) |
 | Feedback | [Discussion #1](https://github.com/wu736139669/goal-instruction-writer/discussions/1) |
 
 ## 中文：怎么投到第三方
