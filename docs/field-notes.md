@@ -100,21 +100,3 @@ The [feedback thread](https://github.com/wu736139669/goal-instruction-writer/dis
 also contains a reader's proposed edge case about waiting for replies versus
 actionable work that makes no progress. That is a useful design question; it
 is labeled as reading feedback rather than an installation/execution test.
-
-## 中文说明
-
-维护者报告最长游戏开发工作流超过 60 小时，并提供了具体会话供核查。对应的
-Factory Town Idle Godot 项目记录覆盖 10 月 13—17 日：分析与架构、可玩系统、
-0.49 本地候选和 Mac/APK 交付。完整复刻 Goal 在快照时仍继续；60 多小时是维护者
-估计，不能把日期跨度当成不间断计算时长。详见[中文案例](cases/factory-town-idle.md#中文案例)。
-
-此项目还展示了有效验证复用：0.48 界面修改复用核心未变的 1,983 项精确对照；
-0.49 修改研究用料规则后，旧对照不再作为新核心的验收证据。
-
-演示中的月光王国片段来自已公开的真实运行录像，明确标注项目名；它不被当作该
-60 多小时工作流的连续录像。
-
-Android 案例的数据来自对已有日志和单测 XML 的本地核查，未重跑项目。505 项测试
-并不等于耗时很长：最终两变体 SDK 套件时间合计约 45 秒，14 次 Gradle 调用合计
-9 分 32 秒。部分重跑修出了实际问题，因此新规则保留必要验收，改进重跑触发与证据
-复用。v0.2.0 尚无对照测量，不宣称固定提速比例或节省工时。

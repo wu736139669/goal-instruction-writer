@@ -1,6 +1,6 @@
 # A multi-day Goal: Factory Town Idle in Godot
 
-[中文案例](#中文案例) · [Evidence summary](factory-town-idle-evidence.json) ·
+[Evidence summary](factory-town-idle-evidence.json) ·
 [Field notes](../field-notes.md)
 
 Recorded on October 17, 2026, at the 0.49r1 local candidate checkpoint.
@@ -102,28 +102,3 @@ its reference materials, and its raw runtime media remain private. The
 repository's existing demonstration uses separately labeled, already-public
 **Moonlit Kingdom** gameplay. It is a different project, not footage or a
 time-lapse of this case.
-
-## 中文案例
-
-这个案例来自维护者提供的真实会话，实际持续推进的是 **Factory Town Idle 的 Godot
-重做研究**。项目资料覆盖 10 月 13 日的分析与架构、14 日的可玩系统、15—16 日的规则/
-存档/界面修正，以及 17 日的 0.48、0.49 本地候选和 Mac/APK 交付。
-
-维护者估计最长游戏开发工作流超过 60 小时。此次核查的 Git 分支从已经完成的 0.19
-基线开始，到 0.49 检查点有 115 个提交、约 57 小时日期跨度；更早的开发不在这段历史
-之内。这些记录能证明跨多日推进与阶段成果，没有单独测量不间断计算时长。
-
-0.49 接通了修道院建设、跨镇研究省料、拆除恢复和保存继续；同源 Mac/APK、独立试玩
-入口和查看页均有交付记录。28.84 秒实录展示正常 1× 的剩余施工、研究变化、完成领取
-和保存。高级条件与近完工施工在录像前明确预置，另有普通新档流程，两者分别验收。
-
-这一案例展示了 Goal 的实际作用：把大目标拆成有证据的工作单元，在跨轮次工作中保留
-目标、用户决定、当前版本和下一游标。阶段候选交付后，完整复刻 Goal 仍在继续，下一项
-是大学对升级用料的规则核查。
-
-它也说明验证可以按影响安排：0.48 研究界面修改时，核心与输入未变，复用 1,983 项
-精确数值对照并运行当前界面/行为检查；0.49 改动共享规则后，重新验证受影响的核心。
-这样控制重复验证，同时保留必需的交付门槛；此次没有测量固定提速比例。
-
-公开内容为本案例时间线和[核查摘要](factory-town-idle-evidence.json)。现有公开演示中的
-月光王国是另一个已发布实录的项目，素材来源分别标明。

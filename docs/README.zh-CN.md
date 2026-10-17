@@ -25,7 +25,7 @@ AI agent 很少因为“不够努力”失败，更多时候是运行很久后�
 一个具体案例是 **Factory Town Idle 的 Godot 重做**：项目记录覆盖 10 月 13 日的分析与
 架构准备、10 月 14 日的可玩系统，以及 10 月 17 日交付的 **0.49 本地候选与 Mac、Android
 安装包**。生产、建设、研究、跨镇效果、保存恢复和下一工作游标，经过多轮开发仍能接续。
-可查看[真实案例与交付时间线](cases/factory-town-idle.md#中文案例)。
+可查看[Case study and delivery timeline](cases/factory-town-idle.md)。
 
 维护者估计，自己最长的一次游戏开发工作流超过 **60 小时**。已核查记录能支持跨多日
 推进和具体阶段交付，没有单独测量 Agent 不间断计算的时长；案例快照中的完整复刻
@@ -34,7 +34,7 @@ Goal 仍在继续。实际工作由 Agent、引擎、素材工具和人的决策
 
 | 实际场景 | Goal 要守住什么 | 可用证据 |
 | --- | --- | --- |
-| 游戏开发 | 可玩结果、连贯成长、运行检查和构建交付 | [Factory Town Idle：分析→0.49 本地候选](cases/factory-town-idle.md#中文案例)、维护者的 60 多小时经历，以及另行标明来源的[公开游戏实录](field-notes.md#game-development) |
+| 游戏开发 | 可玩结果、连贯成长、运行检查和构建交付 | [Factory Town Idle case study](cases/factory-town-idle.md)、维护者的 60 多小时经历，以及另行标明来源的[公开游戏实录](field-notes.md#game-development) |
 | Android SDK 交付 | 功能、兼容、集成和制品来源，同时控制反复全量验收 | 本地日志核查：14 次 Gradle 合计 9 分 32 秒，最终 SDK 单测约 45 秒；[核查方法与边界](field-notes.md#android-sdk-delivery) |
 | 开源技能发布 | 可安装、单一反馈入口、有界跟进、外部维护者门槛 | 已公开的[两轮独立评估](evaluations/2026-10-11-independent-goal-evaluation.zh-CN.md) |
 

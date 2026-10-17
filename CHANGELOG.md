@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.2.2] - 2026-10-17
+
+- Keep the Factory Town Idle case study and field-note body in English.
+- Point localized documentation to the English case study.
+
 ## [0.2.1] - 2026-10-17
 
 - Add an inspected Factory Town Idle Godot case: October 13–17 analysis, development, and 0.49 local candidate delivery with Mac/Android packages.
