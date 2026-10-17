@@ -1,0 +1,7 @@
+Goal Instruction Writer v0.2.0
+Keep a long agent workflow tied to one outcome, with proof and a clear finish.
+Maintainer reports a longest game-development workflow of more than 60 hours, from initial request through development and delivery. This is a field report, not a benchmark.
+Objective / Goal Anchor / Scope / Acceptance evidence / Bounded loop / Drift control / Explicit termination.
+Verification: focused iteration checks, required phase/delivery checks, reuse valid results, explain reruns.
+Recorded Moonlit Kingdom gameplay is a separate documented example, not the 60-hour run trace.
+Install from github.com/wu736139669/goal-instruction-writer.

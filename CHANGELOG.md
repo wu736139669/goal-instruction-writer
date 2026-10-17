@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-10-17
+
+- Expand the bilingual introduction with real use cases, an attributed 60+ hour game-development field report, and a private SDK log audit.
+- Add a recorded-gameplay demonstration, animated README preview, and editable video source with provenance.
+- Add a distribution guide distinguishing direct installation, installation-driven discovery, and curated-list review.
 - Add a verification strategy to Goal drafts and previews: focused iteration checks, required phase/delivery gates, evidence reuse, rerun reasons, and bounds for expensive checks.
 - Clarify that writing a Goal describes checks; executing the underlying task requires an execution request.
 - Add SDK examples showing which evidence to refresh after report, behavior, artifact, or API-snapshot changes.

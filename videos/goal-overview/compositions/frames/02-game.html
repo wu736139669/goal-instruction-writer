@@ -1,0 +1,50 @@
+<template>
+<style>
+
+@font-face{font-family:"EB Garamond";font-style:normal;font-weight:400;src:url("assets/fonts/EBGaramond-400.ttf") format("truetype");font-display:block}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;src:url("assets/fonts/Inter-400.ttf") format("truetype");font-display:block}
+@font-face{font-family:"Inter";font-style:normal;font-weight:700;src:url("assets/fonts/Inter-700.ttf") format("truetype");font-display:block}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:400;src:url("assets/fonts/JetBrainsMono-400.ttf") format("truetype");font-display:block}
+@font-face{font-family:"Noto Sans SC";font-style:normal;font-weight:400;src:url("assets/fonts/NotoSansSC-400-subset.ttf") format("truetype");font-display:block}
+#root{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;container-type:size;color:#141413;font-family:"Inter",sans-serif}
+
+.goal02-ground{position:absolute;inset:0;background:#FAF9F5}
+.goal02-kicker{position:absolute;left:80px;top:78px;font:400 25px "JetBrains Mono";letter-spacing:3px}
+.goal02-mark{color:#CC785C;font-size:40px;vertical-align:-4px;margin-right:16px}
+.goal02-title{position:absolute;left:80px;top:200px;width:505px;font:400 114px/1.0 "EB Garamond";letter-spacing:-2px}
+.goal02-title span{display:block}
+.goal02-project{position:absolute;left:84px;top:480px;font:400 33px "Inter"}
+.goal02-project-zh{position:absolute;left:84px;top:530px;font:400 30px "Noto Sans SC"}
+.goal02-labels{position:absolute;left:84px;top:620px;font:400 26px "JetBrains Mono";line-height:1.8}
+.goal02-stage{position:absolute;left:640px;top:180px;width:1200px;height:675px;border:1px solid #14141322;border-radius:8px;overflow:hidden;background:#EFE9DE}
+.goal02-video{position:absolute;inset:0;width:1200px;height:675px;object-fit:contain}
+.goal02-caption{position:absolute;left:640px;top:132px;font:400 24px "JetBrains Mono";letter-spacing:1px}
+.goal02-source{position:absolute;left:80px;top:868px;font-size:24px}
+.goal02-zh{position:absolute;left:84px;top:812px;font:400 30px "Noto Sans SC"}
+
+</style>
+<div data-hf-id="hf-7fup" id="root" data-composition-id="02-game" data-start="0" data-duration="10" data-width="1920" data-height="1080">
+
+<div data-hf-id="hf-kipp" id="goal02-ground" class="clip goal02-ground" data-start="0" data-duration="10" data-track-index="0"></div>
+<div data-hf-id="hf-4gom" class="goal02-kicker"><span data-hf-id="hf-9lrj" class="goal02-mark">✱</span>RECORDED PROJECT</div>
+<div data-hf-id="hf-4d7m" id="goal02-title" class="goal02-title"><span data-hf-id="hf-2fx2">A playable</span><span data-hf-id="hf-i1ne">result.</span></div>
+<div data-hf-id="hf-ia0d" id="goal02-project" class="goal02-project">Moonlit Kingdom</div><div data-hf-id="hf-scqd" id="goal02-project-zh" class="goal02-project-zh">月光王国</div>
+<div data-hf-id="hf-v6jd" class="goal02-labels"><div data-hf-id="hf-7pmh" id="goal02-label1">01  Game loop</div><div data-hf-id="hf-trc4" id="goal02-label2">02  Progression</div><div data-hf-id="hf-n632" id="goal02-label3">03  Runtime evidence</div></div>
+<div data-hf-id="hf-t3r1" class="goal02-caption">RECORDED GAMEPLAY / ORIGINAL SPEED</div>
+<div data-hf-id="hf-30zu" id="goal02-stage" class="goal02-stage"><!-- approved frame video hoisted by assemble-index --></div>
+<div data-hf-id="hf-0oq2" id="goal02-zh" class="goal02-zh">真实游戏运行录像</div>
+<div data-hf-id="hf-l04n" class="goal02-source">Recorded example · separate from the reported 60+ hour run</div>
+
+</div>
+<script>
+(function(){window.__timelines=window.__timelines||{};const tl=gsap.timeline({paused:true});
+
+tl.fromTo('#goal02-title',{x:-24,opacity:0},{x:0,opacity:1,duration:.6,ease:'power3.out'},.1);
+tl.fromTo('#goal02-stage',{opacity:0},{opacity:1,duration:.65,ease:'power2.out'},.08);
+tl.fromTo(['#goal02-project','#goal02-project-zh'],{y:20,opacity:0},{y:0,opacity:1,duration:.5,stagger:.1,ease:'power3.out'},1.35);
+['#goal02-label1','#goal02-label2','#goal02-label3'].forEach((id,i)=>tl.fromTo(id,{x:-14,opacity:0},{x:0,opacity:1,duration:.45,ease:'power3.out'},2.5+i*1.4));
+tl.fromTo('#goal02-zh',{y:16,opacity:0},{y:0,opacity:1,duration:.55,ease:'power3.out'},6.5);
+
+window.__timelines["02-game"]=tl;})();
+</script>
+</template>

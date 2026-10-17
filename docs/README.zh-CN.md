@@ -7,12 +7,46 @@
 
 [English](../README.md) · [简体中文](README.zh-CN.md)
 
-> **写 Goal 之前，先把循环摊开。**
+> **让长时间运行的 Agent 始终朝着同一个结果推进。**
+>
+> 先预览循环，让进展可检查，最后凭证据交付。
+
+![Goal 技能动态演示](../assets/goal-overview.gif)
+
+[观看完整演示](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.0/goal-overview.mp4) · [真实使用与证据](field-notes.md) · [技能投稿指南](distribution.md)
 
 AI agent 很少因为“不够努力”失败，更多时候是运行很久后已经偏离了原目标。
 <code>goal-instruction-writer</code> 是一个 Codex skill，把“继续改进、直到满意”变成一份能被检查、能被限制、能被暂停、能安全结束的 Goal 指令。
 
 它为长任务补上可观察目标、有界循环、进展证据、漂移检查和明确终态。
+
+## 从真实长任务中提炼
+
+维护者反馈，自己最长的一次游戏开发工作流运行了 **60 多个小时**，从最初的请求一路
+推进到游戏开发与交付。这个经历正是技能要解决的问题：经过玩法实现、素材、调试、
+试玩和打包等许多轮工作后，原始目标仍然清楚。
+
+60 多小时属于维护者报告的实际经历，并非对照实验或下一次运行的时长保证。实际工作
+由 Agent、游戏引擎、素材工具和人的决策共同完成；技能提供的是把这些工作连接起来的
+指令契约。
+
+| 实际场景 | Goal 要守住什么 | 可用证据 |
+| --- | --- | --- |
+| 游戏开发 | 可玩结果、连贯成长、运行检查和构建交付 | 维护者的 60 多小时经历，以及另行标明来源的[游戏实录](field-notes.md#game-development) |
+| Android SDK 交付 | 功能、兼容、集成和制品来源，同时控制反复全量验收 | 本地日志核查：14 次 Gradle 合计 9 分 32 秒，最终 SDK 单测约 45 秒；[核查方法与边界](field-notes.md#android-sdk-delivery) |
+| 开源技能发布 | 可安装、单一反馈入口、有界跟进、外部维护者门槛 | 已公开的[两轮独立评估](evaluations/2026-10-11-independent-goal-evaluation.zh-CN.md) |
+
+## 用上之后，工作方式有什么变化
+
+- **先把需求写成契约：** 明确结果、范围、证据和结束条件，再启动长任务。
+- **每轮都有明确下一步：** 指定一个验收项、预期变化和可恢复的游标。
+- **跨轮次还能接续：** Goal Anchor 和决策记录帮助后续回合或接手的 Agent 找回目标。
+- **验证有范围、有触发条件：** 修改中定向检查，阶段收尾完成必需的全面验收，复用仍有效的结果。
+- **达标就交付：** 准则与交付物满足后结束，阻塞和限额如实报告。
+
+适合游戏开发、功能交付、迁移、调研和发布等多轮任务。短小的一次性请求通常直接写
+普通提示即可。技能本身不增加权限，也不负责让宿主一直运行；续跑、工具和上下文恢复
+由你的 Agent 运行环境提供。
 
 ## 原理总图
 
@@ -192,6 +226,21 @@ Use $goal-instruction-writer to draft the final Goal for this task.
 GOAL BLOCKED: <具体原因>；四轮仍未完成则 GOAL TIMEBOXED: <状态>。
 ~~~
 
+## 用游戏开发任务试一次
+
+~~~text
+用 $goal-instruction-writer 先预览一个 Godot 可玩游戏切片的 Goal。
+先展示结果、范围、一轮循环、证据和停止条件。
+纳入可玩的核心循环、一条连贯成长路径、实际运行试玩证据、存档读档和可复现构建交付。
+固定游戏概念与平台，无关新功能放入延期清单。
+迭代中运行定向检查，交付阶段完成要求的全面验收。
+跨回合保留 Goal Anchor 和下一游标。
+等我确认循环并要求执行后，再开始开发。
+~~~
+
+预览确认后，生成可粘贴 Goal，再交给宿主支持的长任务工作流运行。
+Goal 是指令契约；启动、恢复和状态命令取决于具体宿主。
+
 ## 运行时边界
 
 技能负责设计和审查指令契约。运行时访问权限、工具可用性，以及外部副作用的审批，
@@ -208,6 +257,9 @@ GOAL BLOCKED: <具体原因>；四轮仍未完成则 GOAL TIMEBOXED: <状态>。
 - [漂移检测和恢复](../references/drift-control.md)
 - [编码、研究和开源案例](../references/examples.md)
 - [独立 Goal 测试报告](evaluations/2026-10-11-independent-goal-evaluation.zh-CN.md)
+- [真实使用、游戏实录与证据边界](field-notes.md)
+- [技能分发与投稿指南](distribution.md)
+- [可编辑演示视频与来源](../videos/goal-overview/BRIEF.md)
 - [Independent Goal evaluation（English）](evaluations/2026-10-11-independent-goal-evaluation.md)
 - [发布工具包](launch-kit.md)
 - [贡献指南](../CONTRIBUTING.md)

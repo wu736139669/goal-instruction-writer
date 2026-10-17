@@ -5,3 +5,8 @@ __pycache__/
 .env
 .env.*
 !.env.example
+node_modules/
+videos/**/.hyperframes/
+videos/**/.media/
+videos/**/.thumbnails/
+videos/**/renders/

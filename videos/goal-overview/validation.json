@@ -1,0 +1,57 @@
+{
+  "tool": "HyperFrames",
+  "version": "0.8.167",
+  "durationSeconds": 36,
+  "canvas": [
+    1920,
+    1080
+  ],
+  "strictCheckPassed": true,
+  "lintErrors": 0,
+  "lintWarnings": 0,
+  "runtimeErrors": 0,
+  "layoutErrors": 0,
+  "contrastChecksPassed": 43,
+  "automatedMotionAssertions": false,
+  "manualSeekReviewSeconds": [
+    6,
+    14,
+    26,
+    34,
+    7.9,
+    8.2,
+    17.9,
+    18.2,
+    27.9,
+    28.2
+  ],
+  "review": "Four scene midpoints and both sides of every clean cut inspected; real footage, captions, and layout visible.",
+  "gameSourceSha256": "bdc21cbd240cc7835fdcc73aecc0498dae32a7281cf7db8d34abec6baa5507ed",
+  "render": {
+    "filename": "goal-overview.mp4",
+    "durationSeconds": 36,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "audioTracks": 0,
+    "sizeBytes": 2500170,
+    "sha256": "17de328104695d005e4ef80efec0817e0f6f8360ee62d328b7da51725ca5da59",
+    "fullDecodePassed": true,
+    "encodedFrameReviewSeconds": [
+      6,
+      14,
+      26,
+      34
+    ]
+  },
+  "readmeExcerpt": {
+    "filename": "goal-overview.gif",
+    "durationSeconds": 10,
+    "width": 720,
+    "height": 405,
+    "sizeBytes": 300509,
+    "sha256": "fb71e27cbd9c7a2e0cf359ba209c27bb22fcc00752ef7450008744c0ea0e9a41"
+  }
+}

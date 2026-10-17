@@ -1,0 +1,61 @@
+<template>
+<style>
+
+@font-face{font-family:"EB Garamond";font-style:normal;font-weight:400;src:url("assets/fonts/EBGaramond-400.ttf") format("truetype");font-display:block}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;src:url("assets/fonts/Inter-400.ttf") format("truetype");font-display:block}
+@font-face{font-family:"Inter";font-style:normal;font-weight:700;src:url("assets/fonts/Inter-700.ttf") format("truetype");font-display:block}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:400;src:url("assets/fonts/JetBrainsMono-400.ttf") format("truetype");font-display:block}
+@font-face{font-family:"Noto Sans SC";font-style:normal;font-weight:400;src:url("assets/fonts/NotoSansSC-400-subset.ttf") format("truetype");font-display:block}
+#root{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;container-type:size;color:#141413;font-family:"Inter",sans-serif}
+
+.goal01-ground{position:absolute;inset:0;background:#FAF9F5}
+.goal01-kicker{position:absolute;left:80px;top:78px;font:400 25px "JetBrains Mono";letter-spacing:3px}
+.goal01-mark{color:#CC785C;font-size:42px;vertical-align:-4px;margin-right:18px}
+.goal01-title{position:absolute;left:80px;top:210px;width:1060px;font-family:"EB Garamond";font-weight:400;letter-spacing:-2px;line-height:1.02}
+.goal01-line1{display:block;font-size:168px;height:180px}
+.goal01-line2{display:block;font-size:108px;height:130px}
+.goal01-stat{position:absolute;left:1210px;top:170px;width:620px;height:390px;display:flex;align-items:baseline}
+.goal01-number{display:block;font:400 350px/1 "EB Garamond";font-variant-numeric:tabular-nums;width:355px;text-align:right;transform-origin:50% 65%}
+.goal01-plus{display:block;font:400 126px "JetBrains Mono";padding-left:9px}
+.goal01-unit{position:absolute;left:1250px;top:550px;font:400 30px "JetBrains Mono";letter-spacing:7px}
+.goal01-label{position:absolute;left:82px;top:560px;width:1000px;font-size:32px;line-height:1.35}
+.goal01-rail{position:absolute;left:80px;top:685px;width:1760px;height:70px}
+.goal01-track{height:3px;background:#ECE3D4;width:100%}
+.goal01-fill{height:3px;width:100%;background:#CC785C;transform-origin:left}
+.goal01-phases{display:flex;justify-content:space-between;padding-top:22px;font:400 28px "JetBrains Mono"}
+.goal01-zh{position:absolute;left:80px;top:802px;font:400 31px "Noto Sans SC";letter-spacing:1px}
+.goal01-footer{position:absolute;left:80px;top:864px;font-size:24px}
+.goal01-version{position:absolute;right:80px;top:864px;font:400 23px "JetBrains Mono"}
+
+</style>
+<div data-hf-id="hf-ofdz" id="root" data-composition-id="01-long-run" data-start="0" data-duration="8" data-width="1920" data-height="1080">
+
+<div data-hf-id="hf-4xhc" id="goal01-ground" class="clip goal01-ground" data-start="0" data-duration="8" data-track-index="0"></div>
+<div data-hf-id="hf-ur8q" class="goal01-kicker"><span data-hf-id="hf-gxgo" class="goal01-mark">✱</span>FIELD NOTES / MAINTAINER REPORT</div>
+<div data-hf-id="hf-p1r1" class="goal01-title"><span data-hf-id="hf-1for" id="goal01-title-a" class="goal01-line1">One goal.</span><span data-hf-id="hf-xw69" id="goal01-title-b" class="goal01-line2">Hours of real work.</span></div>
+<div data-hf-id="hf-yaov" class="goal01-stat"><span data-hf-id="hf-xevx" id="goal01-number" class="goal01-number">0</span><span data-hf-id="hf-1w4m" id="goal01-plus" class="goal01-plus">+</span></div>
+<div data-hf-id="hf-ygkv" id="goal01-unit" class="goal01-unit">HOURS</div>
+<div data-hf-id="hf-ilni" id="goal01-label" class="goal01-label"><div data-hf-id="hf-a4uw">A game-development workflow,</div><div data-hf-id="hf-bine">from the first brief through delivery.</div></div>
+<div data-hf-id="hf-8rwt" class="goal01-rail"><div data-hf-id="hf-ahbu" class="goal01-track"><div data-hf-id="hf-9rn6" id="goal01-fill" class="goal01-fill"></div></div><div data-hf-id="hf-z729" class="goal01-phases"><span data-hf-id="hf-y4f7">Brief</span><span data-hf-id="hf-sodb">Build</span><span data-hf-id="hf-zedf">Playtest</span><span data-hf-id="hf-ms1t">Handoff</span></div></div>
+<div data-hf-id="hf-eopw" id="goal01-zh" class="goal01-zh">维护者报告：最长游戏开发工作流超过 60 小时</div>
+<div data-hf-id="hf-3jmy" class="goal01-footer">Field report · not a benchmark</div><div data-hf-id="hf-smfi" class="goal01-version">Goal Instruction Writer · v0.2.0</div>
+
+</div>
+<script>
+(function(){window.__timelines=window.__timelines||{};const tl=gsap.timeline({paused:true});
+
+tl.fromTo('#goal01-title-a',{y:45,opacity:0},{y:0,opacity:1,duration:.55,ease:'power3.out'},.08);
+tl.fromTo('#goal01-title-b',{y:40,opacity:0},{y:0,opacity:1,duration:.55,ease:'power3.out'},.42);
+const state={value:0};const num=document.getElementById('goal01-number');
+tl.to(state,{value:60,duration:1.9,ease:'power3.out',onUpdate:()=>{num.textContent=Math.round(state.value)}},.28);
+tl.fromTo('#goal01-number',{scale:.65},{scale:1,duration:1.9,ease:'power3.out'},.28);
+tl.fromTo('#goal01-plus',{y:20,opacity:0},{y:0,opacity:1,duration:.35,ease:'power3.out'},2.18);
+tl.fromTo('#goal01-unit',{opacity:0},{opacity:1,duration:.35},2.25);
+tl.fromTo('#goal01-label',{y:20,opacity:0},{y:0,opacity:1,duration:.6,ease:'power3.out'},2.65);
+tl.fromTo('#goal01-fill',{scaleX:0},{scaleX:1,duration:2.1,ease:'power2.out'},3.0);
+tl.fromTo('.goal01-phases span',{y:16,opacity:0},{y:0,opacity:1,duration:.4,stagger:.12,ease:'power3.out'},3.35);
+tl.fromTo('#goal01-zh',{y:18,opacity:0},{y:0,opacity:1,duration:.55,ease:'power3.out'},5.2);
+
+window.__timelines["01-long-run"]=tl;})();
+</script>
+</template>

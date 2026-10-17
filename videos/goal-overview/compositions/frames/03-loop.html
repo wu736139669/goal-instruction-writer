@@ -1,0 +1,57 @@
+<template>
+<style>
+
+@font-face{font-family:"EB Garamond";font-style:normal;font-weight:400;src:url("assets/fonts/EBGaramond-400.ttf") format("truetype");font-display:block}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;src:url("assets/fonts/Inter-400.ttf") format("truetype");font-display:block}
+@font-face{font-family:"Inter";font-style:normal;font-weight:700;src:url("assets/fonts/Inter-700.ttf") format("truetype");font-display:block}
+@font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:400;src:url("assets/fonts/JetBrainsMono-400.ttf") format("truetype");font-display:block}
+@font-face{font-family:"Noto Sans SC";font-style:normal;font-weight:400;src:url("assets/fonts/NotoSansSC-400-subset.ttf") format("truetype");font-display:block}
+#root{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;container-type:size;color:#141413;font-family:"Inter",sans-serif}
+
+.goal03-ground{position:absolute;inset:0;background:#FAF9F5}
+.goal03-kicker{position:absolute;left:80px;top:78px;font:400 25px "JetBrains Mono";letter-spacing:2px}
+.goal03-mark{color:#CC785C;font-size:40px;vertical-align:-4px;margin-right:16px}
+.goal03-title{position:absolute;left:80px;top:165px;font:400 108px/1.05 "EB Garamond";letter-spacing:-2px;width:1760px}
+.goal03-anchor{position:absolute;left:80px;top:304px;width:1760px;padding:20px 28px;border:1px solid #14141322;border-radius:8px;background:#EFE9DE;font:400 32px "JetBrains Mono"}
+.goal03-nodes{position:absolute;left:80px;top:440px;width:1760px;display:flex;justify-content:space-between}
+.goal03-node{width:300px;height:126px;display:flex;align-items:center;justify-content:center;border:1px solid #14141333;border-radius:8px;background:#FAF9F5;font:400 34px "JetBrains Mono"}
+.goal03-connectors{position:absolute;left:0;top:0;width:1920px;height:1080px;pointer-events:none}
+.goal03-connectors path{fill:none;stroke:#CC785C;stroke-width:3}
+.goal03-meta{position:absolute;left:80px;top:610px;font:400 28px "JetBrains Mono"}
+.goal03-receipts{position:absolute;left:80px;top:696px;display:flex;gap:30px}
+.goal03-receipt{width:560px;padding:18px 24px;border:1px solid #14141322;border-radius:8px;font:400 26px "JetBrains Mono"}
+.goal03-complete{color:#FAF9F5;background:#181715}
+.goal03-complete-sub{position:absolute;left:1260px;top:778px;width:560px;font-size:25px;line-height:1.25}
+.goal03-zh{position:absolute;left:80px;top:846px;font:400 31px "Noto Sans SC"}
+
+</style>
+<div data-hf-id="hf-3m3s" id="root" data-composition-id="03-loop" data-start="0" data-duration="10" data-width="1920" data-height="1080">
+
+<div data-hf-id="hf-ct45" id="goal03-ground" class="clip goal03-ground" data-start="0" data-duration="10" data-track-index="0"></div>
+<div data-hf-id="hf-51n4" class="goal03-kicker"><span data-hf-id="hf-ou8y" class="goal03-mark">✱</span>WORKFLOW ILLUSTRATION / <span data-hf-id="hf-h742" style="font-family:'Noto Sans SC'">流程示意</span></div>
+<div data-hf-id="hf-9jvy" id="goal03-title" class="goal03-title">One outcome. A bounded loop.</div>
+<div data-hf-id="hf-mhkj" id="goal03-anchor" class="goal03-anchor">Goal Anchor → A playable build</div>
+<svg data-hf-id="hf-21rb" class="goal03-connectors" viewBox="0 0 1920 1080" aria-hidden="true"><path data-hf-id="hf-pjjh" id="goal03-path1" d="M380 503 H444"/><path data-hf-id="hf-tcw6" id="goal03-path2" d="M744 503 H808"/><path data-hf-id="hf-4ert" id="goal03-path3" d="M1108 503 H1172"/><path data-hf-id="hf-0dlw" id="goal03-path4" d="M1472 503 H1536"/></svg>
+<div data-hf-id="hf-whtm" class="goal03-nodes"><div data-hf-id="hf-tawb" id="goal03-node1" class="goal03-node">Inspect</div><div data-hf-id="hf-60k2" id="goal03-node2" class="goal03-node">Select</div><div data-hf-id="hf-i01l" id="goal03-node3" class="goal03-node">Act</div><div data-hf-id="hf-c0ll" id="goal03-node4" class="goal03-node">Verify</div><div data-hf-id="hf-q1hw" id="goal03-node5" class="goal03-node">Record</div></div>
+<div data-hf-id="hf-yrsl" id="goal03-meta" class="goal03-meta">One criterion · evidence · next cursor</div>
+<div data-hf-id="hf-hgjw" class="goal03-receipts"><div data-hf-id="hf-qtno" id="goal03-target" class="goal03-receipt">ON_TARGET → next criterion</div><div data-hf-id="hf-g5cq" id="goal03-defer" class="goal03-receipt">SIDE_QUEST → defer</div><div data-hf-id="hf-v5yl" id="goal03-complete" class="goal03-receipt goal03-complete">GOAL COMPLETE</div></div>
+<div data-hf-id="hf-hun7" id="goal03-complete-sub" class="goal03-complete-sub">All criteria verified + deliverable ready</div>
+<div data-hf-id="hf-hzps" id="goal03-zh" class="goal03-zh">每轮推进一个验收项，保留证据与下一游标</div>
+
+</div>
+<script>
+(function(){window.__timelines=window.__timelines||{};const tl=gsap.timeline({paused:true});
+
+tl.fromTo('#goal03-title',{y:28,opacity:0},{y:0,opacity:1,duration:.6,ease:'power3.out'},.1);
+tl.fromTo('#goal03-anchor',{x:-20,opacity:0},{x:0,opacity:1,duration:.55,ease:'power3.out'},1.0);
+for(let i=1;i<=5;i++){tl.fromTo('#goal03-node'+i,{y:24,opacity:0},{y:0,opacity:1,duration:.5,ease:'power3.out'},2.0+(i-1)*.65);}
+for(let i=1;i<=4;i++){const el=document.getElementById('goal03-path'+i);const len=el.getTotalLength();el.style.strokeDasharray=String(len);tl.fromTo(el,{strokeDashoffset:len},{strokeDashoffset:0,duration:.5,ease:'power2.out'},2.5+(i-1)*.65);}
+tl.fromTo('#goal03-meta',{opacity:0},{opacity:1,duration:.45},5.1);
+tl.fromTo('#goal03-target',{y:15,opacity:0},{y:0,opacity:1,duration:.4,ease:'power3.out'},6.15);
+tl.fromTo('#goal03-defer',{y:15,opacity:0},{y:0,opacity:1,duration:.4,ease:'power3.out'},6.6);
+tl.fromTo(['#goal03-complete','#goal03-complete-sub'],{y:15,opacity:0},{y:0,opacity:1,duration:.45,stagger:.12,ease:'power3.out'},7.15);
+tl.fromTo('#goal03-zh',{opacity:0},{opacity:1,duration:.45},7.65);
+
+window.__timelines["03-loop"]=tl;})();
+</script>
+</template>

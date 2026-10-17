@@ -7,11 +7,13 @@
 
 [English](README.md) · [简体中文](docs/README.zh-CN.md)
 
-> **Write the Goal after you can explain the loop.**
+> **Keep a long agent workflow tied to one outcome.**
 >
-> **Preview the loop before an agent starts.**
+> Preview the loop. Make progress inspectable. Finish with evidence.
 
-![Goal Instruction Writer social preview](assets/social-preview.png)
+![Goal Instruction Writer animated overview](assets/goal-overview.gif)
+
+[Watch the full demo](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.0/goal-overview.mp4) · [Real usage and evidence](docs/field-notes.md) · [Where to share a skill](docs/distribution.md)
 
 AI agents rarely fail because they did too little. More often, they work for a long
 time and quietly move away from the original outcome. <code>goal-instruction-writer</code>
@@ -20,6 +22,44 @@ reviewed, bounded, paused, and finished cleanly.
 
 It gives every long-running task an observable outcome, a bounded loop, evidence
 for meaningful progress, drift gates, and explicit terminal states.
+
+## Built from long-running work
+
+The maintainer reports using this workflow for a game-development run lasting
+**more than 60 hours**, taking a project from the initial request through game
+development and delivery. That experience is the reason for the skill: make the
+original outcome survive implementation, assets, debugging, playtesting, and
+handoff across many iterations.
+
+The duration is a maintainer-reported field experience, not a controlled
+benchmark or a promise about another run. The agent, engine, asset tools, and
+human decisions do the work; this skill supplies the instruction contract that
+keeps that work connected.
+
+| Real work | What the Goal needs to preserve | Evidence available |
+| --- | --- | --- |
+| Game development | A playable result, coherent progression, runtime checks, and a build handoff across a long run | Maintainer's 60+ hour report, plus separately identified [recorded game examples](docs/field-notes.md#game-development) |
+| Android SDK delivery | Feature work, compatibility, integration, and artifact provenance without repeated full release cycles | A local log audit: 14 Gradle calls totaling 9m 32s; final SDK unit suites about 45s; [method and limits](docs/field-notes.md#android-sdk-delivery) |
+| Open-source launch | Installability, one feedback path, finite follow-up, and an external maintainer gate | A published [two-iteration evaluation](docs/evaluations/2026-10-11-independent-goal-evaluation.md) |
+
+## What changes when you use it
+
+- **From a brief to a contract:** agree on the observable result, allowed scope,
+  evidence, and stop conditions before a long run starts.
+- **From repeated activity to a next step:** each iteration names one criterion,
+  the expected change, and the next durable cursor.
+- **From context loss to a checkpoint:** the Goal Anchor and decision record let
+  a later turn or another agent recover the intended outcome.
+- **From repeated release checks to valid evidence:** run focused checks while
+  editing, complete required broader checks at the right gate, and reuse results
+  whose relevant inputs still match.
+- **From endless improvement to delivery:** finish when the criteria and
+  deliverable are satisfied; surface blockers and limits explicitly.
+
+Use it for game development, feature delivery, migrations, research, or launch
+work that needs several iterations. A small one-shot task usually needs only a
+normal prompt. It does not add execution permissions or keep a host running by
+itself; continuation, tools, and context recovery come from your agent runtime.
 
 ## The idea in one picture
 
@@ -209,6 +249,23 @@ GOAL BLOCKED: <reason> after two equivalent failures; emit
 GOAL TIMEBOXED: <state> after the four-iteration limit.
 ~~~
 
+## Try it on a game-development task
+
+~~~text
+Use $goal-instruction-writer to preview a Goal for a playable Godot game slice.
+First show the outcome, scope, one iteration, evidence, and stop conditions.
+Include a playable core loop, one coherent progression path, runtime playtest
+evidence, save/load behavior, and a reproducible build handoff.
+Keep the game concept and platform fixed. Park unrelated features.
+Use focused checks during edits and the required broader checks at delivery.
+Preserve the Goal Anchor and the next cursor across turns.
+Do not execute the development task until I confirm the loop and ask you to run it.
+~~~
+
+After confirming the preview, ask for the ready-to-paste Goal, then run it in
+your agent's supported long-running workflow. A Goal is an instruction contract;
+the exact start, resume, and status commands depend on that host.
+
 ## Runtime boundary
 
 The skill designs and audits the instruction contract. Runtime access,
@@ -227,6 +284,9 @@ Waiting for a maintainer, owner, or missing dataset is not a reason to invent mo
 - [Coding, research, and open-source examples](references/examples.md)
 - [Launch kit with ready-to-post copy](docs/launch-kit.md)
 - [Independent Goal evaluation](docs/evaluations/2026-10-11-independent-goal-evaluation.md)
+- [Real usage, recorded examples, and evidence limits](docs/field-notes.md)
+- [Skill distribution and submission guide](docs/distribution.md)
+- [Editable video source and provenance](videos/goal-overview/BRIEF.md)
 - [Contributing guide](CONTRIBUTING.md)
 - [GitHub Discussions](https://github.com/wu736139669/goal-instruction-writer/discussions)
 - [Chinese documentation](docs/README.zh-CN.md)
