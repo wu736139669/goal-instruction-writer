@@ -58,6 +58,8 @@ outstanding platform gates are recorded in [submission status](submission-status
 | [Skillboard](https://www.skillboard.lol/submit) | Suggest a public GitHub repository or skill directory | Valid frontmatter and a license permitting indexing/attribution |
 | [agentskill.sh](https://agentskill.sh/submit) | Import a GitHub repository or direct `SKILL.md` URL | Import must finish successfully; platform rate limits apply |
 | [SkillMD.ai](https://skillmd.ai/submit/) | Submit a GitHub source, Markdown, or ZIP, then review and publish the resulting draft | Contact email; inspect the generated files before publishing |
+| [SkillBazaar](https://skillbazaar.ai/dashboard/new) | Import a public GitHub skill, review the English listing, category, and tags, then publish | Author account; valid `SKILL.md`; optional AI analysis does not gate ordinary publication |
+| [SkillRepo](https://skillrepo.dev/for-publishers) | Upload the runtime ZIP, save it, then publish the private skill to the public catalog | Free Publisher account; valid frontmatter; complete platform analysis and explicit Publish step |
 | [Agent Skill Source](https://agentskillsource.com/submit.php) | Submit metadata, source URL, execution type, runtime, and contact details | Public GitHub source; supports Prompt Only and OpenAI Codex |
 
 Submitting a source is distinct from a completed import, public listing, or
