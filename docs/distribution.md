@@ -71,6 +71,9 @@ outstanding platform gates are recorded in [submission status](submission-status
 | [Agent Skill Source](https://agentskillsource.com/submit.php) | Submit metadata, source URL, execution type, runtime, and contact details | Public GitHub source; supports Prompt Only and OpenAI Codex |
 | [MCP.Directory](https://mcp.directory/submit-skill) | Submit the direct GitHub `SKILL.md` URL with a name, category, short description, and contact email | Description limit is 300 characters; an existing-submission response means review is pending |
 | [Awesome Skills](https://www.awesomeskills.dev/en/submit) | Submit a GitHub repository or skill-directory URL | Complete the Cloudflare human-verification challenge before submitting; the separate newsletter prompt is optional |
+| [Skills Directory](https://app.skillsdirectory.com/submit) | Sign in, submit a GitHub repository, and optionally specify the `SKILL.md` path | Public repository with a valid skill; platform analyzes metadata and bundle files, then reports publication after validation |
+| [AI Agents Listing](https://aiagentslisting.com/submit) | Use the Skill repository route described in the [official guide](https://aiagentslisting.com/blog/how-to-submit-your-ai-agent) | Sign-in required; public GitHub repository or skill folder; review is separate from submission |
+| [AI Agent Skill](https://ai-agent-skill.com/contact) | Send an English catalog request to the editors with the public skill URL and use case | Contact name, email, role, request type, and working human verification |
 
 Submitting a source is distinct from a completed import, public listing, or
 maintainer acceptance. Preserve the actual receipt and report its state.

@@ -17,6 +17,9 @@ version 0.2.2. Submission copy and the case-study links are in English.
 | [MCP.Directory](https://mcp.directory/submit-skill) | Existing submission confirmed in the review queue | Actual response: “This skill has already been submitted. We'll review it soon!” |
 | [Awesome Skills](https://www.awesomeskills.dev/en/skill/wu736139669-goal-instruction-writer) | Published public directory entry | English detail page, complete instruction body, GitHub-backed install command, and canonical source link verified in the browser |
 | [Agent Skill Exchange #119](https://github.com/agentskillexchange/skills/pull/119) | New PR open; awaiting maintainer review | Seven-file skill directory submitted; focused local checks passed; GitHub Actions awaits maintainer approval |
+| [Skills Directory](https://skillsdirectory.com/skills/wu736139669-goal-instruction-writer) | Published, based on the platform's live receipt | Visible confirmation: “Skill submitted. It’s live in the directory.”; canonical repository and explicit `SKILL.md` path submitted |
+| [AI Agents Listing](https://aiagentslisting.com/submit) | Not submitted; login page unavailable in this check | The linked sign-in page remained blank without a usable login form; no submission receipt |
+| [AI Agent Skill](https://ai-agent-skill.com/contact) | English request prepared; not submitted | Required Turnstile component reports an error after a reload; no submission receipt |
 
 OpenAgentSkill's review notes flag executable/script files, package scan bounds,
 and command execution for deeper review. This is a saved review request, not an
@@ -67,6 +70,24 @@ installation-content, and 79-pattern security checks passed locally. The
 [upstream validation workflow](https://github.com/agentskillexchange/skills/actions/runs/39006588308)
 explicitly awaits maintainer approval before running. Merging the PR and
 publishing it to the marketplace are separate maintainer steps.
+
+Skills Directory received the canonical GitHub repository and the explicit root
+`SKILL.md` path. After analyzing the source, its authenticated submission page
+returned “Skill submitted” and “It’s live in the directory,” with the public
+entry linked above. This publication state is based on the visible platform
+receipt. The initial GitHub callback returned `state_mismatch`; a fresh sign-in
+attempt completed and exposed the submission form.
+
+AI Agents Listing's documented Skill route accepts a public GitHub repository.
+In this check, its submission page led to a sign-in URL that remained blank and
+did not expose a usable login form. No repository submission or review receipt
+was reached.
+
+AI Agent Skill has a complete English catalog-request draft with the slug, MIT
+license, Codex use case, canonical source, case study, and demo. Its required
+human-verification component displayed “Turnstile error (often hostname not
+allowed). Add this domain in Cloudflare Turnstile.” The error persisted after
+one reload. A working verification component is needed to complete this request.
 
 Screenshots and the private tracking link are retained locally. Private tracking
 tokens and contact-account data are excluded from this public record.
