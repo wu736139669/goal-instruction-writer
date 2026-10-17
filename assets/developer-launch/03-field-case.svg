@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<rect width="1600" height="1000" fill="#101c31"/>
+<text x="96" y="74" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#4ed1c5">ENGLISH FIELD CASE / INSPECTED STAGES</text>
+<text x="96" y="160" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="88" font-weight="700" fill="#f4f7ff">A multi-day Godot port</text>
+<text x="96" y="280" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="35" font-weight="400" fill="#a9bfdd">Factory Town Idle: from analysis to local candidate deliveries</text>
+<rect x="96" y="385" width="448" height="300" rx="24" fill="#17283f" stroke="#4ed1c5" stroke-width="2"/>
+<text x="124" y="417" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#4ed1c5">01</text>
+<text x="124" y="465" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="39" font-weight="700" fill="#f4f7ff">Analysis and</text>
+<text x="124" y="515" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="39" font-weight="700" fill="#f4f7ff">architecture</text>
+<text x="124" y="591" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#a9bfdd">Project analysis</text>
+<text x="124" y="629" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#a9bfdd">Architecture decisions</text>
+<rect x="576" y="385" width="448" height="300" rx="24" fill="#17283f" stroke="#917aff" stroke-width="2"/>
+<text x="604" y="417" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#917aff">02</text>
+<text x="604" y="465" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="39" font-weight="700" fill="#f4f7ff">Playable</text>
+<text x="604" y="515" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="39" font-weight="700" fill="#f4f7ff">systems</text>
+<text x="604" y="591" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#a9bfdd">Implemented systems</text>
+<text x="604" y="629" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#a9bfdd">Playable progress</text>
+<rect x="1056" y="385" width="448" height="300" rx="24" fill="#17283f" stroke="#ffbc68" stroke-width="2"/>
+<text x="1084" y="417" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#ffbc68">03</text>
+<text x="1084" y="465" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="39" font-weight="700" fill="#f4f7ff">Mac + Android</text>
+<text x="1084" y="515" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="39" font-weight="700" fill="#f4f7ff">local candidate</text>
+<text x="1084" y="591" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#a9bfdd">Candidate packages</text>
+<text x="1084" y="629" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#a9bfdd">Delivery evidence</text>
+<text x="96" y="745" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="80" font-weight="700" fill="#f4f7ff">60+ hours</text>
+<text x="520" y="759" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#a9bfdd">Maintainer-reported longest workflow</text>
+<text x="520" y="802" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="400" fill="#a9bfdd">An estimate, separate from the stage-delivery records</text>
+<text x="96" y="875" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="400" fill="#ffbc68">The full project Goal was still active at the snapshot.</text>
+<text x="96" y="933" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" fill="#a9bfdd">Source: docs/cases/factory-town-idle.md</text>
+</svg>

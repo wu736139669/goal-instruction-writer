@@ -20,9 +20,9 @@ version 0.2.2. Submission copy and the case-study links are in English.
 | [Skills Directory](https://skillsdirectory.com/skills/wu736139669-goal-instruction-writer) | Published public directory entry | Live receipt and public detail page verified in the native browser; platform automatic analysis reports grade A, score 100/100 |
 | [AI Agents Listing](https://aiagentslisting.com/submit/goal-instruction-writer/success) | Submitted for review | Visible confirmation: “goal-instruction-writer is in the review queue”; repository-only Skill route completed |
 | [AI Agent Skill](https://ai-agent-skill.com/contact) | English request prepared; not submitted | Required Turnstile component reports an error after a reload; no submission receipt |
-| [Console.dev](https://console.dev/selection-criteria) | English editorial submission sent | Sent-mail recipient, subject, and body verified; editorial selection and publication are pending |
-| [DevHunt](https://devhunt.org/login) | English free-listing package prepared; not submitted | GitHub sign-in is waiting for confirmation of the new read-only email authorization; no listing receipt |
-| [Product Hunt](https://www.producthunt.com/) | English launch package prepared; not submitted | Cloudflare verification completed; GitHub sign-in is waiting for read-only email and profile authorization; no platform draft or public launch receipt |
+| [Console.dev](https://console.dev/selection-criteria) | English editorial submission received; review pending | Sent message verified; automatic acknowledgement says submissions will be reviewed for the next newsletter |
+| [DevHunt](https://devhunt.org/tool/goal-instruction-writer) | Free public tool page created | Browser page and anonymous HTTP 200 verified; English thumbnail and three gallery images; free weekly promotion queued for May 13, 2031 |
+| [Product Hunt](https://www.producthunt.com/products/goal-instruction-writer) | Launch successfully scheduled | Receipt and pre-launch dashboard verified; October 18, 2026 at 12:01 AM Pacific / 15:01 Asia/Shanghai; not yet live |
 
 OpenAgentSkill's review notes flag executable/script files, package scan bounds,
 and command execution for deeper review. This is a saved review request, not an
@@ -100,18 +100,32 @@ tokens and contact-account data are excluded from this public record.
 
 Console.dev received an English editorial request at the submission address
 published in its selection criteria. The sent-mail record contains the expected
-recipient, subject, and complete message body. This verifies sending and does
-not establish delivery, an editor reply, selection, or publication.
+recipient, subject, and complete message body. An automated reply subsequently
+acknowledged receipt and said submissions would be reviewed for the next
+newsletter. This does not establish editorial selection or publication.
 
 The [developer launch kit](developer-launch-kit.md) contains the English DevHunt
 and Product Hunt fields, source, installation command, evidence links, and maker
-comment. DevHunt's public FAQ permits a free permanent listing and separately
-offers paid launches and boosts; no paid option has been authorized. The
-prepared package is not a completed submission. Product Hunt's human verification
-has completed. Its GitHub sign-in requests read-only email and profile access;
-authorization is the next step before the publishing flow can be used. DevHunt
-separately requests read-only email access. Both authorization pages are retained
-for the user to review, with screenshots stored privately.
+comment. Both requested GitHub read-only authorizations were completed after
+user confirmation. DevHunt received the form and the free option was selected.
+Its permanent tool page is accessible now, with three English gallery images,
+the source, pricing, and maker comment. The free weekly-promotion date assigned
+by the platform is May 13, 2031. This is separate from the public page being
+available now. No paid launch, boost, or sponsorship was selected.
+
+Product Hunt received the complete form and reported “Successfully Scheduled!”
+The pre-launch dashboard reports “Scheduled,” for October 18, 2026 at 12:01 AM
+Pacific / 07:01 UTC / 15:01 Asia/Shanghai. It contains an English thumbnail,
+three English-only gallery images, the English case-study link, and maker copy.
+The required fields reached 100%; the scheduled launch is not yet live or
+featured. A separate anonymous HTTP request received 403, so this record does
+not claim anonymous access to the pre-launch Product Hunt page.
+
+The earlier video contains Chinese subtitles and game UI. These two new
+submissions use English-only still images. Browser upload through the extension
+required local-file access; the images were instead selected through the native
+file picker, with each filename verified before upload. No extension permission
+was changed. Screenshots and private mail details remain outside this repository.
 
 The existing [distribution guide](distribution.md) describes the entry points.
 Curated lists with adoption or repository-age gates remain separate from these

@@ -94,7 +94,9 @@ This release does not claim a SkillsMP listing.
   selection or publication.
 - [DevHunt](https://devhunt.org/faq) supports a free permanent tool listing after
   sign-in. Its weekly launch, boosted launch, and sponsorships are separate paid
-  options. Use the free listing unless a paid option is explicitly requested.
+  options. The free tool page for this skill is available now; its weekly
+  promotion was assigned May 13, 2031. Use the free listing unless a paid option
+  is explicitly requested.
 - [Product Hunt](https://help.producthunt.com/en/articles/17350772-launch-guide)
   supports a maker-led launch with a tagline, description, gallery, demonstration,
   and maker comment. Review the current account and publishing requirements;
@@ -112,11 +114,11 @@ recorded in [submission status](submission-status.md).
 | Source and installation | [README](../README.md) |
 | 中文介绍 | [README.zh-CN.md](README.zh-CN.md) |
 | Real use cases and evidence limits | [Field notes](field-notes.md) |
-| Short animated preview | [GIF](../assets/goal-overview.gif) |
-| Full demonstration | [v0.2.0 video](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.0/goal-overview.mp4) |
+| Legacy bilingual animated preview | [GIF](../assets/goal-overview.gif) |
+| Legacy bilingual demonstration | [v0.2.0 video](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.0/goal-overview.mp4) |
 | Release | [v0.2.2](https://github.com/wu736139669/goal-instruction-writer/releases/tag/v0.2.2) |
 | Submission receipts and platform gates | [Submission status](submission-status.md) |
-| Developer-tool listings and launch copy | [Developer launch kit](developer-launch-kit.md) |
+| English-only developer launch media and copy | [Developer launch kit](developer-launch-kit.md) |
 | Feedback | [Discussion #1](https://github.com/wu736139669/goal-instruction-writer/discussions/1) |
 
 ## 中文：怎么投到第三方

@@ -1,6 +1,8 @@
 # Developer launch material
 
-Prepared on 2026-10-17 for Goal Instruction Writer v0.2.2. All public submission copy and examples in this file are in English.
+Updated on 2026-10-17 for Goal Instruction Writer v0.2.2. The DevHunt and
+Product Hunt submissions use English copy, an English case study, and three
+English-only gallery images.
 
 ## Shared listing fields
 
@@ -29,54 +31,83 @@ Free under the MIT license. Latest skill release: v0.2.2.
 npx skills add wu736139669/goal-instruction-writer --skill goal-instruction-writer -g -a codex -y
 ```
 
-## Evidence and media
+## Evidence and English media
 
 - [English game-development case](https://github.com/wu736139669/goal-instruction-writer/blob/main/docs/cases/factory-town-idle.md)
 - [Verification field notes](https://github.com/wu736139669/goal-instruction-writer/blob/main/docs/field-notes.md)
-- [36-second workflow demo](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.0/goal-overview.mp4)
-- [Animated preview](../assets/goal-overview.gif)
-- [Social preview](../assets/social-preview.png)
 - [Feedback discussion](https://github.com/wu736139669/goal-instruction-writer/discussions/1)
 
-The demo is a workflow illustration with a separately identified gameplay clip.
-The maintainer-reported 60+ hour figure is an estimate of a long workflow.
-The linked case identifies inspected stages and records that the full project
-Goal was still active at the snapshot. It is not a measured claim about
-uninterrupted runtime or a completed full-game recreation.
+| Material | PNG | Editable SVG source |
+| --- | --- | --- |
+| Square thumbnail, 240 x 240 | [Thumbnail](../assets/launch-logo-240.png) | [Logo source](../assets/launch-logo.svg) |
+| Larger square logo, 512 x 512 | [Logo](../assets/launch-logo.png) | [Logo source](../assets/launch-logo.svg) |
+| Workflow, 1600 x 1000 | [Gallery image 1](../assets/developer-launch/01-workflow.png) | [Source](../assets/developer-launch/01-workflow.svg) |
+| Proportional verification, 1600 x 1000 | [Gallery image 2](../assets/developer-launch/02-verification.png) | [Source](../assets/developer-launch/02-verification.svg) |
+| Inspected Godot-port stages, 1600 x 1000 | [Gallery image 3](../assets/developer-launch/03-field-case.png) | [Source](../assets/developer-launch/03-field-case.svg) |
+
+These submissions use the new English-only still images. The earlier bilingual
+video remains in the release history. The maintainer-reported 60+ hour figure
+is a workflow estimate; the case study and gallery identify the inspected
+stage deliveries and record that the full project Goal was still active at
+the snapshot.
 
 ## Console.dev editorial submission
 
 The English submission was emailed to the editorial address published in the
-[selection criteria](https://console.dev/selection-criteria). The sent-mail
-record confirms sending; editorial acceptance and publication remain separate
-steps.
+[selection criteria](https://console.dev/selection-criteria). An automated reply
+acknowledged the message and said submissions would be reviewed for the next
+newsletter. Editorial selection and publication remain pending.
 
 **Subject:** Tool submission: Goal Instruction Writer — durable Goals for Codex
 
-The submission links to the source, case study, demo, and verification field
-notes. The sender account and private mail identifiers are retained outside
-this public repository.
+The sender account and private mail identifiers are retained outside this
+public repository. Use the English gallery above for new coverage.
 
 ## DevHunt
 
-The [official FAQ](https://devhunt.org/faq) distinguishes a free permanent tool
-listing from a paid launch. Use the free listing for this submission. Paid
-launches, boosts, and sponsorships have not been requested.
+The [free tool page](https://devhunt.org/tool/goal-instruction-writer) has been
+created and verified in the browser and by an anonymous HTTP 200 response. It
+contains the English description, thumbnail, three gallery images, free pricing,
+source links, and maker comment.
 
-The shared fields, detailed description, and existing media above form the
-submission package. See the [submission status](submission-status.md) for the
-actual receipt and current platform gate.
+The platform assigned the free weekly-promotion queue date **May 13, 2031**.
+The permanent page is available now; a near-term weekly launch, newsletter
+promotion, and boosts are separate paid options. No paid option was selected.
+
+### Maker comment (731/1000 characters)
+
+I built Goal Instruction Writer to keep long Codex workflows tied to the requested outcome. It previews the loop and writes Goals with acceptance evidence, checkpoints, drift controls, focused verification, and clear completion conditions.
+
+My longest workflow is estimated at 60+ hours. The English case documents stages of a multi-day Godot port through Mac and Android local candidates; the full Goal was still active at that snapshot.
+
+Free, MIT licensed. Your agent runtime supplies continuation, tools, and permissions. Practical feedback is welcome.
+
+Source: https://github.com/wu736139669/goal-instruction-writer
+English case: https://github.com/wu736139669/goal-instruction-writer/blob/main/docs/cases/factory-town-idle.md
 
 ## Product Hunt
 
-Use the [official launch guide](https://help.producthunt.com/en/articles/17350772-launch-guide)
-for the current fields and publishing flow.
+The launch was [successfully scheduled](https://www.producthunt.com/products/goal-instruction-writer/goal-instruction-writer/prelaunch)
+for **October 18, 2026 at 12:01 AM Pacific / 07:01 UTC / 15:01 Asia/Shanghai**,
+the earliest date offered by the form. The receipt said “Successfully
+Scheduled!” and the pre-launch dashboard reports “Scheduled.”
+
+- [Product page](https://www.producthunt.com/products/goal-instruction-writer)
+- [Launch preview](https://www.producthunt.com/products/goal-instruction-writer?launch=goal-instruction-writer)
+- [Owner edit page](https://www.producthunt.com/posts/goal-instruction-writer/edit)
+- [Official launch guide](https://help.producthunt.com/en/articles/17350772-launch-guide)
+
+The required-information checklist reached 100%. The form received a square
+thumbnail, three English gallery images, Developer Tools and Artificial
+Intelligence tags, open-source and free-pricing selections, the maintainer as
+maker, and the English first comment below. Investor-introduction fields were
+left blank. A scheduled launch is distinct from being live or featured.
 
 **Tagline (48/60 characters):** Keep long-running Codex work tied to one outcome
 
-**Description (192/260 characters):**
+**Description (400/500 characters in the inspected form):**
 
-Write durable Goals for Codex: preview the loop, preserve acceptance evidence, control drift, use focused verification, and define clear completion conditions. Free, open source, MIT licensed.
+Turn long Codex tasks into durable Goals with observable outcomes, acceptance evidence, checkpoints, drift controls, and clear completion conditions. Preview the loop before execution. Use focused checks during development and broader verification at delivery gates. Free, MIT licensed. Includes an English case study of a multi-day Godot port; the maintainer reports a longest workflow of 60+ hours.
 
 ### Maker comment
 
@@ -88,11 +119,15 @@ The skill first previews the execution loop, then writes a Goal with an observab
 
 I've used this approach in multi-day game-development work. My longest workflow is estimated at 60+ hours. The linked English case follows inspected stages of a Factory Town Idle Godot port through Mac and Android local candidate deliveries; the full project Goal was still active at that snapshot.
 
-The repository includes install instructions, examples, field notes, and a 36-second workflow demo. Continuation, tools, permissions, and recovery come from your agent runtime.
+The repository includes install instructions, examples, field notes, and an English case study. Continuation, tools, permissions, and recovery come from your agent runtime.
 
 I'd love practical feedback: what kinds of long tasks make your agent lose the original goal, and which completion conditions are hardest to express?
 
-### Publication state
+Source and installation: https://github.com/wu736139669/goal-instruction-writer
+English case study: https://github.com/wu736139669/goal-instruction-writer/blob/main/docs/cases/factory-town-idle.md
 
-Review the source and media labels before publishing. A prepared package is
-distinct from a saved platform draft or a public launch.
+## Receipt handling
+
+The [submission status](submission-status.md) records the current outcome for
+each destination. Account details and screenshots remain in private local
+records; only the intentional public promotional assets are committed here.

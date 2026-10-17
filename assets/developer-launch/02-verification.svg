@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<rect width="1600" height="1000" fill="#101c31"/>
+<text x="96" y="74" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#4ed1c5">PROPORTIONAL VERIFICATION</text>
+<text x="96" y="160" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="88" font-weight="700" fill="#f4f7ff">Verification that fits</text>
+<text x="96" y="264" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="88" font-weight="700" fill="#f4f7ff">the change.</text>
+<rect x="96" y="475" width="448" height="310" rx="24" fill="#17283f" stroke="#4ed1c5" stroke-width="2"/>
+<text x="124" y="510" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700" fill="#4ed1c5">ITERATION</text>
+<text x="124" y="570" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="40" font-weight="700" fill="#f4f7ff">Changed code</text>
+<text x="124" y="644" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="400" fill="#a9bfdd">Run focused checks</text>
+<text x="124" y="688" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="400" fill="#a9bfdd">for affected behavior.</text>
+<rect x="576" y="475" width="448" height="310" rx="24" fill="#17283f" stroke="#917aff" stroke-width="2"/>
+<text x="604" y="510" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700" fill="#917aff">MILESTONE</text>
+<text x="604" y="570" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="40" font-weight="700" fill="#f4f7ff">Delivery gate</text>
+<text x="604" y="644" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="400" fill="#a9bfdd">Run required checks</text>
+<text x="604" y="688" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="400" fill="#a9bfdd">at phase boundaries.</text>
+<rect x="1056" y="475" width="448" height="310" rx="24" fill="#17283f" stroke="#ffbc68" stroke-width="2"/>
+<text x="1084" y="510" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700" fill="#ffbc68">EVIDENCE</text>
+<text x="1084" y="570" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="40" font-weight="700" fill="#f4f7ff">Same inputs</text>
+<text x="1084" y="644" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="400" fill="#a9bfdd">Reuse valid results.</text>
+<text x="1084" y="688" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="400" fill="#a9bfdd">Rerun when inputs change.</text>
+<text x="96" y="850" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="38" font-weight="700" fill="#f4f7ff">Keep required checks. Bound expensive reruns.</text>
+<text x="96" y="920" dominant-baseline="text-before-edge" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="400" fill="#4ed1c5">Goal Instruction Writer / Free / MIT / v0.2.2</text>
+</svg>
