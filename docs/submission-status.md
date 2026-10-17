@@ -22,7 +22,7 @@ version 0.2.2. Submission copy and the case-study links are in English.
 | [AI Agent Skill](https://ai-agent-skill.com/contact) | English request prepared; not submitted | Required Turnstile component reports an error after a reload; no submission receipt |
 | [Console.dev](https://console.dev/selection-criteria) | English editorial submission sent | Sent-mail recipient, subject, and body verified; editorial selection and publication are pending |
 | [DevHunt](https://devhunt.org/login) | English free-listing package prepared; not submitted | GitHub sign-in is waiting for confirmation of the new read-only email authorization; no listing receipt |
-| [Product Hunt](https://www.producthunt.com/) | English launch package prepared; not submitted | Browser entry is waiting at Cloudflare human verification; no platform draft or public launch receipt |
+| [Product Hunt](https://www.producthunt.com/) | English launch package prepared; not submitted | Cloudflare verification completed; GitHub sign-in is waiting for read-only email and profile authorization; no platform draft or public launch receipt |
 
 OpenAgentSkill's review notes flag executable/script files, package scan bounds,
 and command execution for deeper review. This is a saved review request, not an
@@ -107,8 +107,11 @@ The [developer launch kit](developer-launch-kit.md) contains the English DevHunt
 and Product Hunt fields, source, installation command, evidence links, and maker
 comment. DevHunt's public FAQ permits a free permanent listing and separately
 offers paid launches and boosts; no paid option has been authorized. The
-prepared package is not a completed submission. Product Hunt's browser entry
-currently requires human verification before the publishing flow can be used.
+prepared package is not a completed submission. Product Hunt's human verification
+has completed. Its GitHub sign-in requests read-only email and profile access;
+authorization is the next step before the publishing flow can be used. DevHunt
+separately requests read-only email access. Both authorization pages are retained
+for the user to review, with screenshots stored privately.
 
 The existing [distribution guide](distribution.md) describes the entry points.
 Curated lists with adoption or repository-age gates remain separate from these
