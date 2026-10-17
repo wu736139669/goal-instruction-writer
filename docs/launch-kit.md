@@ -28,6 +28,7 @@ and stop cleanly when the work is complete, blocked, or off target.
 - [x] `v0.2.0` verification strategy and real-use field notes
 - [x] Animated README excerpt and full demonstration video
 - [x] Third-party distribution and submission guide
+- [x] Inspected multi-day Factory Town Idle case with a delivery timeline
 - [x] Issue templates and contribution guide
 - [x] Social preview asset at `assets/social-preview.png`
 - [x] Verified installation through the open agent skills CLI
@@ -39,9 +40,11 @@ and stop cleanly when the work is complete, blocked, or off target.
 
 ### English
 
-> I open-sourced the Goal-writing workflow I use for long-running agent work,
-> including a game-development run I estimate at more than 60 hours from the
-> initial request through development and delivery.
+> I open-sourced the Goal-writing workflow I use for long-running agent work.
+> My longest game-development workflow is an estimated 60+ hours. One concrete
+> case follows a Factory Town Idle Godot port from analysis and architecture to
+> a 0.49 local candidate with Mac and Android packages, while the full Goal
+> continues.
 >
 > Goal Instruction Writer previews the loop first, then turns the request into
 > an observable outcome, acceptance evidence, drift controls, and clear stop
@@ -54,7 +57,8 @@ and stop cleanly when the work is complete, blocked, or off target.
 ### 中文
 
 > 我把自己写长任务 Goal 的工作流开源成了一个 Codex skill。
-> 我的游戏开发工作流最长一次估计超过 60 小时，从初始需求推进到开发与交付。
+> 我的游戏开发工作流最长一次估计超过 60 小时。公开案例记录了 Factory Town Idle
+> Godot 项目从分析与架构推进到 0.49 本地候选、交付 Mac/APK 的过程，完整 Goal 仍在继续。
 >
 > 它先预览循环，再生成带结果、验收证据、防漂移和明确结束条件的 Goal。
 > v0.2.0 还补上了按影响验证、复用有效结果和重跑触发规则。

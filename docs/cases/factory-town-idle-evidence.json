@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-17T02:36:36Z",
+  "case": "Factory Town Idle Godot development study",
+  "evidence_level": "Maintainer audit of private project records; sanitized public summary",
+  "status_at_checkpoint": {
+    "delivered_local_candidate": "0.49r1",
+    "full_recreation_goal_complete": false,
+    "formal_release_promoted": false,
+    "human_reviewed": false,
+    "physical_phone_verified": false,
+    "next_work_unit": "Audit original Plains University global upgrade-material rule"
+  },
+  "duration": {
+    "maintainer_reported_longest_game_workflow": "more than 60 hours; estimate",
+    "inspected_project_document_dates": [
+      "2026-10-13",
+      "2026-10-17"
+    ],
+    "inspected_branch_first_commit": {
+      "sha": "d3c09a022846d2b4559d789dc12252df174f4f74",
+      "authored_at": "2026-10-15T01:27:41+08:00",
+      "subject": "chore: import verified Godot 0.19 baseline"
+    },
+    "inspected_branch_checkpoint": {
+      "sha": "8ca9939bada2bc633efd5935f0cf4a3d60a0ed1e",
+      "authored_at": "2026-10-17T10:27:35+08:00",
+      "subject": "docs: sync monastery delivery checkpoint"
+    },
+    "inspected_branch_commit_count": 115,
+    "inspected_branch_elapsed_hours": 56.998333,
+    "branch_starts_at_existing_version": "0.19",
+    "total_active_compute_time_measured": false,
+    "continuous_unattended_duration_measured": false
+  },
+  "candidate_identity": {
+    "version": "0.49.0",
+    "build": 49,
+    "source_commit": "75e8e8c4d351c4a8b7b32a3f99605cfccb59df56",
+    "delivery_commit": "f05df1d8bc9c3b72140f9686a48a753a7a12acea",
+    "mac_android_same_source": true,
+    "mac_pck_sha256": "cc18ccaccae545be670c26813fbd67b4cff9cd9dc61e3882cb8adfa952de2d41",
+    "android_apk_sha256": "c72f0a67276be3561cc53e551231e5619a41c5ed258ebe535154ee8c4a91997e"
+  },
+  "verification_examples": {
+    "0.48_research_screen": {
+      "reused_exact_numerical_comparisons": 1983,
+      "reuse_basis": "Matching checked domain/app/content/fixture inputs in the local package review",
+      "current_compiled_behavior_and_scene_checks": 74
+    },
+    "0.49_research_material_rule_change": {
+      "old_048_comparisons_claimed_for_changed_core": false,
+      "current_compiled_reference_comparisons": 358,
+      "current_compiled_behavior_and_scene_checks": 101,
+      "focused_source_regression_checks": 146,
+      "player_files_unchanged": 18
+    },
+    "categories_are_not_added_into_a_unique_test_total": true,
+    "skill_version_speedup_measured": false
+  },
+  "runtime_recording": {
+    "duration_seconds": 28.84,
+    "captured_frames": 474,
+    "advanced_state_supplied": true,
+    "explicit_model_seconds_before_recording": 35992,
+    "in_recording_normal_1x": true,
+    "separate_ordinary_fresh_start_without_grants_checked": true,
+    "raw_media_published_with_this_case": false
+  },
+  "inspected_documents": [
+    {
+      "role": "Godot/mobile preparation",
+      "document": "GODOT_MOBILE_PREPARATION.md",
+      "bytes": 860,
+      "sha256": "86c3c9471f6b8107e84491c59ca52958226541ec90fc917611c1f8e2e514880b"
+    },
+    {
+      "role": "Architecture and acceptance plan",
+      "document": "README.md",
+      "bytes": 6258,
+      "sha256": "329f96b0a0635c44e56cb548380a777c4b4a07014cac040e68eb573073602798"
+    },
+    {
+      "role": "Playable trading milestone",
+      "document": "ITERATION_0_10.md",
+      "bytes": 7533,
+      "sha256": "5b74b7644c761559370fd114167c44b081bd5e3ff43d4991b1563b3d485209a9"
+    },
+    {
+      "role": "0.48 research-screen delivery",
+      "document": "RESEARCH_UI_048_DELIVERY.md",
+      "bytes": 5607,
+      "sha256": "e10766ac8ba035b288abd74cda04bc6c33e5b1e37cf1f3a2f3f28af3ca8af861"
+    },
+    {
+      "role": "0.49 monastery delivery",
+      "document": "FOREST_MONASTERY_049_DELIVERY.md",
+      "bytes": 5420,
+      "sha256": "5c215f4122f3e81847ff20b57a37bf672cf67226c440d71be08951e40438e044"
+    },
+    {
+      "role": "0.49 package review",
+      "document": "package-review.json",
+      "bytes": 179799,
+      "sha256": "073c57cde3d9e40fef84a6e99c9f543962154755cafc9d9d8c1269cb5abda4bc"
+    },
+    {
+      "role": "Durable cursor at 0.49 checkpoint",
+      "document": "current-goal-cursor.json",
+      "bytes": 15646,
+      "sha256": "8838ff05737345e9b541496769b83f66dcc87dbb5f3834ea375d16e3409eb4b1"
+    }
+  ],
+  "limits": [
+    "Private source, reference assets, research builds, raw reports and runtime media are not attached.",
+    "Document fingerprints identify inspected inputs; the summary is not an independently reproducible public benchmark.",
+    "Project date spans and commit counts do not establish continuous agent compute time or causal skill performance.",
+    "Stage delivery is distinct from full recreation completion and a public release.",
+    "The existing public demo uses a separately identified Moonlit Kingdom recording."
+  ]
+}

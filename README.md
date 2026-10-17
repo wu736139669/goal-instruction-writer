@@ -25,20 +25,23 @@ for meaningful progress, drift gates, and explicit terminal states.
 
 ## Built from long-running work
 
-The maintainer reports using this workflow for a game-development run lasting
-**more than 60 hours**, taking a project from the initial request through game
-development and delivery. That experience is the reason for the skill: make the
-original outcome survive implementation, assets, debugging, playtesting, and
-handoff across many iterations.
+A concrete example is a multi-day **Factory Town Idle Godot port**. Project
+records cover analysis and architecture on October 13, playable systems on
+October 14, and a **0.49 local candidate with Mac and Android packages** on
+October 17. The workflow carried forward production, construction, research,
+cross-town effects, save/load behavior, and a durable next step. Read the
+[case study and delivery timeline](docs/cases/factory-town-idle.md).
 
-The duration is a maintainer-reported field experience, not a controlled
-benchmark or a promise about another run. The agent, engine, asset tools, and
-human decisions do the work; this skill supplies the instruction contract that
-keeps that work connected.
+The maintainer estimates a longest game-development workflow at **more than
+60 hours**. The inspected records establish multi-day work and concrete stage
+deliveries; they do not measure uninterrupted agent compute time. At the case
+snapshot, the full recreation Goal was still active. The agent, engine, asset
+tools, and human decisions do the work; this skill supplies the instruction
+contract that keeps it connected.
 
 | Real work | What the Goal needs to preserve | Evidence available |
 | --- | --- | --- |
-| Game development | A playable result, coherent progression, runtime checks, and a build handoff across a long run | Maintainer's 60+ hour report, plus separately identified [recorded game examples](docs/field-notes.md#game-development) |
+| Game development | A playable result, coherent progression, runtime checks, and a build handoff across a long run | [Factory Town Idle: analysis → 0.49 local candidate](docs/cases/factory-town-idle.md), the maintainer's 60+ hour report, and separately identified [public game recordings](docs/field-notes.md#game-development) |
 | Android SDK delivery | Feature work, compatibility, integration, and artifact provenance without repeated full release cycles | A local log audit: 14 Gradle calls totaling 9m 32s; final SDK unit suites about 45s; [method and limits](docs/field-notes.md#android-sdk-delivery) |
 | Open-source launch | Installability, one feedback path, finite follow-up, and an external maintainer gate | A published [two-iteration evaluation](docs/evaluations/2026-10-11-independent-goal-evaluation.md) |
 
@@ -285,6 +288,7 @@ Waiting for a maintainer, owner, or missing dataset is not a reason to invent mo
 - [Launch kit with ready-to-post copy](docs/launch-kit.md)
 - [Independent Goal evaluation](docs/evaluations/2026-10-11-independent-goal-evaluation.md)
 - [Real usage, recorded examples, and evidence limits](docs/field-notes.md)
+- [Factory Town Idle: a multi-day Goal case study](docs/cases/factory-town-idle.md)
 - [Skill distribution and submission guide](docs/distribution.md)
 - [Editable video source and provenance](videos/goal-overview/BRIEF.md)
 - [Contributing guide](CONTRIBUTING.md)

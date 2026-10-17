@@ -18,7 +18,11 @@ user asked to publish the skill, enrich its introduction with real usage, and
 show its effect in a dynamic video. The user reports a longest game-development
 workflow of more than 60 hours, from the initial idea through game delivery.
 Treat the duration as a maintainer-reported experience, not an independently
-timed benchmark or a guarantee. No exact project identity was supplied yet.
+timed benchmark or a guarantee. The initial render preceded the identification
+of a specific case. A later inspection of the supplied Factory Town Idle
+session is documented in ../../docs/cases/factory-town-idle.md; its full
+recreation Goal is ongoing. This render's gameplay remains the separately
+identified, already-public Moonlit Kingdom recording.
 
 ## Assets
 

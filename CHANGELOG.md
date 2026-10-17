@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-10-17
+
+- Add an inspected Factory Town Idle Godot case: October 13–17 analysis, development, and 0.49 local candidate delivery with Mac/Android packages.
+- Publish a bilingual case study and sanitized evidence summary, including verification reuse for an unchanged core and renewed checks after a rule change.
+- Clarify the distinction between a maintainer's estimated 60+ hour workflow, dated checkpoints, stage delivery, and the ongoing full recreation Goal.
+- Update the introduction, launch copy, and video provenance while retaining the separately identified public gameplay demo.
+
 ## [0.2.0] - 2026-10-17
 
 - Expand the bilingual introduction with real use cases, an attributed 60+ hour game-development field report, and a private SDK log audit.

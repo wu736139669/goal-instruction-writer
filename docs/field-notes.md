@@ -10,10 +10,16 @@ available evidence supports.
 ## Game development
 
 The maintainer reports a longest game-development workflow of **more than 60
-hours**, taking a project from its initial request through development and
-delivery. This is a first-person field report. The specific 60-hour session has
-not been published here as a complete timestamped trace, and the duration is
-not a speed, quality, or unattended-execution guarantee.
+hours** and identified a concrete session for a closer look: a Factory Town
+Idle Godot port. Its local records cover October 13–17, from analysis and
+architecture through playable systems and a 0.49 local candidate with Mac and
+Android packages. The full recreation Goal remained active at the snapshot.
+
+The [case study](cases/factory-town-idle.md) includes a delivery timeline, the
+source/artifact identities inspected, and a
+[public audit summary](cases/factory-town-idle-evidence.json). The 60+ hour
+figure remains a first-person estimate. The records do not measure total active
+compute time, continuous unattended execution, or a completed full recreation.
 
 The practical value is continuity through a large chain of work:
 
@@ -24,6 +30,14 @@ The practical value is continuity through a large chain of work:
 | Content and assets | The original art/gameplay direction and deferred side quests |
 | Debugging and playtesting | New evidence, remaining gaps, and affected checks |
 | Build and handoff | Verified artifacts, limits, and an exact completion state |
+
+The case also makes verification reuse concrete. A research-screen revision
+reused 1,983 exact numerical comparisons because the checked core, inputs, and
+fixtures still matched, while running current behavior and scene checks. The
+next candidate changed the research-material rule, so those old comparisons
+were not carried forward as proof of the changed core. Relevant current checks
+were recorded instead. This illustrates the strategy; it is not a measured
+before/after speedup from installing this skill.
 
 Two publicly documented game projects show the kinds of artifacts this workflow
 must preserve: [Moonlit Kingdom](https://toolpantry.app/gamedev/moonlit-kingdom)
@@ -89,8 +103,14 @@ is labeled as reading feedback rather than an installation/execution test.
 
 ## 中文说明
 
-维护者报告过一次 60 多小时、从初始需求推进到游戏开发交付的完整工作流。
-本文尚未公开对应会话的全量时间记录，因此把它作为使用经历，而非独立计时实验。
+维护者报告最长游戏开发工作流超过 60 小时，并提供了具体会话供核查。对应的
+Factory Town Idle Godot 项目记录覆盖 10 月 13—17 日：分析与架构、可玩系统、
+0.49 本地候选和 Mac/APK 交付。完整复刻 Goal 在快照时仍继续；60 多小时是维护者
+估计，不能把日期跨度当成不间断计算时长。详见[中文案例](cases/factory-town-idle.md#中文案例)。
+
+此项目还展示了有效验证复用：0.48 界面修改复用核心未变的 1,983 项精确对照；
+0.49 修改研究用料规则后，旧对照不再作为新核心的验收证据。
+
 演示中的月光王国片段来自已公开的真实运行录像，明确标注项目名；它不被当作该
 60 多小时工作流的连续录像。
 

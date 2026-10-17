@@ -5,7 +5,7 @@ The rendered animation is explanatory; it does not reconstruct a real chat log.
 
 | Content | Source | Evidence status |
 | --- | --- | --- |
-| 60+ hour game-development workflow | Maintainer's first-person report on 2026-10-17 | Reported experience, not an independently timed benchmark; exact session not published |
+| 60+ hour game-development workflow | Maintainer's first-person report on 2026-10-17 | Estimated duration; the subsequently supplied Factory Town Idle case is documented in ../../docs/cases/factory-town-idle.md, with an ongoing full Goal and distinct stage deliveries |
 | Moonlit Kingdom gameplay | https://toolpantry.app/gamedev/assets/videos/moonlit-forest.mp4 | Previously published real-time recording, separate from the 60-hour report |
 | Goal Anchor, execution loop, drift labels, terminal states | ../../SKILL.md and ../../references/goal-contract.md | Actual skill contract, visualized as an illustration |
 | Verification reuse and rerun triggers | ../../SKILL.md and ../../references/examples.md | v0.2.0 rules; no measured speedup claimed |
