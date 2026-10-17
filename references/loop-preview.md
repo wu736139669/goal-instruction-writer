@@ -15,7 +15,9 @@ Show these elements in order:
    recorded in one cycle.
 4. **Branches:** what happens after success, a new failure, no progress, a side
    quest, missing authority, or a drift signal.
-5. **Progress evidence:** what must change for an iteration to count.
+5. **Progress evidence:** what must change for an iteration to count; which
+   checks run during edits or at delivery, when evidence can be reused, and
+   which changes trigger a rerun. Include bounds for expensive checks.
 6. **Drift gates:** when the Anchor is re-read and what triggers realignment.
 7. **Terminal states:** exact complete, blocked, paused, timeboxed, and stopped
    conditions.
@@ -60,7 +62,7 @@ flowchart TD
 | Start | What state and cursor are authoritative? | Baseline and first work unit |
 | Select | Which criterion moves next? | Target criterion and expected delta |
 | Act | What is inside the boundary? | Allowed scope and authority |
-| Verify | What proves progress? | Evidence and pass/fail rule |
+| Verify | What proves progress, and when must it be checked again? | Focused and phase/delivery checks, pass/fail rule, evidence reuse, rerun triggers, cost bounds |
 | Branch | What happens if the result is unexpected? | Retry with a new hypothesis, defer, block, or realign |
 | Gate | When is the Anchor re-read? | Cadence, milestone, and high-risk trigger |
 | Feedback | How much evidence counts as real feedback? | Threshold, what counts, and feedback window |
@@ -90,7 +92,11 @@ focused change → run the fixture test → record the diff and result.
 
 ### Gate and limits
 Re-read the Anchor after three iterations and before changing dependencies.
-Use at most four hypothesis iterations.
+Use at most four hypothesis iterations. Run the existing importer suite once
+the parser is stable; after a further parser change, refresh affected regression
+evidence. Report-only edits do not invalidate unrelated passing parser checks.
+Use the repository's command timeout for expensive checks; report any unverified
+criterion if it expires.
 
 ### Confirm before drafting
 Please confirm the retry threshold and whether dependency changes are allowed;

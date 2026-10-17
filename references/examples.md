@@ -29,6 +29,15 @@ the existing record model without truncation or row-count drift.
 - [ ] Existing importer tests pass.
 - [ ] The diff explains the parsing boundary and contains no unrelated edits.
 
+## Verification strategy
+During parser edits, run the focused fixture test. Once the parser is stable,
+run the existing importer suite and review the diff. Record the checked parser,
+fixtures, dependencies, and test environment; reuse passing results while those
+inputs remain valid. A report-only edit needs a report check. A later parser
+change requires the focused test and affected importer regressions again;
+broaden if its impact is unclear. Apply the repository's command timeout to
+expensive checks and leave any timed-out criterion open.
+
 ## Execution loop
 Inspect the failing fixture and parser state; make one smallest hypothesis-driven
 change; run the focused test; record the result and diff; then choose the next
@@ -46,8 +55,19 @@ fourth iteration if the criteria remain open.
 
 ## Reporting
 Return the revision, commands and results, changed files, remaining gap, and
-the terminal label.
+the terminal label. Distinguish newly run checks from reused evidence.
 ```
+
+### SDK delivery: choose checks after a successful validation
+
+Keep all required release checks, but let the actual change determine which
+evidence must be refreshed:
+
+| Later change | Next verification |
+| --- | --- |
+| Only the handoff report or receipt changes | Check that document; reuse runtime and artifact results whose inputs remain valid |
+| A cancellation fix changes SDK behavior and the AAR | Run the affected regression checks, rebuild affected artifacts, and refresh consumer checks against the new AAR |
+| A new API snapshot is added while the AAR is unchanged | Check the new snapshot; reuse existing compatibility and runtime results tied to the same AAR and inputs |
 
 ## Research: compare two options
 

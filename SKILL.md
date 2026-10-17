@@ -10,6 +10,8 @@ execute without guessing what success, progress, or stopping means. Preserve
 the user's intent, language, authority boundaries, and requested scope.
 This skill designs and audits the instruction contract; runtime access,
 permissions, and external approvals still come from the host agent and user.
+Describe the checks while writing a Goal; execute the underlying task only
+when the user has also requested execution.
 
 Read [references/goal-contract.md](references/goal-contract.md) when drafting
 or auditing a Goal. Read [references/examples.md](references/examples.md) only
@@ -46,7 +48,8 @@ The preview is a design checkpoint, not an approval to execute:
 1. State the provisional outcome, baseline, and assumptions.
 2. Show the loop as concrete state transitions, including the first work unit,
    success and failure branches, progress evidence, drift checks, phase gates,
-   and legal stop states.
+   and legal stop states. Distinguish iteration checks from broader phase or
+   delivery checks, including evidence reuse and bounds for expensive checks.
 3. List the decisions that could change the loop or its scope. For feedback,
    adoption, pilot, launch, or validation work, include the evidence threshold,
    what counts, and the feedback window.
@@ -123,7 +126,8 @@ Use a bounded iteration with a visible progress signal:
 2. **Select** the smallest next work unit, name its target criterion, expected
    delta, and scope reason.
 3. **Act** within the allowed scope and authority.
-4. **Verify** the result against the relevant criterion; capture the evidence.
+4. **Verify** the result against the relevant criterion using the verification
+   strategy below; capture the evidence.
 5. **Classify** the result as `ON_TARGET`, `SIDE_QUEST`, or `DRIFTED` and apply
    the corresponding drift rule.
 6. **Record** the delta, remaining gap, decision, and next cursor before
@@ -134,6 +138,31 @@ maximum attempts, or a finite work-unit list. Add a no-op rule: do not repeat
 the same action without new information; after a repeated failure, change the
 hypothesis or stop with the blocker. The loop must be able to explain why the
 next iteration is different from the previous one.
+
+#### Verification strategy
+
+Include a short verification strategy in the Goal. Preserve explicit user and
+repository acceptance requirements while controlling when checks run:
+
+- **Iteration checks:** choose the smallest checks sufficient for the affected
+  behavior. Broaden for change impact, new failures, unresolved uncertainty,
+  or a required gate.
+- **Phase and delivery checks:** once the relevant implementation is stable,
+  complete the remaining required regression, build, integration, and artifact
+  checks. A phase gate reviews current evidence; it does not automatically
+  repeat the entire validation and delivery pipeline.
+- **Evidence reuse:** tie results to the checked source or artifact, relevant
+  inputs, dependencies, and environment. Carry forward results while those
+  conditions remain valid. Documentation or receipt changes do not invalidate
+  unrelated runtime checks. Distinguish reused evidence from newly run checks.
+- **Rerun reason:** before repeating a check, name the change or new evidence
+  that invalidates its result and select the affected checks. A source or
+  artifact change invalidates dependent evidence, including consumer checks
+  when the consumed artifact changes.
+- **Cost and completion:** give expensive checks suitable command timeouts or
+  attempt bounds. A timeout leaves its criterion unverified; report the gap.
+  Finish when all criteria have valid evidence and delivery is complete;
+  further checking needs a concrete unresolved concern or invalidated result.
 
 ### 3. Termination: define legal endings
 
@@ -173,8 +202,8 @@ use this order:
 3. **Ready-to-paste Goal:** in Draft, Refine, or Convert mode, include the full
    instruction in a fenced block with `Objective`, `Goal anchor`, `Baseline and
    scope`, `Acceptance criteria`, `Feedback evidence` when applicable,
-   `Execution loop`, `Drift control`, `Limits and no-op rule`, `Termination`,
-   and `Reporting` sections.
+   `Verification strategy`, `Execution loop`, `Drift control`, `Limits and no-op
+   rule`, `Termination`, and `Reporting` sections.
 4. **Audit notes:** if refining or auditing, name each remaining ambiguity and
    the smallest change that resolves it.
 

@@ -57,6 +57,7 @@ flowchart TD
 | New discoveries silently change direction | A Goal Anchor that freezes outcome, criteria, scope, and authority |
 | Useful side work consumes the main task | A <code>SIDE_QUEST</code> label and a deferred list |
 | The agent keeps working without progress | A pause after two materially equivalent no-progress iterations |
+| Small edits repeatedly trigger full validation and packaging | Focused iteration checks, required delivery gates, and reuse of valid evidence |
 | An external dependency creates endless waiting | <code>GOAL BLOCKED</code> with the exact unblock needed |
 
 ## The three-layer contract
@@ -81,6 +82,13 @@ For feedback, adoption, pilot, launch, or validation Goals, define what counts
 as evidence before execution: an entry point, at least <code>N</code> non-author
 responses, or a named cohort. Add the feedback window and do not count
 author-only activity unless the Goal explicitly chooses it.
+
+Goals also define a **verification strategy**: use focused checks during edits,
+complete required broader checks when the implementation is stable, and tie
+results to their relevant inputs and artifacts. Rerun checks when changes or
+new evidence invalidate them; report-only commits can reuse unrelated runtime
+results. Expensive checks get suitable bounds, and timed-out criteria stay
+open. Explicit acceptance and release requirements still apply.
 
 ## Drift control in one picture
 

@@ -27,6 +27,7 @@ with no progress signal can stop at the wrong time.
 | Allowed scope | What may change? | Named files, systems, sources, or decision boundary |
 | Frozen scope | What must remain unchanged? | Explicitly protected behavior, data, or external state |
 | Acceptance criteria | How will a reviewer know it is done? | Test result, diff, artifact, cited source, or checklist |
+| Verification strategy | Which checks run during edits, at delivery, or after a change? | Focused checks, required broader gates, evidence validity, rerun reasons, cost bounds |
 | Feedback evidence threshold | What counts as real feedback, and how much is required? | Entry point only, N non-author replies, named cohort, and a timebox |
 | Work unit | What is one iteration small enough to verify? | One hypothesis, patch, experiment, or review slice |
 | Progress signal | What changes after a useful iteration? | New evidence, reduced gap, changed artifact, or decision |
@@ -69,12 +70,26 @@ Produce <artifact/behavior/decision> so that <user or system value>.
 - What counts: <concrete use case, result, defect, or decision>
 - Window: <date, number of attempts, or timebox>
 
+## Verification strategy
+- Iteration checks: <smallest checks sufficient for the affected behavior>.
+- Phase/delivery checks: <required broader checks and artifacts, with triggers>;
+  complete them once the relevant implementation is stable.
+- Evidence reuse: record the checked source/artifact and relevant inputs,
+  dependencies, and environment; carry forward results while they remain valid.
+  Label reused and newly run checks separately. Documentation or receipt edits
+  do not invalidate unrelated runtime checks.
+- Reruns: name the change or new evidence that invalidates a result; rerun
+  affected checks, including consumers of changed artifacts. Broaden when the
+  impact, a failure, uncertainty, or an explicit requirement warrants it.
+- Cost bounds: <command timeouts or attempt caps for expensive checks>;
+  a timeout leaves the corresponding criterion open.
+
 ## Execution loop
 Repeat one bounded work unit at a time:
 1. Inspect <state and last cursor>.
 2. Select one unmet criterion, expected delta, and scope reason.
 3. Act within Allowed scope and Authority.
-4. Verify the result and capture evidence.
+4. Apply the verification strategy to the relevant criterion and capture evidence.
 5. Classify the iteration as `ON_TARGET`, `SIDE_QUEST`, or `DRIFTED`.
 6. Record the delta, remaining gap, decision, and next cursor.
 
@@ -93,7 +108,8 @@ Repeat one bounded work unit at a time:
 
 ## Termination
 - `GOAL COMPLETE` when all acceptance criteria are verified and the deliverable
-  is available.
+  is available. Stop; further checking requires invalidated evidence or a
+  concrete unresolved concern about a criterion.
 - `GOAL BLOCKED: <reason>` when the next meaningful action needs a named
   dependency, owner decision, or unresolved failure; include the unblock needed.
 - `GOAL PAUSED: <reason>` only after an explicit owner pause; preserve the
@@ -117,6 +133,9 @@ Before returning a Goal, check:
 - The objective describes an end state rather than a list of activities.
 - The Goal anchor is short enough to re-read and is not silently mutable.
 - Every acceptance criterion can be checked from named evidence.
+- The verification strategy separates iteration checks from required phase or
+  delivery checks, defines evidence validity and rerun triggers, and bounds
+  expensive commands without weakening acceptance requirements.
 - For feedback, adoption, pilot, launch, or validation work, the evidence
   threshold and window are explicit; author-only activity is not counted unless
   the Goal chooses it.

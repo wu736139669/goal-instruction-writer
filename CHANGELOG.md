@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+- Add a verification strategy to Goal drafts and previews: focused iteration checks, required phase/delivery gates, evidence reuse, rerun reasons, and bounds for expensive checks.
+- Clarify that writing a Goal describes checks; executing the underlying task requires an execution request.
+- Add SDK examples showing which evidence to refresh after report, behavior, artifact, or API-snapshot changes.
 - Add a GitHub Actions packaging smoke test for required files and Skills CLI discovery.
 - Document that runtime access and external approvals remain host- and user-controlled.
 - Add an open-source launch example with an external maintainer gate and bounded follow-up.
