@@ -180,7 +180,7 @@ Make the terminal states explicit and mutually understandable:
   authority; do not silently continue.
 - **Realignment required:** a drift check fails; stop the current loop, preserve
   the checkpoint, and resume only after the next action is re-anchored. Use
-  `GOAL PAUSED: realignment required` when a local terminal label is needed.
+  `GOAL REALIGNMENT REQUIRED` when a local terminal label is needed.
 
 Do not use “continue until satisfied,” “try indefinitely,” or a success claim
 based only on effort. If the task has a local convention for terminal strings,

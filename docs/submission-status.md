@@ -2,7 +2,9 @@
 
 Recorded on 2026-10-17 for
 [Goal Instruction Writer](https://github.com/wu736139669/goal-instruction-writer),
-version 0.2.2. Submission copy and the case-study links are in English.
+with submissions based on version 0.2.2. The canonical skill release is now
+v0.2.3. Evidence below records the submitted versions. Submission copy and the
+case-study links are in English.
 
 | Destination | Verified state | Evidence / next gate |
 | --- | --- | --- |
@@ -16,7 +18,7 @@ version 0.2.2. Submission copy and the case-study links are in English.
 | [awesome-codex-skills #337](https://github.com/composio-community/awesome-codex-skills/pull/337) | Existing PR remains open | Updated the existing description with v0.2.2, the English case study, and the demo; no duplicate PR |
 | [MCP.Directory](https://mcp.directory/submit-skill) | Existing submission confirmed in the review queue | Actual response: “This skill has already been submitted. We'll review it soon!” |
 | [Awesome Skills](https://www.awesomeskills.dev/en/skill/wu736139669-goal-instruction-writer) | Published public directory entry | English detail page, complete instruction body, GitHub-backed install command, and canonical source link verified in the browser |
-| [Agent Skill Exchange #119](https://github.com/agentskillexchange/skills/pull/119) | New PR open; awaiting maintainer review | Seven-file skill directory submitted; focused local checks passed; GitHub Actions awaits maintainer approval |
+| [Agent Skill Exchange #119](https://github.com/agentskillexchange/skills/pull/119) | Merged on 2026-10-17 at 11:39 UTC | Maintainer clarified drift-stop labels and reported validation passed; the clarification is included upstream in v0.2.3 |
 | [Skills Directory](https://skillsdirectory.com/skills/wu736139669-goal-instruction-writer) | Published public directory entry | Live receipt and public detail page verified in the native browser; platform automatic analysis reports grade A, score 100/100 |
 | [AI Agents Listing](https://aiagentslisting.com/submit/goal-instruction-writer/success) | Submitted for review | Visible confirmation: “goal-instruction-writer is in the review queue”; repository-only Skill route completed |
 | [AI Agent Skill](https://ai-agent-skill.com/contact) | English request prepared; not submitted | Required Turnstile component reports an error after a reload; no submission receipt |
@@ -66,13 +68,17 @@ The directory generates its own agent labels; the canonical package and upstream
 installation instructions remain the source of truth for Codex use.
 
 Agent Skill Exchange received a focused PR containing the instruction body and
-six supporting files from v0.2.2. The instruction body and supporting-file bytes
-are preserved; the entry adapts frontmatter to the catalog schema and appends
-canonical Codex installation, usage, and English evidence links. Format, source,
-installation-content, and 79-pattern security checks passed locally. The
-[upstream validation workflow](https://github.com/agentskillexchange/skills/actions/runs/39006588308)
-explicitly awaits maintainer approval before running. Merging the PR and
-publishing it to the marketplace are separate maintainer steps.
+six supporting files from v0.2.2. The initial submission preserved the
+instruction body and supporting-file bytes, adapted frontmatter to the catalog
+schema, and appended canonical Codex installation, usage, and English evidence
+links. The maintainer then contributed
+[a clarification](https://github.com/agentskillexchange/skills/commit/94cd5ce20fe8ef49dd1de17946198d256fdef43f)
+separating `GOAL REALIGNMENT REQUIRED` from an explicit owner `GOAL PAUSED`.
+The PR was merged on 2026-10-17 at 11:39 UTC as
+[`1286841`](https://github.com/agentskillexchange/skills/commit/12868415f1f20b606304839a2e3209d033b32024),
+and the maintainer reported validation passed. The label clarification is now
+included in the canonical v0.2.3 skill. Marketplace publication remains a
+separate step from the verified repository merge.
 
 Skills Directory received the canonical GitHub repository and the explicit root
 `SKILL.md` path. After analyzing the source, its authenticated submission page

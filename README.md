@@ -84,7 +84,7 @@ flowchart TD
     H -->|SIDE_QUEST| L["Defer with a revisit condition"]
     L --> G
     H -->|DRIFTED| M["Pause and realign"]
-    M --> N["GOAL PAUSED: realignment required"]
+    M --> N["GOAL REALIGNMENT REQUIRED"]
     G --> O{"Blocked / budgeted / owner-stopped?"}
     O -->|Blocked| P["GOAL BLOCKED"]
     O -->|Budget exhausted| Q["GOAL TIMEBOXED"]
@@ -207,7 +207,7 @@ Before each iteration, state the target criterion, expected evidence, and scope 
 After each iteration, state the actual evidence, alignment label, remaining gap,
 and next cursor.
 If two equivalent iterations produce no new progress, stop with:
-GOAL PAUSED: realignment required.
+GOAL REALIGNMENT REQUIRED.
 ~~~
 
 For a short, reversible task, skip Preview and ask directly:

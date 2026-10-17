@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [0.2.3] - 2026-10-17
+
+- Use `GOAL REALIGNMENT REQUIRED` consistently for drift stops across the skill, references, examples, and README diagrams; reserve `GOAL PAUSED` for an explicit owner pause.
+- Adopt the clarification contributed by [Gagan Chawla](https://github.com/gagankcai-jpg) in [Agent Skill Exchange commit 94cd5ce](https://github.com/agentskillexchange/skills/commit/94cd5ce20fe8ef49dd1de17946198d256fdef43f).
+- Record the merged Agent Skill Exchange submission and retain the submitted-version evidence for other directories.
+
 ## [0.2.2] - 2026-10-17
 
 - Keep the Factory Town Idle case study and field-note body in English.

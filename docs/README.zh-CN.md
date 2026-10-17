@@ -70,7 +70,7 @@ flowchart TD
     H -->|SIDE_QUEST| L["延期并设置回访条件"]
     L --> G
     H -->|DRIFTED| M["暂停并重新对齐"]
-    M --> N["GOAL PAUSED: realignment required"]
+    M --> N["GOAL REALIGNMENT REQUIRED"]
     G --> O{"阻塞 / 预算耗尽 / 用户停止？"}
     O -->|阻塞| P["GOAL BLOCKED"]
     O -->|预算耗尽| Q["GOAL TIMEBOXED"]
@@ -187,7 +187,7 @@ Use $goal-instruction-writer in Preview mode.
 每轮开始前说明：目标准则、预期证据、范围理由。
 每轮结束后说明：实际证据、对齐标签、剩余差距、下一游标。
 如果两轮等价迭代没有新进展，暂停并输出：
-GOAL PAUSED: realignment required。
+GOAL REALIGNMENT REQUIRED。
 ~~~
 
 短小、可逆的任务可以跳过预览：

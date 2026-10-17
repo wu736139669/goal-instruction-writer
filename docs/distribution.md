@@ -32,7 +32,7 @@ It links to this repository in Meta & Utilities and includes installation
 instructions. As of the check date it is open, not merged. A maintainer owns
 the acceptance decision; do not open a duplicate PR.
 
-A second submission is open at
+A second submission was merged on 2026-10-17 at
 [Agent Skill Exchange #119](https://github.com/agentskillexchange/skills/pull/119).
 Its [contribution guide](https://github.com/agentskillexchange/skills/blob/main/CONTRIBUTING.md)
 requires a complete `skills/<slug>/` entry with catalog metadata, installation
@@ -116,7 +116,7 @@ recorded in [submission status](submission-status.md).
 | Real use cases and evidence limits | [Field notes](field-notes.md) |
 | Legacy bilingual animated preview | [GIF](../assets/goal-overview.gif) |
 | Legacy bilingual demonstration | [v0.2.0 video](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.0/goal-overview.mp4) |
-| Release | [v0.2.2](https://github.com/wu736139669/goal-instruction-writer/releases/tag/v0.2.2) |
+| Release | [v0.2.3](https://github.com/wu736139669/goal-instruction-writer/releases/tag/v0.2.3) |
 | Submission receipts and platform gates | [Submission status](submission-status.md) |
 | English-only developer launch media and copy | [Developer launch kit](developer-launch-kit.md) |
 | Feedback | [Discussion #1](https://github.com/wu736139669/goal-instruction-writer/discussions/1) |
