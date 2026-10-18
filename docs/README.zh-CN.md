@@ -11,9 +11,9 @@
 >
 > 先预览循环，让进展可检查，最后凭证据交付。
 
-![Goal 技能动态演示](../assets/goal-overview.gif)
+![Goal 技能全英文动态演示](../assets/goal-overview-en.gif)
 
-[观看完整演示](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.0/goal-overview.mp4) · [真实使用与证据](field-notes.md) · [技能投稿指南](distribution.md)
+[观看完整英文演示](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.4/goal-overview-en.mp4) · [真实使用与证据](field-notes.md) · [技能投稿指南](distribution.md)
 
 AI agent 很少因为“不够努力”失败，更多时候是运行很久后已经偏离了原目标。
 <code>goal-instruction-writer</code> 是一个 Codex skill，把“继续改进、直到满意”变成一份能被检查、能被限制、能被暂停、能安全结束的 Goal 指令。

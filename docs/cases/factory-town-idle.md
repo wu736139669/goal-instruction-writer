@@ -99,6 +99,7 @@ the underlying private records independently accessible.
 
 The public case publishes the timeline and audit summary. The research build,
 its reference materials, and its raw runtime media remain private. The
-repository's existing demonstration uses separately labeled, already-public
-**Moonlit Kingdom** gameplay. It is a different project, not footage or a
-time-lapse of this case.
+repository's current English-only demonstration illustrates this documented
+checkpoint timeline without gameplay footage. The archived v0.2.0 video uses
+separately labeled, already-public **Moonlit Kingdom** gameplay. It is a different
+project, not footage or a time-lapse of this case.

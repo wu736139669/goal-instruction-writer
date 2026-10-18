@@ -1,6 +1,7 @@
 {
   "tool": "HyperFrames",
   "version": "0.8.167",
+  "language": "en",
   "durationSeconds": 36,
   "canvas": [
     1920,
@@ -11,13 +12,27 @@
   "lintWarnings": 0,
   "runtimeErrors": 0,
   "layoutErrors": 0,
-  "contrastChecksPassed": 43,
+  "layoutSampleSeconds": [
+    0,
+    2.5,
+    6,
+    7.9,
+    8.2,
+    16,
+    17.9,
+    18.2,
+    26,
+    27.9,
+    28.2,
+    35.5
+  ],
+  "contrastChecksPassed": 67,
   "automatedMotionAssertions": false,
   "manualSeekReviewSeconds": [
     6,
-    14,
+    16,
     26,
-    34,
+    35.5,
     7.9,
     8.2,
     17.9,
@@ -25,33 +40,69 @@
     27.9,
     28.2
   ],
-  "review": "Four scene midpoints and both sides of every clean cut inspected; real footage, captions, and layout visible.",
-  "gameSourceSha256": "bdc21cbd240cc7835fdcc73aecc0498dae32a7281cf7db8d34abec6baa5507ed",
+  "review": "All four source scene snapshots and encoded midpoints inspected; decoded frames on both sides of each cut inspected. All on-screen explanations and labels are English. The case timeline is an illustration, not gameplay.",
+  "englishSourceCheck": {
+    "mountedHtmlFiles": 5,
+    "chineseCharacters": 0,
+    "embeddedImageVideoAudioElements": 0,
+    "sourceSha256": {
+      "index.html": "3a8dad1368c6d5268e80907a843c163bcfb891e51f689ef846dd63a7f5fb7ad3",
+      "compositions/frames/01-long-run.html": "fe17bd31f157f29adfa002eb441b06f33960fbeceb654dbde029a650733fb0ba",
+      "compositions/frames/02-game.html": "564ccc5366242e87324d8fc0ec1148bd91a114d0c3f20a1f797f63cc48bc3706",
+      "compositions/frames/03-loop.html": "b64aead7f3abccf4afe8c39dc9281394cf70b5c8e521dee4c2f972e4eec441ab",
+      "compositions/frames/04-verify.html": "32dce0c98ddf953f6d74f242e7176c5cfbb319b7cbb6d1cd250c17a801d8f4eb"
+    }
+  },
+  "toolingNote": "Kept the existing 0.8.167 pin after the attempted 0.8.171 upgrade failed with a missing CLI module. The final strict check and delivery render used 0.8.167.",
   "render": {
-    "filename": "goal-overview.mp4",
-    "durationSeconds": 36,
+    "filename": "goal-overview-en.mp4",
+    "durationSeconds": 36.0,
     "width": 1920,
     "height": 1080,
-    "fps": 30,
     "codec": "h264",
     "pixelFormat": "yuv420p",
     "audioTracks": 0,
-    "sizeBytes": 2500170,
-    "sha256": "17de328104695d005e4ef80efec0817e0f6f8360ee62d328b7da51725ca5da59",
+    "sizeBytes": 1885598,
+    "sha256": "8135a5e47f0bf44e39cc815224b63dfd32228d055c1220b731fa41d156b7203c",
     "fullDecodePassed": true,
+    "fps": 30,
+    "capture": "screenshot",
+    "browserGpu": "hardware",
     "encodedFrameReviewSeconds": [
       6,
-      14,
+      16,
       26,
-      34
+      35.5
     ]
   },
   "readmeExcerpt": {
-    "filename": "goal-overview.gif",
-    "durationSeconds": 10,
-    "width": 720,
-    "height": 405,
-    "sizeBytes": 300509,
-    "sha256": "fb71e27cbd9c7a2e0cf359ba209c27bb22fcc00752ef7450008744c0ea0e9a41"
+    "filename": "goal-overview-en.gif",
+    "durationSeconds": 15.8,
+    "width": 960,
+    "height": 540,
+    "codec": "gif",
+    "pixelFormat": "bgra",
+    "audioTracks": 0,
+    "sizeBytes": 660971,
+    "sha256": "0d4de7913a1e5f4f3225d7984acc9b214040cb9a36e8bef2ae606cfad314aebf",
+    "fullDecodePassed": true,
+    "sourceRangesSeconds": [
+      [
+        1,
+        7
+      ],
+      [
+        13.8,
+        17.8
+      ],
+      [
+        25,
+        27.8
+      ],
+      [
+        33,
+        36
+      ]
+    ]
   }
 }

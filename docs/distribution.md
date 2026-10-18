@@ -114,8 +114,8 @@ recorded in [submission status](submission-status.md).
 | Source and installation | [README](../README.md) |
 | 中文介绍 | [README.zh-CN.md](README.zh-CN.md) |
 | Real use cases and evidence limits | [Field notes](field-notes.md) |
-| Legacy bilingual animated preview | [GIF](../assets/goal-overview.gif) |
-| Legacy bilingual demonstration | [v0.2.0 video](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.0/goal-overview.mp4) |
+| English-only animated preview | [GIF](../assets/goal-overview-en.gif) |
+| English-only demonstration | [Full video](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.4/goal-overview-en.mp4) |
 | Release | [v0.2.4](https://github.com/wu736139669/goal-instruction-writer/releases/tag/v0.2.4) |
 | Submission receipts and platform gates | [Submission status](submission-status.md) |
 | English-only developer launch media and copy | [Developer launch kit](developer-launch-kit.md) |

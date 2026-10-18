@@ -40,6 +40,8 @@ npx skills add wu736139669/goal-instruction-writer --skill goal-instruction-writ
 - [English game-development case](https://github.com/wu736139669/goal-instruction-writer/blob/main/docs/cases/factory-town-idle.md)
 - [Verification field notes](https://github.com/wu736139669/goal-instruction-writer/blob/main/docs/field-notes.md)
 - [Feedback discussion](https://github.com/wu736139669/goal-instruction-writer/discussions/1)
+- [English-only animated overview](../assets/goal-overview-en.gif)
+- [Full English-only video](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.4/goal-overview-en.mp4)
 
 | Material | PNG | Editable SVG source |
 | --- | --- | --- |
@@ -49,8 +51,10 @@ npx skills add wu736139669/goal-instruction-writer --skill goal-instruction-writ
 | Proportional verification, 1600 x 1000 | [Gallery image 2](../assets/developer-launch/02-verification.png) | [Source](../assets/developer-launch/02-verification.svg) |
 | Inspected Godot-port stages, 1600 x 1000 | [Gallery image 3](../assets/developer-launch/03-field-case.png) | [Source](../assets/developer-launch/03-field-case.svg) |
 
-These submissions use the new English-only still images. The earlier bilingual
-video remains in the release history. The maintainer-reported 60+ hour figure
+These submissions use the English-only still images. The README now uses an
+English-only animation and video, including an illustrated case timeline rather
+than Chinese-language gameplay. The earlier bilingual video remains only in
+the v0.2.0 release history. The maintainer-reported 60+ hour figure
 is a workflow estimate; the case study and gallery identify the inspected
 stage deliveries and record that the full project Goal was still active at
 the snapshot.

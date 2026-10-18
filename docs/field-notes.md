@@ -53,11 +53,13 @@ The public pages contain runtime clips, game structure, and explicit delivery
 boundaries. They are recorded examples from the maintainer's work, not a
 controlled comparison of this skill against a baseline.
 
-The release video uses the already-public Moonlit Kingdom forest/dispatch
-recording and identifies it by name. That excerpt is **not** a time-lapse or
-recording of the reported 60-hour run. A playable development build and an
-engineering handoff are distinct from a store release; the game pages record
-their own current status.
+The current English-only demonstration illustrates the documented Factory Town
+Idle checkpoints; it contains no gameplay footage or reconstructed chat log.
+The archived v0.2.0 video used an already-public Moonlit Kingdom forest/dispatch
+recording, with Chinese game UI and bilingual captions. That separate project
+is **not** a time-lapse or recording of the reported 60-hour run. A playable
+development build and an engineering handoff are distinct from a store release;
+the game pages record their own current status.
 
 ## Android SDK delivery
 

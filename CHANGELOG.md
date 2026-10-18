@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 
+- Replace the bilingual README animation and demo link with English-only media, including an evidence-linked game-development timeline; retain the original video only in the v0.2.0 release archive.
 - Add an English case library and three detailed cases covering source-led research, Android SDK software delivery, and the public contribution/feedback loop, with sanitized research and SDK evidence summaries.
 - Describe support for active iterations and continuation after time/event triggers through Goal instructions, with host timers, relevant events, or authorized messages providing invocation; retain the host boundary and untested live wait/resume status.
 

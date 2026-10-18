@@ -63,7 +63,7 @@ original launch context.
 > Goal Instruction Writer previews the loop first, then turns the request into
 > an observable outcome, acceptance evidence, drift controls, and clear stop
 > conditions. v0.2.0 adds focused verification and reuse of still-valid results.
-> The README includes a recorded-gameplay demo and explains the evidence behind
+> The README includes an English-only case-timeline demo and explains the evidence behind
 > the field reports.
 >
 > Try it: https://github.com/wu736139669/goal-instruction-writer
@@ -76,7 +76,7 @@ original launch context.
 >
 > 它先预览循环，再生成带结果、验收证据、防漂移和明确结束条件的 Goal。
 > v0.2.0 还补上了按影响验证、复用有效结果和重跑触发规则。
-> README 有真实游戏运行片段，也写清了使用报告和日志核查各自能证明什么。
+> README 有全英文案例时间线演示，也写清了使用报告和日志核查各自能证明什么。
 >
 > GitHub：https://github.com/wu736139669/goal-instruction-writer
 

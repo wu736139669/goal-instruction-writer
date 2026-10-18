@@ -5,8 +5,7 @@
 @font-face{font-family:"Inter";font-style:normal;font-weight:400;src:url("assets/fonts/Inter-400.ttf") format("truetype");font-display:block}
 @font-face{font-family:"Inter";font-style:normal;font-weight:700;src:url("assets/fonts/Inter-700.ttf") format("truetype");font-display:block}
 @font-face{font-family:"JetBrains Mono";font-style:normal;font-weight:400;src:url("assets/fonts/JetBrainsMono-400.ttf") format("truetype");font-display:block}
-@font-face{font-family:"Noto Sans SC";font-style:normal;font-weight:400;src:url("assets/fonts/NotoSansSC-400-subset.ttf") format("truetype");font-display:block}
-#root{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;container-type:size;color:#141413;font-family:"Inter",sans-serif}
+#root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;container-type:size;color:#141413;font-family:"Inter",sans-serif}
 
 .goal04-ground{position:absolute;inset:0;background:#FAF9F5}
 .goal04-kicker{position:absolute;left:80px;top:78px;font:400 25px "JetBrains Mono";letter-spacing:2px}
@@ -17,7 +16,7 @@
 .goal04-rule{display:flex;align-items:center;gap:20px;min-height:108px;border-bottom:1px solid #14141322;font-size:30px;line-height:1.25}
 .goal04-rule svg{flex:0 0 38px;width:38px;height:38px}
 .goal04-rule path{fill:none;stroke:#141413;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
-.goal04-zh{position:absolute;left:84px;top:537px;font:400 31px "Noto Sans SC"}
+.goal04-note{position:absolute;left:84px;top:537px;width:900px;font:400 30px/1.35 "Inter"}
 .goal04-cta{position:absolute;left:80px;top:672px;width:1760px;height:155px;padding:24px 34px;border-radius:8px;background:#181715;color:#FAF9F5;border-left:8px solid #CC785C}
 .goal04-cta-title{font:400 42px "EB Garamond";padding-bottom:12px}
 .goal04-link{font:400 30px "JetBrains Mono";letter-spacing:-.5px}
@@ -30,9 +29,9 @@
 <div data-hf-id="hf-91kp" class="goal04-kicker"><span data-hf-id="hf-9iw9" class="goal04-mark">✱</span>PROPORTIONAL VERIFICATION</div>
 <div data-hf-id="hf-04na" id="goal04-title" class="goal04-title"><span data-hf-id="hf-jvtx">Verify the change.</span><span data-hf-id="hf-k3qm">Keep valid proof.</span></div>
 <div data-hf-id="hf-9fw3" class="goal04-rules"><div data-hf-id="hf-nx2j" id="goal04-rule1" class="goal04-rule"><svg data-hf-id="hf-s0tj" viewBox="0 0 38 38"><path data-hf-id="hf-wy2f" id="goal04-check1" d="M6 20 L15 29 L32 9"/></svg><span data-hf-id="hf-rrlc">Changed code → focused checks</span></div><div data-hf-id="hf-f96o" id="goal04-rule2" class="goal04-rule"><svg data-hf-id="hf-pc5j" viewBox="0 0 38 38"><path data-hf-id="hf-oa6k" id="goal04-check2" d="M6 20 L15 29 L32 9"/></svg><span data-hf-id="hf-qdul">Stable build → required gates</span></div><div data-hf-id="hf-g0uh" id="goal04-rule3" class="goal04-rule"><svg data-hf-id="hf-oxui" viewBox="0 0 38 38"><path data-hf-id="hf-p1ud" id="goal04-check3" d="M6 20 L15 29 L32 9"/></svg><span data-hf-id="hf-jme2">Same inputs → reuse valid results</span></div></div>
-<div data-hf-id="hf-d30g" id="goal04-zh" class="goal04-zh">按影响验证，复用仍有效的结果</div>
+<div data-hf-id="hf-d30g" id="goal04-note" class="goal04-note">Check the affected behavior. Reuse evidence while its inputs remain valid.</div>
 <div data-hf-id="hf-tffu" id="goal04-cta" class="goal04-cta"><div data-hf-id="hf-r1qw" class="goal04-cta-title">Try Goal Instruction Writer</div><div data-hf-id="hf-kwcu" class="goal04-link">github.com/wu736139669/goal-instruction-writer</div></div>
-<div data-hf-id="hf-bfhz" class="goal04-footer">MIT · Codex skill · v0.2.0</div>
+<div data-hf-id="hf-bfhz" class="goal04-footer">MIT · Codex skill · English overview</div>
 
 </div>
 <script>
@@ -40,7 +39,7 @@
 
 tl.fromTo('#goal04-title',{x:-25,opacity:0},{x:0,opacity:1,duration:.6,ease:'power3.out'},.1);
 for(let i=1;i<=3;i++){const t=.9+(i-1)*1.1;tl.fromTo('#goal04-rule'+i,{y:20,opacity:0},{y:0,opacity:1,duration:.5,ease:'power3.out'},t);const path=document.getElementById('goal04-check'+i);const len=path.getTotalLength();path.style.strokeDasharray=String(len);tl.fromTo(path,{strokeDashoffset:len},{strokeDashoffset:0,duration:.4,ease:'power2.out'},t+.5);}
-tl.fromTo('#goal04-zh',{opacity:0},{opacity:1,duration:.5},3.7);
+tl.fromTo('#goal04-note',{opacity:0},{opacity:1,duration:.5},3.7);
 tl.fromTo('#goal04-cta',{y:30,opacity:0},{y:0,opacity:1,duration:.6,ease:'power3.out'},5.0);
 
 window.__timelines["04-verify"]=tl;})();

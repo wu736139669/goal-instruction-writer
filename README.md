@@ -11,9 +11,9 @@
 >
 > Preview the loop. Make progress inspectable. Finish with evidence.
 
-![Goal Instruction Writer animated overview](assets/goal-overview.gif)
+![Goal Instruction Writer English animated overview](assets/goal-overview-en.gif)
 
-[Watch the full demo](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.0/goal-overview.mp4) · [English case studies](docs/cases/README.md) · [Real usage and evidence](docs/field-notes.md) · [Where to share a skill](docs/distribution.md)
+[Watch the full English demo](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.4/goal-overview-en.mp4) · [English case studies](docs/cases/README.md) · [Real usage and evidence](docs/field-notes.md) · [Where to share a skill](docs/distribution.md)
 
 AI agents rarely fail because they did too little. More often, they work for a long
 time and quietly move away from the original outcome. <code>goal-instruction-writer</code>
