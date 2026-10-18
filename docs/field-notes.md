@@ -1,11 +1,18 @@
 # Field notes: long-running Goals in real work
 
-Recorded on 2026-10-17. [English introduction](../README.md) ·
+Observations recorded on 2026-10-17; case library expanded on 2026-10-18.
+[English introduction](../README.md) ·
 [中文介绍](README.zh-CN.md).
 
 These notes separate a maintainer's experience, inspectable project material,
 and a measured local log audit. They explain why the rules exist and what the
 available evidence supports.
+
+The [English case library](cases/README.md) adds dedicated write-ups for
+[source-led research](cases/source-led-research.md),
+[Android SDK delivery](cases/android-sdk-delivery.md), and the
+[public feedback loop](cases/open-source-feedback.md). The research and Godot
+write-ups describe different stages of the same project.
 
 ## Game development
 

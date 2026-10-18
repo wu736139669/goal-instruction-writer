@@ -1,6 +1,7 @@
 # Developer launch material
 
-Updated on 2026-10-17 for Goal Instruction Writer v0.2.3. The DevHunt and
+Original submission copy recorded on 2026-10-17; case-library links added on
+2026-10-18. The canonical skill release is v0.2.4. The recorded DevHunt and
 Product Hunt submissions use English copy, an English case study, and three
 English-only gallery images.
 
@@ -23,7 +24,7 @@ The skill keeps each iteration tied to the original outcome and uses focused che
 
 A public English case follows a multi-day Factory Town Idle Godot port through analysis, playable systems, and a local candidate with Mac and Android packages. The maintainer reports an estimated 60+ hour longest workflow. The case documents inspected stages and records that the full Goal was still active at the snapshot.
 
-Free under the MIT license. Latest skill release: v0.2.3.
+Free under the MIT license. Latest skill release: v0.2.4.
 
 ## Installation
 
@@ -33,6 +34,7 @@ npx skills add wu736139669/goal-instruction-writer --skill goal-instruction-writ
 
 ## Evidence and English media
 
+- [English case library: implementation, research, SDK delivery, and open-source feedback](https://github.com/wu736139669/goal-instruction-writer/blob/main/docs/cases/README.md)
 - [English game-development case](https://github.com/wu736139669/goal-instruction-writer/blob/main/docs/cases/factory-town-idle.md)
 - [Verification field notes](https://github.com/wu736139669/goal-instruction-writer/blob/main/docs/field-notes.md)
 - [Feedback discussion](https://github.com/wu736139669/goal-instruction-writer/discussions/1)

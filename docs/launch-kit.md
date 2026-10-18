@@ -38,6 +38,12 @@ and stop cleanly when the work is complete, blocked, or off target.
 
 ## Short post
 
+For new English posts, choose a concrete story from the
+[case library](cases/README.md): a game candidate, a research handoff, an SDK
+software release, or a public contribution that changed the skill. Use that
+case's recorded outcome and evidence boundary; the posts below retain their
+original launch context.
+
 ### English
 
 > I open-sourced the Goal-writing workflow I use for long-running agent work.

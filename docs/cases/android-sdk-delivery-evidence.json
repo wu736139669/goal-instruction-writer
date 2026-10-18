@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "audited_at_utc": "2026-10-18T11:09:43.874414+00:00",
+  "case": "Anonymized Android SDK 0.7.0 software delivery",
+  "evidence_level": "Maintainer audit of private engineering records; sanitized aggregate summary",
+  "milestone": {
+    "status": "COMPLETE_SOFTWARE_DELIVERY",
+    "version": "0.7.0",
+    "sourceCommit": "9009725b9801d9398f21da6bf6c686aca3b75dd9",
+    "deliveryCommit": "22e3d98a4efacfff24e7d143e882c310627b6b91",
+    "verifiedAtUtc": "2026-10-16T16:43:56.626123+00:00"
+  },
+  "delivery": {
+    "artifact_types": 8,
+    "source_inputs_matching_commit": 303,
+    "source_matches_git_bytes": true,
+    "sdk_tests_per_variant": 505,
+    "ui_tests_per_variant": 21,
+    "python_tool_tests": 21,
+    "native_and_device_tests": "NOT_EXECUTED"
+  },
+  "recorded_junit_suites": {
+    "sdk_debug": {
+      "suites": 69,
+      "tests": 505,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "suite_seconds_sum": 24.541
+    },
+    "sdk_release": {
+      "suites": 69,
+      "tests": 505,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "suite_seconds_sum": 20.073
+    },
+    "ui_debug": {
+      "suites": 7,
+      "tests": 21,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "suite_seconds_sum": 0.072
+    },
+    "ui_release": {
+      "suites": 7,
+      "tests": 21,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "suite_seconds_sum": 0.059
+    }
+  },
+  "recorded_gradle_cost": {
+    "duplicate_log_copies_excluded": true,
+    "invocations": 14,
+    "total_seconds": 572,
+    "broad_root_checks": 5,
+    "broad_root_seconds": 435,
+    "final_root_seconds": 90,
+    "logs": [
+      {
+        "role": "api07-check",
+        "status": "SUCCESSFUL",
+        "seconds": 3,
+        "sha256": "61634e493cd85da4b39cd916ecb377ed3a66a18de79eff2d1f2be86a3e4110d1"
+      },
+      {
+        "role": "compile",
+        "status": "FAILED",
+        "seconds": 10,
+        "sha256": "c7959a8337bbceb84bc3ce5c014aba8fdcf38387d6b3787322d51bdb6ad9768a"
+      },
+      {
+        "role": "compile2",
+        "status": "SUCCESSFUL",
+        "seconds": 20,
+        "sha256": "74036d76fa27e6f3a90be24f17c828388448d94eec818b0a919ba6625c0cee92"
+      },
+      {
+        "role": "final-check",
+        "status": "SUCCESSFUL",
+        "seconds": 81,
+        "sha256": "2bbf3db5df60566d883c83014fd4db57ae338a490b1e14c9dcaa8e896517792a"
+      },
+      {
+        "role": "final-check2",
+        "status": "SUCCESSFUL",
+        "seconds": 66,
+        "sha256": "2a302b3a55e79580d89af731f5adbe90acf77cb7ac6a091108578c387fff0627"
+      },
+      {
+        "role": "final-check3",
+        "status": "SUCCESSFUL",
+        "seconds": 90,
+        "sha256": "eb6017afc870b23fdc2ae7691bb0d73dc2440665e03587fa9f0a4074151c5b8a"
+      },
+      {
+        "role": "full1",
+        "status": "FAILED",
+        "seconds": 115,
+        "sha256": "4d49d653e524e60e316bc78f39f2404c43d33c77e7d9772068ae8c28e21c77bc"
+      },
+      {
+        "role": "full2",
+        "status": "SUCCESSFUL",
+        "seconds": 83,
+        "sha256": "62a6740f7388a0a6dc26253a9106f4ef19e3fdbde74b5de1370f582030d93f95"
+      },
+      {
+        "role": "independent-host-final",
+        "status": "SUCCESSFUL",
+        "seconds": 30,
+        "sha256": "0556e70c7e10f313112d333ab3bb0956f1445e7be053e4edadf3844e3545b47d"
+      },
+      {
+        "role": "independent-host",
+        "status": "SUCCESSFUL",
+        "seconds": 27,
+        "sha256": "42a313569fdef0955e0de92990863f21f326bce5826bd1567896e853694d516e"
+      },
+      {
+        "role": "tests1",
+        "status": "SUCCESSFUL",
+        "seconds": 19,
+        "sha256": "b3029b5493c80610bba623ee57c9112f13dde94ed3d820350aa76a80ef671d3a"
+      },
+      {
+        "role": "tests2",
+        "status": "FAILED",
+        "seconds": 8,
+        "sha256": "51e30dc25a42fcf5d0840c7c3227d556f098f0a15183f6bc8888735a9dec2a3c"
+      },
+      {
+        "role": "tests3",
+        "status": "SUCCESSFUL",
+        "seconds": 8,
+        "sha256": "7379abb2fe413b439466b2c42c2f47564703b4c72a830188ba8e4c63b6a200ff"
+      },
+      {
+        "role": "ui-compile",
+        "status": "SUCCESSFUL",
+        "seconds": 12,
+        "sha256": "4ac3a52b5c3f521b7006a98e375ea861e3872abde7d743df0322bc6d9d235ccd"
+      }
+    ]
+  },
+  "inspected_inputs": [
+    {
+      "role": "software acceptance report",
+      "bytes": 3099,
+      "sha256": "d11a1577ad180524250dc0a08246d698fc0b0d6da39e09be46b5599874a9065a"
+    },
+    {
+      "role": "delivery checklist",
+      "bytes": 1721,
+      "sha256": "1ec08e2318a4a712306110bccce79038d2253d7e1cc2a2b397d69ba590c7d070"
+    },
+    {
+      "role": "delivery receipt",
+      "bytes": 2156,
+      "sha256": "53c9dc5aece7654d1a68c1213cd30a40e8ccd9b5b8707275289977d3ad55828f"
+    },
+    {
+      "role": "software check archive",
+      "bytes": 1505493,
+      "sha256": "e5d95b30f954c69ec55095a74afd1081fb9267905640bfbe1be725528c5abe02"
+    }
+  ],
+  "limits": [
+    "The private project, raw logs, test reports, and packages are not reproduced here.",
+    "Suite-duration sums and recorded command durations are not total session wall-clock time.",
+    "Debug and Release are separate variants, not independent scenarios.",
+    "Physical-device, native recognition, and production-service acceptance are not established by this software delivery.",
+    "This audit read existing records; it did not rerun the SDK or measure a before/after skill speedup."
+  ]
+}

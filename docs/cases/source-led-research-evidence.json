@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "audited_at_utc": "2026-10-18T11:09:43.876862+00:00",
+  "case": "Factory Town Idle demo: source-led research and implementation handoff",
+  "checkpoint_date": "2026-10-13",
+  "evidence_level": "Maintainer audit of private project records; sanitized coverage summary",
+  "relationship": "Research stage of the same project as the Factory Town Idle Godot case",
+  "source": {
+    "developer_demo_page": "https://easmussen.itch.io/factory-town-idle-demo",
+    "inspected_interface_version": "1.3.6a / Standalone - Demo",
+    "downloaded_zip_sha256": "74c55370b2af57d4fc3930f3a5dc66d8c8f09416d2656226aa04c75de95d8382",
+    "main_assembly_sha256": "497329ebed78e03850f380a7a99e69d6f40b4ed1efeeb7a70c9be90f301d624c"
+  },
+  "coverage": {
+    "indexed_methods": 4920,
+    "methods_with_bodies": 4825,
+    "methods_without_bodies": 95,
+    "default_recipes": 160,
+    "research_definitions": 158,
+    "unity_objects_inventoried": 13875,
+    "unity_objects_with_extraction_records": 13875,
+    "uncovered_objects": 0,
+    "data_files_equal_original_archive": 113,
+    "recorded_errors": 0
+  },
+  "runtime_boundary": "title and main menu only; complete gameplay and long-run validation not finished",
+  "tool_limit": {
+    "initial_all_members_attempt_retained_as_failure": true,
+    "later_work_unit": "declaring-type batches using unmodified parser modules",
+    "per_batch_limit_mib": 64
+  },
+  "inspected_inputs": [
+    {
+      "role": "full analysis report",
+      "bytes": 19306,
+      "sha256": "e39a8999b5506934a028ee711e24b095841664282da4ed0e7d2a2d8fb9b925a5"
+    },
+    {
+      "role": "final verification summary",
+      "bytes": 2410,
+      "sha256": "28e598ae2282453a7c896524ab8dadcd1b1b98351a5211bfd53d47887ecc6af0"
+    },
+    {
+      "role": "review counts",
+      "bytes": 320,
+      "sha256": "31a91949bd21a6f7e195340ea4c67b345de2912fe25f6576893b9d2689ba9956"
+    }
+  ],
+  "limits": [
+    "The analysis archive, extracted code, media, and source game are not included in this public case.",
+    "Static coverage and inventories do not establish complete gameplay or a finished recreation.",
+    "This is a distinct stage of an existing maintainer project, not another independent customer adoption.",
+    "No continuous unattended duration or causal skill performance gain was measured."
+  ]
+}

@@ -13,7 +13,7 @@
 
 ![Goal Instruction Writer animated overview](assets/goal-overview.gif)
 
-[Watch the full demo](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.0/goal-overview.mp4) · [Real usage and evidence](docs/field-notes.md) · [Where to share a skill](docs/distribution.md)
+[Watch the full demo](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.0/goal-overview.mp4) · [English case studies](docs/cases/README.md) · [Real usage and evidence](docs/field-notes.md) · [Where to share a skill](docs/distribution.md)
 
 AI agents rarely fail because they did too little. More often, they work for a long
 time and quietly move away from the original outcome. <code>goal-instruction-writer</code>
@@ -42,8 +42,13 @@ contract that keeps it connected.
 | Real work | What the Goal needs to preserve | Evidence available |
 | --- | --- | --- |
 | Game development | A playable result, coherent progression, runtime checks, and a build handoff across a long run | [Factory Town Idle: analysis → 0.49 local candidate](docs/cases/factory-town-idle.md), the maintainer's 60+ hour report, and separately identified [public game recordings](docs/field-notes.md#game-development) |
-| Android SDK delivery | Feature work, compatibility, integration, and artifact provenance without repeated full release cycles | A local log audit: 14 Gradle calls totaling 9m 32s; final SDK unit suites about 45s; [method and limits](docs/field-notes.md#android-sdk-delivery) |
-| Open-source launch | Installability, one feedback path, finite follow-up, and an external maintainer gate | A published [two-iteration evaluation](docs/evaluations/2026-10-11-independent-goal-evaluation.md) |
+| Research and handoff | Source identities, rule coverage, tool limits, and explicit runtime gaps before implementation | A [source-led research archive](docs/cases/source-led-research.md) with 4,920 indexed methods; an earlier stage of the same game project |
+| Android SDK delivery | Feature work, compatibility, integration, and artifact provenance with checks selected by change | An [SDK software handoff](docs/cases/android-sdk-delivery.md): 505 SDK tests per variant, eight artifact types, and 14 recorded Gradle calls totaling 9m 32s |
+| Open-source collaboration | A reviewable submission, finite follow-up, external maintainer ownership, and accepted improvements | A [public contribution and feedback trace](docs/cases/open-source-feedback.md) through v0.2.3 and v0.2.4, alongside the earlier bounded evaluation |
+
+The [case library](docs/cases/README.md) links each outcome to its evidence and
+provides short contracts to adapt. It identifies private-record audits,
+public contribution traces, and the limits of each recorded checkpoint.
 
 ## What changes when you use it
 

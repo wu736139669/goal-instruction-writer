@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- Add an English case library and three detailed cases covering source-led research, Android SDK software delivery, and the public contribution/feedback loop, with sanitized research and SDK evidence summaries.
+
 ## [0.2.4] - 2026-10-18
 
 - Distinguish scheduled external waits from actionable attempts that make no progress; retain overall host time, token, and tool limits.
