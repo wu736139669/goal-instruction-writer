@@ -9,47 +9,55 @@
 
 > **Keep a long agent workflow tied to one outcome.**
 >
-> Preview the loop. Make progress inspectable. Finish with evidence.
+> Preview the loop. Keep the next step clear. Finish with evidence.
+
+An MIT-licensed skill for Codex that turns a broad request into a Goal with
+acceptance criteria, a bounded work loop, checkpoints, and clear stop conditions.
+Built from multi-day game development and software-delivery workflows.
 
 ![Goal Instruction Writer English animated overview](assets/goal-overview-en.gif)
 
 [Watch the full English demo](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.4/goal-overview-en.mp4) · [English case studies](docs/cases/README.md) · [Real usage and evidence](docs/field-notes.md) · [Where to share a skill](docs/distribution.md)
 
-AI agents rarely fail because they did too little. More often, they work for a long
-time and quietly move away from the original outcome. <code>goal-instruction-writer</code>
-turns “keep improving until it feels right” into a Goal instruction that can be
-reviewed, bounded, paused, and finished cleanly.
+## Start in two minutes
 
-It gives every long-running task an observable outcome, a bounded loop, evidence
-for meaningful progress, drift gates, and explicit terminal states.
+**1. Install for Codex.**
 
-## Active work and waiting
+~~~bash
+npx skills add wu736139669/goal-instruction-writer \
+  --skill goal-instruction-writer -g -a codex -y
+~~~
 
-The skill supports continuation after time or event triggers through its Goal
-instructions. A single Goal can alternate between active iterations and waiting.
-Its outcome and acceptance criteria stay the same; the next action depends on
-what can usefully advance now.
+**2. Paste this into a Codex chat in a repository.**
 
-| Situation | What the generated Goal tells the agent to do |
-| --- | --- |
-| An authorized work unit can advance a criterion | Inspect, act, verify, record evidence, then choose the next bounded work unit |
-| A criterion depends on a later time or external response | Preserve the pending criterion, next check time or relevant notification, and deadline; continue independent work or yield with the checkpoint saved |
-| The task is invoked again | Read the checkpoint and check limits; query the pending dependency only when its recorded time/event condition is met, then verify the response and continue |
+~~~text
+Use $goal-instruction-writer in Preview mode.
+Design a read-only Goal to audit local Markdown links in README.md and report
+broken targets with proposed fixes. Limit the eventual audit to two passes.
+Show the outcome, acceptance evidence, loop, checkpoint, and stop conditions.
+Do not perform the audit or edit files yet.
+~~~
 
-This makes waiting a branch of the same Goal. A time or relevant notification
-can permit another check. Waiting and a due observation of "still pending" do
-not count as failed actionable attempts; actual queries, deadlines, and host
-budgets still apply.
+The preview should make it clear which links are in scope, what evidence proves
+each finding, what the next step is, and when the audit will stop. Review it,
+then ask for the final Goal if the proposed loop fits your task.
 
-The skill defines what to save, when another check is allowed, and how to resume.
-A host timer, relevant event, or authorized message can provide the next
-invocation with access to the saved checkpoint. The host supplies persistence
-and invocation, including any automatic delivery at the requested time. When
-automatic wake-up is unavailable, a later authorized invocation can resume the
-same workflow from its checkpoint.
-The documented waiting branch has not yet been validated by a live wait/resume
-test. See the [waiting rules](references/drift-control.md#scheduled-external-waits)
-and [English example](docs/cases/open-source-feedback.md#how-the-waiting-branch-becomes-concrete).
+[Try three short examples](docs/quickstart-examples.md) ·
+[Other installation options](#install) · [Preview, confirm, and execute](#30-second-usage)
+
+If this workflow helps you,
+[star the repository](https://github.com/wu736139669/goal-instruction-writer)
+to keep it handy and follow new examples.
+
+## What it helps with
+
+Long agent tasks can lose their original scope, repeat broad checks, or leave
+the next turn without a usable handoff. <code>goal-instruction-writer</code>
+turns “keep improving until it feels right” into a Goal that can be reviewed,
+bounded, paused, and finished against observable criteria.
+
+The host agent supplies execution, persistence, tools, and permissions. This
+skill supplies the instruction contract; it does not start an unattended runtime.
 
 ## Built from long-running work
 
@@ -326,9 +334,38 @@ trigger; waiting does not consume the actionable no-progress allowance. Actual
 queries and elapsed time still count toward host limits. See the
 [scheduled-wait rules](references/drift-control.md#scheduled-external-waits).
 
+## Active work and waiting
+
+The skill supports continuation after time or event triggers through its Goal
+instructions. A single Goal can alternate between active iterations and waiting.
+Its outcome and acceptance criteria stay the same; the next action depends on
+what can usefully advance now.
+
+| Situation | What the generated Goal tells the agent to do |
+| --- | --- |
+| An authorized work unit can advance a criterion | Inspect, act, verify, record evidence, then choose the next bounded work unit |
+| A criterion depends on a later time or external response | Preserve the pending criterion, next check time or relevant notification, and deadline; continue independent work or yield with the checkpoint saved |
+| The task is invoked again | Read the checkpoint and check limits; query the pending dependency only when its recorded time/event condition is met, then verify the response and continue |
+
+This makes waiting a branch of the same Goal. A time or relevant notification
+can permit another check. Waiting and a due observation of "still pending" do
+not count as failed actionable attempts; actual queries, deadlines, and host
+budgets still apply.
+
+The skill defines what to save, when another check is allowed, and how to resume.
+A host timer, relevant event, or authorized message can provide the next
+invocation with access to the saved checkpoint. The host supplies persistence
+and invocation, including any automatic delivery at the requested time. When
+automatic wake-up is unavailable, a later authorized invocation can resume the
+same workflow from its checkpoint.
+The documented waiting branch has not yet been validated by a live wait/resume
+test. See the [waiting rules](references/drift-control.md#scheduled-external-waits)
+and [English example](docs/cases/open-source-feedback.md#how-the-waiting-branch-becomes-concrete).
+
 ## Resources
 
 - [Skill entrypoint](SKILL.md)
+- [Three short prompts to try](docs/quickstart-examples.md)
 - [Goal contract and ready-to-paste skeleton](references/goal-contract.md)
 - [Loop preview format and flow diagram](references/loop-preview.md)
 - [Drift detection and recovery](references/drift-control.md)
