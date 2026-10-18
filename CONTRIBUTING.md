@@ -36,6 +36,7 @@ root:
 
 ```bash
 npx --yes skills add . --list
+python3 scripts/build_openai_plugin.py
 ```
 
 The same check runs automatically in GitHub Actions.

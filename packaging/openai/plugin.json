@@ -1,0 +1,41 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "goal-instruction-writer",
+  "version": "0.2.4",
+  "description": "Preview execution loops and write durable Goal instructions with acceptance evidence, drift controls, focused verification, and clear stop conditions.",
+  "author": {
+    "name": "wu736139669",
+    "url": "https://github.com/wu736139669"
+  },
+  "homepage": "https://github.com/wu736139669/goal-instruction-writer",
+  "repository": "https://github.com/wu736139669/goal-instruction-writer",
+  "license": "MIT",
+  "keywords": ["goals", "agent-workflows", "planning", "coding", "research", "game-development"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Goal Instruction Writer",
+        "shortDescription": "Goals that stay on target",
+        "longDescription": "Turn a broad request into a Goal with an observable outcome, acceptance evidence, a bounded execution loop, and explicit stop conditions. Preview the loop before a long task, draft a ready-to-use contract, refine an existing Goal, or audit it for scope drift and repeated activity. Keep each work unit tied to a criterion, preserve the next step across turns, and distinguish focused checks from delivery gates. Reuse verification evidence while its relevant inputs remain valid. For external dependencies, record the pending criterion, next check time or event, and deadline. This instruction package supports coding, game-development, research, and other multi-stage workflows. The host agent supplies tools, permissions, persistence, and future invocations. The package does not provide a scheduler; a live wait/resume transition has not yet been validated.",
+        "developerName": "wu736139669",
+        "category": "Developer Tools",
+        "capabilities": ["Preview execution loops", "Draft Goal contracts", "Audit scope and evidence"],
+        "websiteURL": "https://github.com/wu736139669/goal-instruction-writer",
+        "supportURL": "https://github.com/wu736139669/goal-instruction-writer/issues",
+        "privacyPolicyURL": "https://github.com/wu736139669/goal-instruction-writer/blob/main/docs/privacy.md",
+        "defaultPrompt": [
+          "Preview a Goal for a playable Godot game slice with save/load and build evidence. Do not execute it.",
+          "Draft a Goal for fixing a CSV importer with focused checks and explicit completion criteria.",
+          "Audit my existing Goal for scope drift, repeated checks, and unclear stop conditions."
+        ],
+        "brandColor": "#101C30",
+        "brandColorDark": "#8FB2E0",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      },
+      "publication": {
+        "release_notes": "Initial OpenAI skills-only packaging of the v0.2.4 instruction contract, references, icons, and privacy information."
+      }
+    }
+  }
+}

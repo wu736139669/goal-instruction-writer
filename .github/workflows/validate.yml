@@ -28,3 +28,6 @@ jobs:
 
       - name: Verify Skills CLI discovery
         run: npx --yes skills add . --list
+
+      - name: Build and validate OpenAI plugin package
+        run: python3 scripts/build_openai_plugin.py

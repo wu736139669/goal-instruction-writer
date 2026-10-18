@@ -197,6 +197,13 @@ npx skills add wu736139669/goal-instruction-writer \
 The command is verified against this repository and detects one skill:
 <code>goal-instruction-writer</code>.
 
+### OpenAI plugin package
+
+The [skills-only plugin ZIP](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.4/goal-instruction-writer-openai-0.2.4.zip)
+packages the same instruction contract for OpenAI plugin upload. See the
+[build and validation notes](docs/openai-plugin.md) and [privacy statement](docs/privacy.md).
+Public directory review and publication are separate from this downloadable package.
+
 ### Git clone fallback
 
 ~~~bash
