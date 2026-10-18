@@ -3,7 +3,7 @@
 ## [Unreleased]
 
 - Add an English case library and three detailed cases covering source-led research, Android SDK software delivery, and the public contribution/feedback loop, with sanitized research and SDK evidence summaries.
-- Explain active iterations and continuation after a time/event trigger as branches of one Goal; clarify host requirements and the untested live wait/resume boundary in the introduction and launch material.
+- Describe support for active iterations and continuation after time/event triggers through Goal instructions, with host timers, relevant events, or authorized messages providing invocation; retain the host boundary and untested live wait/resume status.
 
 ## [0.2.4] - 2026-10-18
 

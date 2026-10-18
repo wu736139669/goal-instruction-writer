@@ -25,9 +25,10 @@ for meaningful progress, drift gates, and explicit terminal states.
 
 ## Active work and waiting
 
-A single Goal can alternate between active iterations and waiting for a time
-or event. Its outcome and acceptance criteria stay the same; the next action
-depends on what can usefully advance now.
+The skill supports continuation after time or event triggers through its Goal
+instructions. A single Goal can alternate between active iterations and waiting.
+Its outcome and acceptance criteria stay the same; the next action depends on
+what can usefully advance now.
 
 | Situation | What the generated Goal tells the agent to do |
 | --- | --- |
@@ -40,9 +41,12 @@ can permit another check. Waiting and a due observation of "still pending" do
 not count as failed actionable attempts; actual queries, deadlines, and host
 budgets still apply.
 
-The skill specifies these instructions and resume conditions. Persistence and
-automatic invocation require support from the host runtime. When automatic
-wake-up is unavailable, the checkpoint supports a later authorized invocation.
+The skill defines what to save, when another check is allowed, and how to resume.
+A host timer, relevant event, or authorized message can provide the next
+invocation with access to the saved checkpoint. The host supplies persistence
+and invocation, including any automatic delivery at the requested time. When
+automatic wake-up is unavailable, a later authorized invocation can resume the
+same workflow from its checkpoint.
 The documented waiting branch has not yet been validated by a live wait/resume
 test. See the [waiting rules](references/drift-control.md#scheduled-external-waits)
 and [English example](docs/cases/open-source-feedback.md#how-the-waiting-branch-becomes-concrete).

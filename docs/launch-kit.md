@@ -16,12 +16,14 @@ and stop cleanly when the work is complete, blocked, or off target.
 **Short description:**
 
 > Preview the loop before you run the Goal. Write Goals that stay on target,
-> preserve evidence across long runs, and stop cleanly. Continue useful work,
-> or save a pending criterion until its next check time or relevant notification.
+> preserve evidence across long runs, and stop cleanly. Supports bounded active
+> work and continuation after time or event triggers, with a saved checkpoint.
 
 For the distinction between active iterations and continuation after a trigger,
-use the [introduction](../README.md#active-work-and-waiting). The skill defines
-the checkpoint and resume conditions; automatic wake-up requires host support.
+use the [introduction](../README.md#active-work-and-waiting). The skill includes
+the checkpoint and resume instructions. A host timer, relevant event, or later
+authorized message supplies the next invocation; automatic delivery needs host
+support.
 The live wait/resume transition remains untested.
 
 ## Launch checklist
