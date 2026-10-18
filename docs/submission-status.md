@@ -3,7 +3,7 @@
 Recorded on 2026-10-17 for
 [Goal Instruction Writer](https://github.com/wu736139669/goal-instruction-writer),
 with submissions based on version 0.2.2. The canonical skill release is now
-v0.2.3. Evidence below records the submitted versions. Submission copy and the
+v0.2.4. Evidence below records the submitted versions. Submission copy and the
 case-study links are in English.
 
 | Destination | Verified state | Evidence / next gate |

@@ -100,3 +100,7 @@ The [feedback thread](https://github.com/wu736139669/goal-instruction-writer/dis
 also contains a reader's proposed edge case about waiting for replies versus
 actionable work that makes no progress. That is a useful design question; it
 is labeled as reading feedback rather than an installation/execution test.
+Version 0.2.4 makes the scheduled-wait branch explicit across the skill and
+templates, following the [maintainer reply](https://github.com/wu736139669/goal-instruction-writer/discussions/1#discussioncomment-19016524).
+The historical evaluation remains evidence of two bounded read-only iterations;
+it did not test waiting for a real deadline or an automatic resume.

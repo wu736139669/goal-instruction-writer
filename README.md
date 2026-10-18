@@ -99,9 +99,9 @@ flowchart TD
 | The loop is just “keep trying” | One smallest work unit and an expected delta per iteration |
 | New discoveries silently change direction | A Goal Anchor that freezes outcome, criteria, scope, and authority |
 | Useful side work consumes the main task | A <code>SIDE_QUEST</code> label and a deferred list |
-| The agent keeps working without progress | A pause after two materially equivalent no-progress iterations |
+| The agent keeps working without progress | Realignment after two equivalent actionable attempts add no progress or new relevant evidence |
 | Small edits repeatedly trigger full validation and packaging | Focused iteration checks, required delivery gates, and reuse of valid evidence |
-| An external dependency creates endless waiting | <code>GOAL BLOCKED</code> with the exact unblock needed |
+| An external dependency creates endless waiting | A next-check trigger and durable wait checkpoint; a named blocker when no resume trigger is supported |
 
 ## The three-layer contract
 
@@ -275,8 +275,11 @@ The skill designs and audits the instruction contract. Runtime access,
 permissions, tool availability, and approval for external side effects remain
 controlled by the host agent and the user.
 
-For external gates, preserve the evidence and stop with the exact unblock needed.
-Waiting for a maintainer, owner, or missing dataset is not a reason to invent more work.
+For external gates, preserve the open criterion, evidence, next check time/event,
+and deadline or unblock condition. Continue independent work or yield until the
+trigger; waiting does not consume the actionable no-progress allowance. Actual
+queries and elapsed time still count toward host limits. See the
+[scheduled-wait rules](references/drift-control.md#scheduled-external-waits).
 
 ## Resources
 

@@ -106,11 +106,13 @@ At every iteration, record three links before acting:
 
 After verification, classify the result as:
 
-- `ON_TARGET`: the named criterion moved and evidence supports the next step.
+- `ON_TARGET`: the named criterion moved or new relevant evidence supports a
+  justified next step.
 - `SIDE_QUEST`: useful but not required for this Goal; park it in a deferred
   list instead of expanding the loop.
-- `DRIFTED`: no criterion moved, the action changed the goal or scope, or the
-  next step cannot be justified from the Anchor; stop and realign.
+- `DRIFTED`: the action changed the goal or scope without authorization, the
+  next step cannot be justified from the Anchor, or the no-progress threshold
+  is reached; stop and realign.
 
 Run a phase gate every 3–5 iterations by default, at each milestone, and before
 an irreversible or high-cost action. Re-read the Anchor, compare the current
@@ -138,6 +140,15 @@ maximum attempts, or a finite work-unit list. Add a no-op rule: do not repeat
 the same action without new information; after a repeated failure, change the
 hypothesis or stop with the blocker. The loop must be able to explain why the
 next iteration is different from the previous one.
+
+For external dependencies, record the unmet criterion, next check time or
+relevant notification, and deadline. Before that trigger, continue independent
+work or yield with the checkpoint preserved. Waiting and a due check that
+confirms the dependency is still pending do not count as failed actionable
+attempts toward the default two-equivalent-no-progress threshold. Actual tool
+calls and elapsed time still count against host limits. See
+[scheduled waits](references/drift-control.md#scheduled-external-waits)
+for polling, resumption, and deadline rules.
 
 #### Verification strategy
 

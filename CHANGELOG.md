@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [0.2.4] - 2026-10-18
+
+- Distinguish scheduled external waits from actionable attempts that make no progress; retain overall host time, token, and tool limits.
+- Record pending criteria, next check time/event, and deadlines; skip premature polling, continue independent work or yield, and verify responses before counting them.
+- Align Goal templates, preview branches, drift rules, and the open-source example; a wait checkpoint does not create an automatic scheduler.
+- Credit [TheodorNEngoy's reading feedback](https://github.com/wu736139669/goal-instruction-writer/discussions/1#discussioncomment-18861864). The historical October 11 evaluation did not test this waiting transition.
+
 ## [0.2.3] - 2026-10-17
 
 - Use `GOAL REALIGNMENT REQUIRED` consistently for drift stops across the skill, references, examples, and README diagrams; reserve `GOAL PAUSED` for an explicit owner pause.
