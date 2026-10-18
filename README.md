@@ -23,6 +23,30 @@ reviewed, bounded, paused, and finished cleanly.
 It gives every long-running task an observable outcome, a bounded loop, evidence
 for meaningful progress, drift gates, and explicit terminal states.
 
+## Active work and waiting
+
+A single Goal can alternate between active iterations and waiting for a time
+or event. Its outcome and acceptance criteria stay the same; the next action
+depends on what can usefully advance now.
+
+| Situation | What the generated Goal tells the agent to do |
+| --- | --- |
+| An authorized work unit can advance a criterion | Inspect, act, verify, record evidence, then choose the next bounded work unit |
+| A criterion depends on a later time or external response | Preserve the pending criterion, next check time or relevant notification, and deadline; continue independent work or yield with the checkpoint saved |
+| The task is invoked again | Read the checkpoint and check limits; query the pending dependency only when its recorded time/event condition is met, then verify the response and continue |
+
+This makes waiting a branch of the same Goal. A time or relevant notification
+can permit another check. Waiting and a due observation of "still pending" do
+not count as failed actionable attempts; actual queries, deadlines, and host
+budgets still apply.
+
+The skill specifies these instructions and resume conditions. Persistence and
+automatic invocation require support from the host runtime. When automatic
+wake-up is unavailable, the checkpoint supports a later authorized invocation.
+The documented waiting branch has not yet been validated by a live wait/resume
+test. See the [waiting rules](references/drift-control.md#scheduled-external-waits)
+and [English example](docs/cases/open-source-feedback.md#how-the-waiting-branch-becomes-concrete).
+
 ## Built from long-running work
 
 A concrete example is a multi-day **Factory Town Idle Godot port**. Project
@@ -211,7 +235,12 @@ the final Goal instruction.
 Before each iteration, state the target criterion, expected evidence, and scope reason.
 After each iteration, state the actual evidence, alignment label, remaining gap,
 and next cursor.
-If two equivalent iterations produce no new progress, stop with:
+For an external wait, save the pending criterion, next check time/event, and deadline.
+Before the trigger, continue independent work or yield without another lookup.
+On a later invocation, read the checkpoint and check limits before querying.
+Waiting and due observations of "still pending" are not failed actionable attempts.
+If two equivalent actionable attempts add neither acceptance progress nor new
+relevant evidence, stop with:
 GOAL REALIGNMENT REQUIRED.
 ~~~
 
