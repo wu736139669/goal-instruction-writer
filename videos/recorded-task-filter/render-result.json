@@ -1,0 +1,40 @@
+{
+  "file": "goal-recorded-task-filter-en.mp4",
+  "bytes": 1014558,
+  "sha256": "b27ec1511580311f5c3c390e808fb10c6abf1441743421b21cbecc4d583f50fa",
+  "durationSeconds": 48.0,
+  "width": 1920,
+  "height": 1080,
+  "fps": "30/1",
+  "frames": 1440,
+  "videoCodec": "h264",
+  "audioStreams": 0,
+  "renderCommand": "npm run render -- --quality delivery --fps 30 --output renders/goal-recorded-task-filter-en.mp4",
+  "capture": "drawelement; hardware GPU",
+  "cliVersion": "0.8.174",
+  "visualRevision": 2,
+  "url": "https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.4/goal-recorded-task-filter-en.mp4",
+  "decodedFrameReviewSeconds": [
+    3,
+    19,
+    37,
+    45
+  ],
+  "decodedFrameReview": "Verified actual MP4 frames against the approved composition.",
+  "gif": {
+    "path": "../../assets/goal-recorded-task-filter-en.gif",
+    "width": 960,
+    "height": 540,
+    "fps": 15,
+    "frames": 720,
+    "durationSeconds": 48.0,
+    "bytes": 897656,
+    "sha256": "bfbd5f76291dca4932103c3c12d4b1c044c35caa2c2164e42eae01e9124edfd0"
+  },
+  "poster": {
+    "path": "../../assets/goal-recorded-task-filter-en-poster.png",
+    "sourceTimeSeconds": 3.0,
+    "bytes": 170179,
+    "sha256": "4feaca227ca87a691f8545c17fbc94f6f62185b2493fa5d6efcd6d76fd588b21"
+  }
+}

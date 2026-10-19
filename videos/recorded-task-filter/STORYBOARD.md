@@ -76,3 +76,79 @@ blueprint: none; composed from waterfall-entry and GSAP discrete timeline sets
 reference: transcript-scroll-artifact-reveal (evidence-to-artifact arc; no camera moves)
 beat: Deliver the result. Then stop. 2 of 4 iterations used. Inspect the request, Goal, code, tests, and transcript. Try one real task and share what happened.
 source: examples/task-filter/evidence/operator-review.json + final agent message
+
+
+# Visual revision 2 — 2026-10-19
+
+User note: "Do these pictures/videos look a bit ugly?"
+Diagnosis: six repetitive text-heavy layouts with little hierarchy or momentum.
+Change: reduce 90s to 48s; display headlines 106–184px; one evidence focus per
+scene; switch between dark, paper, and lime using one palette. Keep all public
+text English and retain real artifact provenance. Earlier frames remain as the
+published v1 source; the following frames are the current cut.
+
+## Frame 7
+
+status: animated
+frame_id: v2-hook
+src: compositions/v2/v2-hook.html
+start: 0
+duration: 6
+blueprint: none; rules: waterfall-entry, svg-path-draw, css-marker-patterns
+beat: Give your agent a finish line
+source: Editorial hook; no performance or adoption claim
+
+## Frame 8
+
+status: animated
+frame_id: v2-contract
+src: compositions/v2/v2-contract.html
+start: 6
+duration: 8
+blueprint: none; rules: waterfall-entry, svg-path-draw, css-marker-patterns
+beat: Turn a request into a contract
+source: examples/task-filter/GOAL.md C1, C7, execution loop
+
+## Frame 9
+
+status: animated
+frame_id: v2-code
+src: compositions/v2/v2-code.html
+start: 14
+duration: 10
+blueprint: none; rules: waterfall-entry, svg-path-draw, css-marker-patterns
+beat: One small change
+source: examples/task-filter/result/tasklist.py actual selected source lines
+
+## Frame 10
+
+status: animated
+frame_id: v2-proof
+src: compositions/v2/v2-proof.html
+start: 24
+duration: 8
+blueprint: none; rules: waterfall-entry, svg-path-draw, css-marker-patterns
+beat: Focused first. Full suite last
+source: examples/task-filter/evidence/focused-check.json; delivery-check.json
+
+## Frame 11
+
+status: animated
+frame_id: v2-result
+src: compositions/v2/v2-result.html
+start: 32
+duration: 9
+blueprint: none; rules: waterfall-entry, svg-path-draw, css-marker-patterns
+beat: Goal complete
+source: Operator review actual stdout + final captured agent report; separate sources
+
+## Frame 12
+
+status: animated
+frame_id: v2-close
+src: compositions/v2/v2-close.html
+start: 41
+duration: 7
+blueprint: none; rules: waterfall-entry, svg-path-draw, css-marker-patterns
+beat: Try one real task
+source: Repository identity and existing public install command

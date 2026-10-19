@@ -1,35 +1,35 @@
 {
-  "duration": 90,
+  "duration": 48,
   "assertions": [
     {
       "kind": "appearsBy",
-      "selector": "[data-composition-id=\"frame01\"] .heading",
-      "bySec": 0.6
+      "selector": "[data-composition-id=\"v2-hook\"] .head",
+      "bySec": 0.65
     },
     {
       "kind": "appearsBy",
-      "selector": "[data-composition-id=\"frame02\"] .heading",
-      "bySec": 14.6
+      "selector": "[data-composition-id=\"v2-contract\"] .head",
+      "bySec": 6.65
     },
     {
       "kind": "appearsBy",
-      "selector": "[data-composition-id=\"frame03\"] .heading",
-      "bySec": 29.6
+      "selector": "[data-composition-id=\"v2-code\"] .head",
+      "bySec": 14.65
     },
     {
       "kind": "appearsBy",
-      "selector": "[data-composition-id=\"frame04\"] .heading",
-      "bySec": 45.6
+      "selector": "[data-composition-id=\"v2-proof\"] .head",
+      "bySec": 24.65
     },
     {
       "kind": "appearsBy",
-      "selector": "[data-composition-id=\"frame05\"] .heading",
-      "bySec": 60.6
+      "selector": "[data-composition-id=\"v2-result\"] .head",
+      "bySec": 32.65
     },
     {
       "kind": "appearsBy",
-      "selector": "[data-composition-id=\"frame06\"] .heading",
-      "bySec": 75.6
+      "selector": "[data-composition-id=\"v2-close\"] .head",
+      "bySec": 41.65
     }
   ]
 }

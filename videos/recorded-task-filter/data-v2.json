@@ -1,0 +1,50 @@
+[
+  {
+    "id": "v2-hook",
+    "duration": 6,
+    "stage": "01 / THE IDEA",
+    "title": "Give your agent a finish line",
+    "source": "Editorial hook; no performance or adoption claim",
+    "start": 0
+  },
+  {
+    "id": "v2-contract",
+    "duration": 8,
+    "stage": "02 / THE CONTRACT",
+    "title": "Turn a request into a contract",
+    "source": "examples/task-filter/GOAL.md C1, C7, execution loop",
+    "start": 6
+  },
+  {
+    "id": "v2-code",
+    "duration": 10,
+    "stage": "03 / THE IMPLEMENTATION",
+    "title": "One small change",
+    "source": "examples/task-filter/result/tasklist.py actual selected source lines",
+    "start": 14
+  },
+  {
+    "id": "v2-proof",
+    "duration": 8,
+    "stage": "04 / THE EVIDENCE",
+    "title": "Focused first. Full suite last",
+    "source": "examples/task-filter/evidence/focused-check.json; delivery-check.json",
+    "start": 24
+  },
+  {
+    "id": "v2-result",
+    "duration": 9,
+    "stage": "05 / THE HANDOFF",
+    "title": "Goal complete",
+    "source": "Operator review actual stdout + final captured agent report; separate sources",
+    "start": 32
+  },
+  {
+    "id": "v2-close",
+    "duration": 7,
+    "stage": "06 / TRY IT",
+    "title": "Try one real task",
+    "source": "Repository identity and existing public install command",
+    "start": 41
+  }
+]

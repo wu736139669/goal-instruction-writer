@@ -4,6 +4,10 @@ One request becomes a Goal, a small implementation, and a verified stop.
 This is a **maintainer-operated controlled example**, recorded on 2026-10-19.
 It is not an external trial or a before/after performance benchmark.
 
+[![Recorded English task demo](../../assets/goal-recorded-task-filter-en-poster.png)](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.4/goal-recorded-task-filter-en.mp4)
+
+[Watch the 48-second English demo](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.4/goal-recorded-task-filter-en.mp4).
+
 | Starting point | Recorded result |
 | --- | --- |
 | Python task-list CLI, no dependencies | `--status open\|done\|all` |

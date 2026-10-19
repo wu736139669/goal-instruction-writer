@@ -15,9 +15,9 @@ An MIT-licensed skill for Codex that turns a broad request into a Goal with
 acceptance criteria, a bounded work loop, checkpoints, and clear stop conditions.
 Built from multi-day game development and software-delivery workflows.
 
-![Goal Instruction Writer English animated overview](assets/goal-overview-en.gif)
+[![Goal Instruction Writer — recorded English task demo](assets/goal-recorded-task-filter-en.gif)](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.4/goal-recorded-task-filter-en.mp4)
 
-[Watch the full English demo](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.4/goal-overview-en.mp4) · [English case studies](docs/cases/README.md) · [Real usage and evidence](docs/field-notes.md) · [Where to share a skill](docs/distribution.md)
+[Watch the 48-second recorded example](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.4/goal-recorded-task-filter-en.mp4) · [English case studies](docs/cases/README.md) · [Real usage and evidence](docs/field-notes.md) · [Where to share a skill](docs/distribution.md)
 
 ## See one task finish
 
@@ -383,7 +383,7 @@ and [English example](docs/cases/open-source-feedback.md#how-the-waiting-branch-
 - [Real usage, recorded examples, and evidence limits](docs/field-notes.md)
 - [Factory Town Idle: a multi-day Goal case study](docs/cases/factory-town-idle.md)
 - [Skill distribution and submission guide](docs/distribution.md)
-- [Editable video source and provenance](videos/goal-overview/BRIEF.md)
+- [Editable video source and provenance](videos/recorded-task-filter/BRIEF.md)
 - [Contributing guide](CONTRIBUTING.md)
 - [GitHub Discussions](https://github.com/wu736139669/goal-instruction-writer/discussions)
 - [Chinese documentation](docs/README.zh-CN.md)

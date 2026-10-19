@@ -11,9 +11,9 @@
 >
 > 先预览循环，让进展可检查，最后凭证据交付。
 
-![Goal 技能全英文动态演示](../assets/goal-overview-en.gif)
+![Goal 技能全英文动态演示](../assets/goal-recorded-task-filter-en.gif)
 
-[观看完整英文演示](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.4/goal-overview-en.mp4) · [真实使用与证据](field-notes.md) · [技能投稿指南](distribution.md)
+[观看 48 秒英文实测演示](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.4/goal-recorded-task-filter-en.mp4) · [真实使用与证据](field-notes.md) · [技能投稿指南](distribution.md)
 
 AI agent 很少因为“不够努力”失败，更多时候是运行很久后已经偏离了原目标。
 <code>goal-instruction-writer</code> 是一个 Codex skill，把“继续改进、直到满意”变成一份能被检查、能被限制、能被暂停、能安全结束的 Goal 指令。
@@ -288,7 +288,7 @@ Goal 是指令契约；启动、恢复和状态命令取决于具体宿主。
 - [独立 Goal 测试报告](evaluations/2026-10-11-independent-goal-evaluation.zh-CN.md)
 - [真实使用、游戏实录与证据边界](field-notes.md)
 - [技能分发与投稿指南](distribution.md)
-- [可编辑演示视频与来源](../videos/goal-overview/BRIEF.md)
+- [可编辑演示视频与来源](../videos/recorded-task-filter/BRIEF.md)
 - [Independent Goal evaluation（English）](evaluations/2026-10-11-independent-goal-evaluation.md)
 - [发布工具包](launch-kit.md)
 - [贡献指南](../CONTRIBUTING.md)

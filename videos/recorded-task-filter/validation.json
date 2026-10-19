@@ -1,42 +1,56 @@
 {
-  "command": "npm run check -- --strict --at 7,21.5,37,52.5,67.5,82.5 --snapshots --json",
+  "revision": "Visual revision 2",
+  "durationSeconds": 48,
   "cliVersion": "0.8.174",
-  "durationSeconds": 90,
+  "command": "npm run check -- --strict --at 3,10,19,28,37,45 --snapshots --json",
   "ok": true,
   "browserSkipped": false,
   "lint": {
+    "ok": true,
     "errorCount": 0,
     "warningCount": 0,
-    "filesScanned": 7
+    "filesScanned": 13
   },
   "runtime": {
+    "ok": true,
     "errorCount": 0,
     "warningCount": 0
   },
   "layout": {
+    "ok": true,
     "errorCount": 0,
     "warningCount": 0,
     "samples": [
-      7,
-      21.5,
+      3,
+      10,
+      19,
+      28,
       37,
-      52.5,
-      67.5,
-      82.5
+      45
     ]
   },
   "motion": {
-    "enabled": true,
+    "ok": true,
     "errorCount": 0,
     "warningCount": 0,
+    "enabled": true,
     "samples": 300
   },
   "contrast": {
+    "ok": true,
     "errorCount": 0,
     "warningCount": 0,
-    "checked": 74,
-    "passed": 74
+    "enabled": true,
+    "samples": [
+      3,
+      10,
+      19,
+      28,
+      45
+    ],
+    "checked": 90,
+    "passed": 90
   },
-  "manualReview": "Opening frame, six settled scene frames, and Studio preview inspected.",
-  "exportState": "Preview prepared; no MP4 rendered in this record."
+  "manualReview": "Opening frame and six settled scene frames inspected; final Studio preview opened.",
+  "exportState": "User approved visual revision 2; MP4 exported and verified. See render-result.json."
 }
