@@ -1,0 +1,42 @@
+{
+  "command": "npm run check -- --strict --at 7,21.5,37,52.5,67.5,82.5 --snapshots --json",
+  "cliVersion": "0.8.174",
+  "durationSeconds": 90,
+  "ok": true,
+  "browserSkipped": false,
+  "lint": {
+    "errorCount": 0,
+    "warningCount": 0,
+    "filesScanned": 7
+  },
+  "runtime": {
+    "errorCount": 0,
+    "warningCount": 0
+  },
+  "layout": {
+    "errorCount": 0,
+    "warningCount": 0,
+    "samples": [
+      7,
+      21.5,
+      37,
+      52.5,
+      67.5,
+      82.5
+    ]
+  },
+  "motion": {
+    "enabled": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "samples": 300
+  },
+  "contrast": {
+    "errorCount": 0,
+    "warningCount": 0,
+    "checked": 74,
+    "passed": 74
+  },
+  "manualReview": "Opening frame, six settled scene frames, and Studio preview inspected.",
+  "exportState": "Preview prepared; no MP4 rendered in this record."
+}

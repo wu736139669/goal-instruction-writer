@@ -1,0 +1,46 @@
+{
+  "recordedOn": "2026-10-19",
+  "operator": "Repository maintainer",
+  "taskType": "Controlled small coding example; not an external user trial",
+  "skillRevision": "a288550a5970f2412f1b4aa15ee4ef0df8c33107",
+  "runtime": "codex-cli 0.159.2",
+  "configuredModelLabel": "gpt-6.1-sol",
+  "python": "3.9.6",
+  "platform": "macOS 15.6 arm64",
+  "phases": [
+    {
+      "phase": "draft",
+      "startedAt": "2026-10-19T11:28:29.094253+00:00",
+      "durationSeconds": 100.1,
+      "exitCode": 0,
+      "runtime": "codex-cli 0.159.2",
+      "modelLabel": "gpt-6.1-sol"
+    },
+    {
+      "phase": "execute",
+      "startedAt": "2026-10-19T11:30:46.966242+00:00",
+      "durationSeconds": 183.858,
+      "exitCode": 0,
+      "runtime": "codex-cli 0.159.2",
+      "modelLabel": "gpt-6.1-sol"
+    }
+  ],
+  "baselineTests": 9,
+  "focusedTests": 10,
+  "finalTests": 19,
+  "agentFocusedSuiteRuns": 1,
+  "agentFullSuiteRuns": 1,
+  "iterationsUsed": 2,
+  "iterationLimit": 4,
+  "executionTimeLimitSeconds": 1200,
+  "terminalState": "GOAL COMPLETE",
+  "baselineFrozenFilesUnchanged": 13,
+  "goalUnchanged": true,
+  "knownLimitations": [
+    "One maintainer-operated example, not an A/B benchmark or independent adoption evidence.",
+    "Agent generation can differ by host/model/version; recorded code/tests are reproducible without an API.",
+    "Two inspected commands returned host setup/configuration warnings; a no-HEAD Git lookup failed and the agent recovered using hashes.",
+    "Agent PROGRESS uses a conservative 180-second inspection charge; that accounting value is not the observed capture duration.",
+    "Public paths are normalized; private reasoning, thread identifiers, host configuration warnings, and multilingual support reads are omitted."
+  ]
+}

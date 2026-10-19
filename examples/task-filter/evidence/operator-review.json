@@ -1,0 +1,30 @@
+{
+  "frozenInitialFilesUnchanged": 13,
+  "goalUnchanged": true,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "tasklist.py",
+        "tasks.json",
+        "--status",
+        "open"
+      ],
+      "exitCode": 0,
+      "stdout": "1: [open] Review the release checklist\n3: [open] Verify the delivery artifact\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "tasklist.py",
+        "tasks.json",
+        "--status",
+        "done"
+      ],
+      "exitCode": 0,
+      "stdout": "2: [done] Write the migration note\n4: [done] Record the previous checkpoint\n",
+      "stderr": ""
+    }
+  ]
+}

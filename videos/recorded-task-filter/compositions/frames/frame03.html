@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><title>Keep the implementation small.</title></head><body><template>
+<div data-hf-id="hf-49lv" id="frame03-root" data-composition-id="frame03" data-duration="16" data-width="1920" data-height="1080">
+<style>
+#frame03-root {position:absolute;inset:0;width:100%;height:100%;overflow:hidden;color:#182b25;font-family:Montserrat,sans-serif;}
+#frame03-root .heading {position:absolute;left:72px;top:164px;font-size:60px;line-height:1.18;font-weight:700;letter-spacing:-2px;}
+#frame03-root .terminal {position:absolute;left:72px;top:292px;width:1140px;height:604px;background:#14221e;color:#e6eee4;border:1px solid #334c40;border-radius:10px;overflow:hidden;}
+#frame03-root .bar {height:66px;border-bottom:1px solid #446052;display:flex;align-items:center;padding:0 30px;font:24px 'IBM Plex Mono',monospace;color:#bfd4c4;}
+#frame03-root .term-body {padding:28px 30px;font:27px/1.5 'IBM Plex Mono',monospace;}
+#frame03-root .cmd {white-space:pre-wrap;overflow-wrap:anywhere;color:#a9e6bd;margin-bottom:30px;}
+#frame03-root .out {white-space:pre-wrap;overflow-wrap:anywhere;}
+#frame03-root .aside {position:absolute;left:1260px;top:306px;width:584px;}
+#frame03-root .kicker {font:24px 'IBM Plex Mono',monospace;color:#236d54;margin-bottom:30px;}
+#frame03-root .big {font-size:46px;line-height:1.2;font-weight:700;margin-bottom:34px;letter-spacing:-1px;}
+#frame03-root .body {font-size:30px;line-height:1.52;}
+#frame03-root .note {margin-top:36px;border-top:1px solid #abb8ab;padding-top:26px;font:24px/1.5 'IBM Plex Mono',monospace;color:#355447;}
+#frame03-root .wrapper-note {position:absolute;left:72px;top:918px;font:23px 'IBM Plex Mono',monospace;color:#355447;}
+</style>
+<div data-hf-id="hf-omzp" class="heading">Keep the implementation small.</div>
+<div data-hf-id="hf-1ms0" class="terminal"><div data-hf-id="hf-vtnk" class="bar">03 / 06 &nbsp; tasklist.py · delivered code excerpt</div><div data-hf-id="hf-ty2f" class="term-body"><div data-hf-id="hf-dqbo" class="out">    parser.add_argument(</div><div data-hf-id="hf-ntze" class="out">        &quot;--status&quot;, choices=(&quot;open&quot;, &quot;done&quot;, &quot;all&quot;), default=&quot;all&quot;,</div><div data-hf-id="hf-9apm" class="out">        help=&quot;show open, done, or all tasks (default: all)&quot;,</div><div data-hf-id="hf-d6vr" class="out">    )</div><div data-hf-id="hf-m4sk" class="out">&#160;</div><div data-hf-id="hf-665p" class="out">    for task in tasks:</div><div data-hf-id="hf-r5fd" class="out">        if args.status == &quot;all&quot; or task[&quot;done&quot;] == (args.status == &quot;done&quot;):</div><div data-hf-id="hf-77fp" class="out">            print(format_task(task))</div></div></div>
+<div data-hf-id="hf-2h8w" class="aside"><div data-hf-id="hf-cpau" class="kicker">THE CHANGE</div><div data-hf-id="hf-z9q2" class="big">One CLI flag</div><div data-hf-id="hf-qji9" class="body">The existing loader and formatter stay in place. The agent adds status choices, filtering, and focused coverage.</div><div data-hf-id="hf-yrlj" class="note">Frozen baseline files and Goal unchanged.</div></div>
+<script>
+(function(){const root=document.getElementById('frame03-root');const tl=gsap.timeline({paused:true});
+const title=root.querySelector('.heading');gsap.set(title,{opacity:0,y:48});tl.set(title,{opacity:1},0.02);tl.to(title,{y:0,duration:0.18,ease:'power4.out'},0.02);
+const lines=Array.from(root.querySelectorAll('.out'));lines.forEach((el,n)=>{gsap.set(el,{opacity:0});tl.set(el,{opacity:1},1.0+n*0.28);});
+window.__timelines=window.__timelines||{};window.__timelines['frame03']=tl;
+})();
+</script></div></template></body></html>

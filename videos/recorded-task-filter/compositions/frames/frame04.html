@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><title>Check the changed behavior first.</title></head><body><template>
+<div data-hf-id="hf-tsfo" id="frame04-root" data-composition-id="frame04" data-duration="15" data-width="1920" data-height="1080">
+<style>
+#frame04-root {position:absolute;inset:0;width:100%;height:100%;overflow:hidden;color:#182b25;font-family:Montserrat,sans-serif;}
+#frame04-root .heading {position:absolute;left:72px;top:164px;font-size:60px;line-height:1.18;font-weight:700;letter-spacing:-2px;}
+#frame04-root .terminal {position:absolute;left:72px;top:292px;width:1140px;height:604px;background:#14221e;color:#e6eee4;border:1px solid #334c40;border-radius:10px;overflow:hidden;}
+#frame04-root .bar {height:66px;border-bottom:1px solid #446052;display:flex;align-items:center;padding:0 30px;font:24px 'IBM Plex Mono',monospace;color:#bfd4c4;}
+#frame04-root .term-body {padding:28px 30px;font:27px/1.5 'IBM Plex Mono',monospace;}
+#frame04-root .cmd {white-space:pre-wrap;overflow-wrap:anywhere;color:#a9e6bd;margin-bottom:30px;}
+#frame04-root .out {white-space:pre-wrap;overflow-wrap:anywhere;}
+#frame04-root .aside {position:absolute;left:1260px;top:306px;width:584px;}
+#frame04-root .kicker {font:24px 'IBM Plex Mono',monospace;color:#236d54;margin-bottom:30px;}
+#frame04-root .big {font-size:46px;line-height:1.2;font-weight:700;margin-bottom:34px;letter-spacing:-1px;}
+#frame04-root .body {font-size:30px;line-height:1.52;}
+#frame04-root .note {margin-top:36px;border-top:1px solid #abb8ab;padding-top:26px;font:24px/1.5 'IBM Plex Mono',monospace;color:#355447;}
+#frame04-root .wrapper-note {position:absolute;left:72px;top:918px;font:23px 'IBM Plex Mono',monospace;color:#355447;}
+</style>
+<div data-hf-id="hf-a5pn" class="heading">Check the changed behavior first.</div>
+<div data-hf-id="hf-1ms0" class="terminal"><div data-hf-id="hf-j304" class="bar">04 / 06 &nbsp; Recorded focused check · output excerpt</div><div data-hf-id="hf-ty2f" class="term-body"><div data-hf-id="hf-gu2t" class="cmd">$ python3 -m unittest discover -s tests -p &#x27;test_status.py&#x27; -v</div><div data-hf-id="hf-y6vi" class="out">----------------------------------------------------------------------</div><div data-hf-id="hf-u8ow" class="out">Ran 10 tests in 0.508s</div><div data-hf-id="hf-m4sk" class="out">&#160;</div><div data-hf-id="hf-xuge" class="out">OK</div></div></div>
+<div data-hf-id="hf-2h8w" class="aside"><div data-hf-id="hf-myg6" class="kicker">ITERATION CHECK</div><div data-hf-id="hf-ubay" class="big">10 tests passed</div><div data-hf-id="hf-l6so" class="body">The agent runs the focused status-filter suite once and compares default/all output with the captured original bytes.</div><div data-hf-id="hf-jcj7" class="note">PYTHONDONTWRITEBYTECODE=1 · timeout 60s · exit 0</div></div><div data-hf-id="hf-7eqh" class="wrapper-note">Executed inside the captured Python wrapper</div>
+<script>
+(function(){const root=document.getElementById('frame04-root');const tl=gsap.timeline({paused:true});
+const title=root.querySelector('.heading');gsap.set(title,{opacity:0,y:48});tl.set(title,{opacity:1},0.02);tl.to(title,{y:0,duration:0.18,ease:'power4.out'},0.02);
+const lines=Array.from(root.querySelectorAll('.out'));lines.forEach((el,n)=>{gsap.set(el,{opacity:0});tl.set(el,{opacity:1},1.0+n*0.28);});
+window.__timelines=window.__timelines||{};window.__timelines['frame04']=tl;
+})();
+</script></div></template></body></html>

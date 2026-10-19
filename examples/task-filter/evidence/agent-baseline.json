@@ -1,0 +1,45 @@
+{
+  "checkpoint_epoch": 1792409504.223969,
+  "initial_inspection_allowance_seconds": 180,
+  "python": "3.9.6 (default, Oct 17 2025, 17:15:53) \n[Clang 17.0.0 (clang-1700.4.4.1)]",
+  "python_executable": "<python3>",
+  "platform": "macOS-15.6-arm64-arm-64bit",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": null,
+    "PYTHONUTF8": null,
+    "LC_ALL": "C.UTF-8",
+    "LC_CTYPE": "C.UTF-8",
+    "LANG": "C.UTF-8"
+  },
+  "root": "<workspace>",
+  "evidence_directory": "<run-evidence>",
+  "baseline_hashes": {
+    ".agents/skills/goal-instruction-writer/LICENSE": "43da0a698672aae72dd5005b59bd14a2ad9c463af7f6b4b0706f3fe1a00ceefe",
+    ".agents/skills/goal-instruction-writer/SKILL.md": "d1df400f366792dd500e2e650254dc5bc637e2f7f1d4b7f15285a9ac26f8731d",
+    ".agents/skills/goal-instruction-writer/agents/openai.yaml": "ddbb7dc542c041ebe9752e0754df4181bed35cb7c0ee61b121de45993e4e61f3",
+    ".agents/skills/goal-instruction-writer/references/drift-control.md": "dd90aec79be759b6ffcaae1592527c6ba1a0defa638b8f956cc7ff4b25bbd62c",
+    ".agents/skills/goal-instruction-writer/references/examples.md": "eb11c1790504ee86e6f7629d13ae1f0dad4694713abb89b76f94b0bad50861ca",
+    ".agents/skills/goal-instruction-writer/references/goal-contract.md": "e422f211279c7fd2522d9449b648001121e11c104748014ed31c7cc0565bd4db",
+    ".agents/skills/goal-instruction-writer/references/loop-preview.md": "d4c4fd6c10d97f15c1d5ce06a2dc9ec829622d5bcac3ca9ffc8496a4e8c856c0",
+    ".gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+    "AGENTS.md": "2eb715591e96a37b2b3f16d60a0619e8d00b061071605a18947294598b40f07a",
+    "GOAL.md": "c83949321a75cf321ae4d6da441f19fe897b214b38fd55c4ae3fa6ce63686d2d",
+    "README.md": "2dc0edfd19cc65f1971490824a1aed7b7cce40174022be2c65fea124a20e5b90",
+    "TASK.md": "5983d544a6f94e797825e82cca1a323f7d547bb91d794b646885c5c59accdb25",
+    "tasklist.py": "86ab792f89388e57ce46116ecff0eaa74c0bf1421cd0c750d272639878dc022b",
+    "tasks.json": "5198c5772102e1433e7ca9ed786adda71d056fed3e880e56ea538e92fc23dd8c",
+    "tests/test_listing.py": "cb10ba7075359141b606592a7d0f8bfc913f8ae431b3feaa0fbadaf50be4601f",
+    "tests/test_storage.py": "1f44f19e87ba9f0f11422f304bb1539b3c9fedce712de30a09cc9f150167d504"
+  },
+  "fixture": "[\n  {\"id\": 9, \"title\": \"Caf\\u00e9 notes\", \"done\": true},\n  {\"id\": 2, \"title\": \"Review\", \"done\": false},\n  {\"id\": 17, \"title\": \"Ship\", \"done\": true},\n  {\"id\": 5, \"title\": \"Verify\", \"done\": false}\n]\n",
+  "fixture_sha256": "180a02f4efaa661d92080f5340a57ca88e47283046094526e9f2c9e9582d78e9",
+  "baseline_command": [
+    "<python3>",
+    "<workspace>/tasklist.py",
+    "<run-evidence>/mixed.json"
+  ],
+  "baseline_returncode": 0,
+  "baseline_stdout_hex": "393a205b646f6e655d20436166c3a9206e6f7465730a323a205b6f70656e5d205265766965770a31373a205b646f6e655d20536869700a353a205b6f70656e5d205665726966790a",
+  "baseline_stderr_hex": ""
+}

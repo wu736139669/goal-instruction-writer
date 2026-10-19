@@ -1,0 +1,10 @@
+{
+  "duration": 16,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "[data-composition-id=\"frame03\"] .heading",
+      "bySec": 0.5
+    }
+  ]
+}

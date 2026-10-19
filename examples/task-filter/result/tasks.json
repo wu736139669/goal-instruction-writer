@@ -1,0 +1,6 @@
+[
+  {"id": 1, "title": "Review the release checklist", "done": false},
+  {"id": 2, "title": "Write the migration note", "done": true},
+  {"id": 3, "title": "Verify the delivery artifact", "done": false},
+  {"id": 4, "title": "Record the previous checkpoint", "done": true}
+]

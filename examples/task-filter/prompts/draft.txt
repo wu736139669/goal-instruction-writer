@@ -1,0 +1,17 @@
+This is one recorded, maintainer-operated skill example. Work in English.
+
+Use $goal-instruction-writer in Draft mode. For this case the published skill
+is pinned in .agents/skills/goal-instruction-writer/SKILL.md and its references.
+Read that local copy and the relevant contract reference, rather than another
+installed copy. Read AGENTS.md and TASK.md.
+
+Write the ready-to-execute Goal to GOAL.md, preserving the requested criteria,
+scope, finite bounds, verification strategy, evidence reuse, and terminal states.
+This is a short reversible task, so a direct Draft is requested. Do not implement
+the task yet. GOAL.md is the only file you may create or change in this phase.
+Do not use native durable-Goal tools, subagents, parallel agents, network tools,
+package installation, commits, or pushes. The host supplies execution; this phase
+only drafts the instruction artifact.
+
+Return a short explanation of the contract you wrote and the next authorized
+step. Do not claim that the feature or any of its acceptance tests already pass.

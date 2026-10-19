@@ -1,0 +1,62 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "timeout_seconds": 60,
+  "python": "3.9.6 (default, Oct 17 2025, 17:15:53) \n[Clang 17.0.0 (clang-1700.4.4.1)]",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": null,
+    "PYTHONUTF8": null,
+    "LC_ALL": "C.UTF-8",
+    "LC_CTYPE": "C.UTF-8",
+    "LANG": "C.UTF-8"
+  },
+  "checked_sha256": {
+    "tasklist.py": "9fa49d2c87a462114b8c47765d0dbd9fe7086644c0852212c16aecd35308f150",
+    "tests/test_listing.py": "cb10ba7075359141b606592a7d0f8bfc913f8ae431b3feaa0fbadaf50be4601f",
+    "tests/test_status.py": "ebe7c3c66222edb9b57f5e7d853ef49eb4795a00be96895c7e554ea6a13b7f9e",
+    "tests/test_storage.py": "1f44f19e87ba9f0f11422f304bb1539b3c9fedce712de30a09cc9f150167d504"
+  },
+  "readme_sha256": "4dcdf35b288d6ba795aae4dce522d793aa3abea444e1e900d1c4aa4fa2f42048",
+  "fixture_sha256": "180a02f4efaa661d92080f5340a57ca88e47283046094526e9f2c9e9582d78e9",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "python3: warning: confstr() failed with code 5: couldn't get path of DARWIN_USER_TEMP_DIR; using /tmp instead\ntest_custom_file_and_nonsequential_ids (test_listing.ListingTests) ... ok\ntest_default_lists_every_task_in_file_order (test_listing.ListingTests) ... ok\ntest_empty_file_prints_nothing (test_listing.ListingTests) ... ok\ntest_listing_preserves_file_bytes (test_listing.ListingTests) ... ok\ntest_all_matches_original_and_omitted_status (test_status.StatusTests) ... ok\ntest_default_relative_path_works_for_every_status (test_status.StatusTests) ... ok\ntest_done_preserves_order_and_format (test_status.StatusTests) ... ok\ntest_empty_list_succeeds_for_every_status (test_status.StatusTests) ... ok\ntest_every_status_preserves_input_bytes (test_status.StatusTests) ... ok\ntest_filter_keeps_boolean_validation (test_status.StatusTests) ... ok\ntest_invalid_status_uses_argparse_error_without_listing (test_status.StatusTests) ... ok\ntest_no_matching_status_succeeds_without_output (test_status.StatusTests) ... ok\ntest_omitted_status_preserves_original_output_bytes (test_status.StatusTests) ... ok\ntest_open_preserves_order_and_format (test_status.StatusTests) ... ok\ntest_blank_titles_are_rejected (test_storage.StorageTests) ... ok\ntest_done_must_be_boolean (test_storage.StorageTests) ... ok\ntest_duplicate_ids_are_rejected (test_storage.StorageTests) ... ok\ntest_tasks_must_be_objects (test_storage.StorageTests) ... ok\ntest_top_level_must_be_a_list (test_storage.StorageTests) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.629s\n\nOK\n",
+  "frozen_sha256": {
+    ".agents/skills/goal-instruction-writer/LICENSE": "43da0a698672aae72dd5005b59bd14a2ad9c463af7f6b4b0706f3fe1a00ceefe",
+    ".agents/skills/goal-instruction-writer/SKILL.md": "d1df400f366792dd500e2e650254dc5bc637e2f7f1d4b7f15285a9ac26f8731d",
+    ".agents/skills/goal-instruction-writer/agents/openai.yaml": "ddbb7dc542c041ebe9752e0754df4181bed35cb7c0ee61b121de45993e4e61f3",
+    ".agents/skills/goal-instruction-writer/references/drift-control.md": "dd90aec79be759b6ffcaae1592527c6ba1a0defa638b8f956cc7ff4b25bbd62c",
+    ".agents/skills/goal-instruction-writer/references/examples.md": "eb11c1790504ee86e6f7629d13ae1f0dad4694713abb89b76f94b0bad50861ca",
+    ".agents/skills/goal-instruction-writer/references/goal-contract.md": "e422f211279c7fd2522d9449b648001121e11c104748014ed31c7cc0565bd4db",
+    ".agents/skills/goal-instruction-writer/references/loop-preview.md": "d4c4fd6c10d97f15c1d5ce06a2dc9ec829622d5bcac3ca9ffc8496a4e8c856c0",
+    ".gitignore": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+    "AGENTS.md": "2eb715591e96a37b2b3f16d60a0619e8d00b061071605a18947294598b40f07a",
+    "GOAL.md": "c83949321a75cf321ae4d6da441f19fe897b214b38fd55c4ae3fa6ce63686d2d",
+    "TASK.md": "5983d544a6f94e797825e82cca1a323f7d547bb91d794b646885c5c59accdb25",
+    "tasks.json": "5198c5772102e1433e7ca9ed786adda71d056fed3e880e56ea538e92fc23dd8c",
+    "tests/test_listing.py": "cb10ba7075359141b606592a7d0f8bfc913f8ae431b3feaa0fbadaf50be4601f",
+    "tests/test_storage.py": "1f44f19e87ba9f0f11422f304bb1539b3c9fedce712de30a09cc9f150167d504"
+  },
+  "frozen_changes": [],
+  "changed_files": [
+    "PROGRESS.md",
+    "README.md",
+    "tasklist.py",
+    "tests/test_status.py"
+  ],
+  "removed_files": [],
+  "bytecode_artifacts": [],
+  "git_diff_check_returncode": 0,
+  "git_diff_check_stdout": "",
+  "git_diff_check_stderr": "git: warning: confstr() failed with code 5: couldn't get path of DARWIN_USER_TEMP_DIR; using /tmp instead\n",
+  "git_status_returncode": 0,
+  "git_status_stdout": "A  .agents/skills/goal-instruction-writer/LICENSE\nA  .agents/skills/goal-instruction-writer/SKILL.md\nA  .agents/skills/goal-instruction-writer/agents/openai.yaml\nA  .agents/skills/goal-instruction-writer/references/drift-control.md\nA  .agents/skills/goal-instruction-writer/references/examples.md\nA  .agents/skills/goal-instruction-writer/references/goal-contract.md\nA  .agents/skills/goal-instruction-writer/references/loop-preview.md\nA  .gitignore\nA  AGENTS.md\nAM README.md\nA  TASK.md\nAM tasklist.py\nA  tasks.json\nA  tests/test_listing.py\nA  tests/test_storage.py\n?? GOAL.md\n?? PROGRESS.md\n?? tests/test_status.py\n"
+}

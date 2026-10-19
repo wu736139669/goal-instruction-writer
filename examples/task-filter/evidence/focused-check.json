@@ -1,0 +1,59 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_status.py",
+    "-v"
+  ],
+  "timeout_seconds": 60,
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": null,
+    "PYTHONUTF8": null,
+    "LC_ALL": "C.UTF-8",
+    "LC_CTYPE": "C.UTF-8",
+    "LANG": "C.UTF-8"
+  },
+  "checked_sha256": {
+    "tasklist.py": "9fa49d2c87a462114b8c47765d0dbd9fe7086644c0852212c16aecd35308f150",
+    "tests/test_listing.py": "cb10ba7075359141b606592a7d0f8bfc913f8ae431b3feaa0fbadaf50be4601f",
+    "tests/test_status.py": "ebe7c3c66222edb9b57f5e7d853ef49eb4795a00be96895c7e554ea6a13b7f9e",
+    "tests/test_storage.py": "1f44f19e87ba9f0f11422f304bb1539b3c9fedce712de30a09cc9f150167d504"
+  },
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "python3: warning: confstr() failed with code 5: couldn't get path of DARWIN_USER_TEMP_DIR; using /tmp instead\ntest_all_matches_original_and_omitted_status (test_status.StatusTests) ... ok\ntest_default_relative_path_works_for_every_status (test_status.StatusTests) ... ok\ntest_done_preserves_order_and_format (test_status.StatusTests) ... ok\ntest_empty_list_succeeds_for_every_status (test_status.StatusTests) ... ok\ntest_every_status_preserves_input_bytes (test_status.StatusTests) ... ok\ntest_filter_keeps_boolean_validation (test_status.StatusTests) ... ok\ntest_invalid_status_uses_argparse_error_without_listing (test_status.StatusTests) ... ok\ntest_no_matching_status_succeeds_without_output (test_status.StatusTests) ... ok\ntest_omitted_status_preserves_original_output_bytes (test_status.StatusTests) ... ok\ntest_open_preserves_order_and_format (test_status.StatusTests) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.508s\n\nOK\n",
+  "baseline_comparisons": [
+    {
+      "command": [
+        "<python3>",
+        "<workspace>/tasklist.py",
+        "<run-evidence>/mixed.json"
+      ],
+      "returncode": 0,
+      "stdout_hex": "393a205b646f6e655d20436166c3a9206e6f7465730a323a205b6f70656e5d205265766965770a31373a205b646f6e655d20536869700a353a205b6f70656e5d205665726966790a",
+      "stderr_hex": "",
+      "matches_baseline": true,
+      "fixture_unchanged": true
+    },
+    {
+      "command": [
+        "<python3>",
+        "<workspace>/tasklist.py",
+        "<run-evidence>/mixed.json",
+        "--status",
+        "all"
+      ],
+      "returncode": 0,
+      "stdout_hex": "393a205b646f6e655d20436166c3a9206e6f7465730a323a205b6f70656e5d205265766965770a31373a205b646f6e655d20536869700a353a205b6f70656e5d205665726966790a",
+      "stderr_hex": "",
+      "matches_baseline": true,
+      "fixture_unchanged": true
+    }
+  ]
+}

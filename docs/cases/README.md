@@ -6,6 +6,7 @@ skill itself.
 
 | Workflow | Concrete result | Read the case |
 | --- | --- | --- |
+| Reproducible coding task | A read-only CLI gained a status filter; 9 unchanged tests plus 10 new tests passed, with a captured contract and check record | [Recorded task-filter example](../../examples/task-filter/README.md) |
 | Multi-day implementation | A Godot game study progressed through versioned Mac and Android local candidates, with a durable next task | [Factory Town Idle in Godot](factory-town-idle.md) |
 | Research and handoff | A demo-analysis archive indexed 4,920 methods and turned findings, runtime gaps, and source identities into an implementation brief | [Source-led research](source-led-research.md) |
 | SDK delivery | A version 0.7.0 software milestone combined compatibility checks, independent AAR consumption, eight artifact types, and an auditable verification cost | [Android SDK delivery](android-sdk-delivery.md) |

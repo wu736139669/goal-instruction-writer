@@ -1,0 +1,77 @@
+[
+  {
+    "id": "frame01",
+    "duration": 14,
+    "title": "One request. A checkable finish.",
+    "label": "Original task \u00b7 selected lines",
+    "text": "Add `--status open|done|all` to the read-only Tasklist CLI.\n\n- Omitting the flag must keep the current output byte-for-byte identical.\n- `open` and `done` must select the corresponding tasks in original file order.\n- `all` must match the original behavior.\n- Invalid values must produce argparse's error response and a nonzero exit.",
+    "kicker": "THE STARTER",
+    "big": "9 existing tests",
+    "body": "A read-only Python CLI. Add one status filter while preserving the default output and the input file.",
+    "note": "Maintainer-operated example \u00b7 2026-10-19",
+    "source": "examples/task-filter/task.md"
+  },
+  {
+    "id": "frame02",
+    "duration": 15,
+    "title": "The agent writes the contract.",
+    "label": "GOAL.md \u00b7 exact excerpts",
+    "text": "# Goal: Add a read-only Tasklist status filter\n\nUse at most four actionable iterations, adapting each to the current evidence rather than following a fixed script:\n\n- Stop immediately when all criteria and delivery evidence are complete. Further checking requires a concrete unresolved concern or invalidated evidence.",
+    "kicker": "THE BOUNDARY",
+    "big": "4 iterations max",
+    "body": "The generated Goal names acceptance evidence, permitted files, focused checks, a delivery gate, and explicit stop states.",
+    "note": "Draft only: the program was unchanged.",
+    "source": "examples/task-filter/GOAL.md"
+  },
+  {
+    "id": "frame03",
+    "duration": 16,
+    "title": "Keep the implementation small.",
+    "label": "tasklist.py \u00b7 delivered code excerpt",
+    "text": "    parser.add_argument(\n        \"--status\", choices=(\"open\", \"done\", \"all\"), default=\"all\",\n        help=\"show open, done, or all tasks (default: all)\",\n    )\n\n    for task in tasks:\n        if args.status == \"all\" or task[\"done\"] == (args.status == \"done\"):\n            print(format_task(task))",
+    "kicker": "THE CHANGE",
+    "big": "One CLI flag",
+    "body": "The existing loader and formatter stay in place. The agent adds status choices, filtering, and focused coverage.",
+    "note": "Frozen baseline files and Goal unchanged.",
+    "source": "examples/task-filter/result/tasklist.py"
+  },
+  {
+    "id": "frame04",
+    "duration": 15,
+    "title": "Check the changed behavior first.",
+    "label": "Recorded focused check \u00b7 output excerpt",
+    "command": "python3 -m unittest discover -s tests -p 'test_status.py' -v",
+    "text": "----------------------------------------------------------------------\nRan 10 tests in 0.508s\n\nOK",
+    "kicker": "ITERATION CHECK",
+    "big": "10 tests passed",
+    "body": "The agent runs the focused status-filter suite once and compares default/all output with the captured original bytes.",
+    "note": "PYTHONDONTWRITEBYTECODE=1 \u00b7 timeout 60s \u00b7 exit 0",
+    "source": "examples/task-filter/evidence/focused-check.json"
+  },
+  {
+    "id": "frame05",
+    "duration": 15,
+    "title": "Run the delivery gate once.",
+    "label": "Recorded full suite \u00b7 output excerpt",
+    "command": "python3 -m unittest discover -s tests -v",
+    "text": "----------------------------------------------------------------------\nRan 19 tests in 0.629s\n\nOK",
+    "kicker": "DELIVERY EVIDENCE",
+    "big": "19 tests passed",
+    "body": "9 unchanged tests plus 10 new tests. Source and tests retain the focused-check hashes; report-only edits reuse valid results.",
+    "note": "PYTHONDONTWRITEBYTECODE=1 \u00b7 timeout 60s \u00b7 exit 0",
+    "source": "examples/task-filter/evidence/delivery-check.json"
+  },
+  {
+    "id": "frame06",
+    "duration": 15,
+    "title": "Deliver the result. Then stop.",
+    "label": "CLI output + agent report \u00b7 two sources",
+    "command": "python3 tasklist.py tasks.json --status open",
+    "text": "1: [open] Review the release checklist\n3: [open] Verify the delivery artifact\n\n**GOAL COMPLETE** \u2014 C1\u2013C8 verified in 2 iterations.",
+    "kicker": "THE HANDOFF",
+    "big": "GOAL COMPLETE",
+    "body": "2 of 4 iterations used. Inspect the request, Goal, code, tests, and transcript. Try one real task and share what happened.",
+    "note": "One controlled run \u00b7 no timing or adoption claim",
+    "source": "examples/task-filter/evidence/operator-review.json + final agent message"
+  }
+]

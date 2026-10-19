@@ -19,6 +19,14 @@ Built from multi-day game development and software-delivery workflows.
 
 [Watch the full English demo](https://github.com/wu736139669/goal-instruction-writer/releases/download/v0.2.4/goal-overview-en.mp4) · [English case studies](docs/cases/README.md) · [Real usage and evidence](docs/field-notes.md) · [Where to share a skill](docs/distribution.md)
 
+## See one task finish
+
+[Inspect a recorded CLI task](examples/task-filter/README.md): original request,
+generated Goal, final code, 19 passing tests, and the actual check record.
+The maintainer's agent ran one focused suite and one final full suite, then stopped.
+[Try your own task and share a report](docs/try-it.md). We are looking for our first
+3–5 independent reports; successful and unsuccessful attempts are welcome.
+
 ## Start in two minutes
 
 **1. Install for Codex.**

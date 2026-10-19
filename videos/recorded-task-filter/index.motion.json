@@ -1,0 +1,35 @@
+{
+  "duration": 90,
+  "assertions": [
+    {
+      "kind": "appearsBy",
+      "selector": "[data-composition-id=\"frame01\"] .heading",
+      "bySec": 0.6
+    },
+    {
+      "kind": "appearsBy",
+      "selector": "[data-composition-id=\"frame02\"] .heading",
+      "bySec": 14.6
+    },
+    {
+      "kind": "appearsBy",
+      "selector": "[data-composition-id=\"frame03\"] .heading",
+      "bySec": 29.6
+    },
+    {
+      "kind": "appearsBy",
+      "selector": "[data-composition-id=\"frame04\"] .heading",
+      "bySec": 45.6
+    },
+    {
+      "kind": "appearsBy",
+      "selector": "[data-composition-id=\"frame05\"] .heading",
+      "bySec": 60.6
+    },
+    {
+      "kind": "appearsBy",
+      "selector": "[data-composition-id=\"frame06\"] .heading",
+      "bySec": 75.6
+    }
+  ]
+}

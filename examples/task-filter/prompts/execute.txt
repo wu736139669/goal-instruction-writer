@@ -1,0 +1,14 @@
+Execute the recorded task now, following GOAL.md and AGENTS.md in this workspace.
+The maintainer has authorized this isolated implementation and its local checks.
+Use English. The drafting phase is finished; keep GOAL.md unchanged and record
+progress and evidence in PROGRESS.md.
+
+Implement only the status-filter feature, focused tests, and README change within
+the declared file scope. Preserve the pinned skill and all frozen baseline files.
+Follow the finite execution loop and verification strategy. Do not invoke other
+agents, native durable-Goal tools, network services, installs, commits, or pushes.
+Use the existing standard library and the current configured model.
+
+Stop as soon as the acceptance criteria and delivery report have valid evidence.
+Report the exact terminal state, changed files, actual test commands/results,
+evidence reused, and any remaining gaps. Do not claim speedups or external usage.

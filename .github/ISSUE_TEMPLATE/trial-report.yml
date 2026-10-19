@@ -1,0 +1,66 @@
+name: Real task trial report
+description: Share a real attempt, including failures or confusing steps.
+title: "[Trial] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for trying the skill. This issue is public. Remove private data.
+        Success, failure, and incomplete attempts are all welcome. No Star is required.
+  - type: input
+    id: environment
+    attributes:
+      label: Agent host and model
+      placeholder: "Codex CLI 0.x, configured model label, OS"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Skill version or commit
+      placeholder: "Release tag / commit / unknown"
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: Task and expected finish
+      description: Describe one task and how you would tell it was done.
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Actual outcome
+      options:
+        - Completed and checked
+        - Partially completed
+        - Stopped or blocked
+        - Preview or Draft only
+        - Other or unclear
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: What happened and what you checked
+      description: Include a short sanitized Goal/checkpoint excerpt or artifact link if available. State what remains unverified.
+    validations:
+      required: true
+  - type: textarea
+    id: checks
+    attributes:
+      label: Check behavior and friction
+      description: Were checks focused, repeated unnecessarily, or skipped? How often did you intervene? Estimates are fine when labeled.
+    validations:
+      required: true
+  - type: dropdown
+    id: quotation
+    attributes:
+      label: May we quote this report in project documentation?
+      options:
+        - No, use it only for the discussion and improvements
+        - Ask me here before quoting
+        - Yes, quote with a link to this issue
+    validations:
+      required: true
