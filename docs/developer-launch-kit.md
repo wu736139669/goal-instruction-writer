@@ -1,7 +1,7 @@
 # Developer launch material
 
 Original submission copy recorded on 2026-10-17; case-library links added on
-2026-10-18. The canonical skill release is v0.2.4. The recorded DevHunt and
+2026-10-18. The canonical skill release is v0.2.5. The recorded DevHunt and
 Product Hunt submissions use English copy, an English case study, and three
 English-only gallery images.
 
@@ -26,7 +26,7 @@ The skill supports continuation after time or event triggers through its generat
 
 A public English case follows a multi-day Factory Town Idle Godot port through analysis, playable systems, and a local candidate with Mac and Android packages. The maintainer reports an estimated 60+ hour longest workflow. The case documents inspected stages and records that the full Goal was still active at the snapshot.
 
-Free under the MIT license. Latest skill release: v0.2.4.
+Free under the MIT license. Latest skill release: v0.2.5.
 
 ## Installation
 

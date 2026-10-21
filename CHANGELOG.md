@@ -2,7 +2,13 @@
 
 ## [Unreleased]
 
-- Add a minimal OpenAI skills-only plugin package, repeatable archive builder, English starter prompts, and privacy statement; preserve the committed v0.2.4 runtime instructions.
+## [0.2.5] - 2026-10-21
+
+- Require a blocked claim to name a verifiable dependency, the attempts made, and the unblock condition. Difficulty, slowness, uncertainty, an ambiguous requirement, and a failure another approach could resolve are approach changes or scoped questions, not blockers.
+- Keep independently actionable criteria working when one criterion is blocked, and treat a false blocked claim as a defect in the report rather than a neutral stop.
+- Align the Goal contract, drift rules, examples, and loop preview with the tightened blocked rule; the two-equivalent-failure path now changes the hypothesis first.
+- Address the r/codex reader point that a terminal-state list can become an excuse to stop early.
+- Add a minimal OpenAI skills-only plugin package, repeatable archive builder, English starter prompts, and privacy statement; preserve the committed runtime instructions.
 - Replace the bilingual README animation and demo link with English-only media, including an evidence-linked game-development timeline; retain the original video only in the v0.2.0 release archive.
 - Add an English case library and three detailed cases covering source-led research, Android SDK software delivery, and the public contribution/feedback loop, with sanitized research and SDK evidence summaries.
 - Describe support for active iterations and continuation after time/event triggers through Goal instructions, with host timers, relevant events, or authorized messages providing invocation; retain the host boundary and untested live wait/resume status.
