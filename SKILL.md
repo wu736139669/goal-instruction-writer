@@ -114,6 +114,11 @@ After verification, classify the result as:
   next step cannot be justified from the Anchor, or the no-progress threshold
   is reached; stop and realign.
 
+Keep these links and decisions in a concise current cursor or existing record.
+They do not require separate reports, duplicate contracts, or a new evidence
+bundle for every edit. Retain detailed artifacts only when they support a
+concrete result, failure diagnosis, or declared delivery requirement.
+
 Run a phase gate every 3–5 iterations by default, at each milestone, and before
 an irreversible or high-cost action. Re-read the Anchor, compare the current
 state with the baseline, mark criteria open or verified, review deferred side
@@ -162,6 +167,12 @@ repository acceptance requirements while controlling when checks run:
   complete the remaining required regression, build, integration, and artifact
   checks. A phase gate reviews current evidence; it does not automatically
   repeat the entire validation and delivery pipeline.
+- **Batch and handoff cadence:** group related edits around an observable
+  outcome before broader regression. Schedule packages, archives, entry-point
+  audits, recordings, and formal clean-submission checks at the declared stage
+  delivery or when demonstrated impact requires them. A helper, label, perk,
+  or primitive is not automatically a release. Apply specialist checklists to
+  their intended stage instead of importing every item into each work unit.
 - **Evidence reuse:** tie results to the checked source or artifact, relevant
   inputs, dependencies, and environment. Carry forward results while those
   conditions remain valid. Documentation or receipt changes do not invalidate
@@ -174,6 +185,11 @@ repository acceptance requirements while controlling when checks run:
   attempt bounds. A timeout leaves its criterion unverified; report the gap.
   Finish when all criteria have valid evidence and delivery is complete;
   further checking needs a concrete unresolved concern or invalidated result.
+
+When the owner changes cadence, record the adjustment once in the current
+contract and state which older frequency requirements it supersedes. Preserve
+historical runs as history; updating a skill does not itself amend an existing
+project contract, grant new authority, or turn missing checks into passes.
 
 ### 3. Termination: define legal endings
 

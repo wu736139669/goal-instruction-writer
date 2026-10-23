@@ -86,6 +86,9 @@ Produce <artifact/behavior/decision> so that <user or system value>.
 - Iteration checks: <smallest checks sufficient for the affected behavior>.
 - Phase/delivery checks: <required broader checks and artifacts, with triggers>;
   complete them once the relevant implementation is stable.
+- Batch/delivery boundary: <observable outcome grouping related edits>;
+  packages, archives, recordings, and formal submission checks run at the
+  declared delivery trigger or for demonstrated broader impact, not each edit.
 - Evidence reuse: record the checked source/artifact and relevant inputs,
   dependencies, and environment; carry forward results while they remain valid.
   Label reused and newly run checks separately. Documentation or receipt edits
@@ -104,6 +107,9 @@ Repeat one bounded work unit at a time:
 4. Apply the verification strategy to the relevant criterion and capture evidence.
 5. Classify the iteration as `ON_TARGET`, `SIDE_QUEST`, or `DRIFTED`.
 6. Record the delta, remaining gap, decision, and next cursor.
+
+Keep a concise current record. Do not duplicate the same result across new
+contracts, reports, and evidence bundles for every work unit.
 
 ## Drift control
 - Re-read the Goal anchor every 3–5 iterations, at phase gates, and before
@@ -152,6 +158,8 @@ Before returning a Goal, check:
 - The verification strategy separates iteration checks from required phase or
   delivery checks, defines evidence validity and rerun triggers, and bounds
   expensive commands without weakening acceptance requirements.
+- Related edits have a useful batch/delivery boundary. Specialist release
+  checklists and clean-submission rules are not applied to every small edit.
 - For feedback, adoption, pilot, launch, or validation work, the evidence
   threshold and window are explicit; author-only activity is not counted unless
   the Goal chooses it.
