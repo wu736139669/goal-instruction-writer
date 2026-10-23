@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "goal-instruction-writer",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Preview execution loops and write durable Goal instructions with acceptance evidence, drift controls, focused verification, and clear stop conditions.",
   "author": {
     "name": "wu736139669",
@@ -34,7 +34,7 @@
         "logo": "./assets/logo.png"
       },
       "publication": {
-        "release_notes": "OpenAI skills-only packaging of the v0.2.5 instruction contract: scheduled external waits stay distinct from actionable attempts, and a blocked claim now requires a verifiable dependency, the attempts made, and the unblock condition."
+        "release_notes": "OpenAI skills-only packaging of the v0.2.6 instruction contract: scheduled external waits stay distinct from actionable attempts, a blocked claim requires a verifiable dependency plus the attempts and unblock condition, and realignment requires two materially equivalent attempts without progress or new evidence."
       }
     }
   }

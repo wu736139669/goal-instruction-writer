@@ -1,7 +1,7 @@
 # Goal Instruction Writer
 
 An OpenAI skills-only plugin for previewing execution loops and writing durable
-Goals. It packages the existing v0.2.5 skill and its supporting references.
+Goals. It packages the existing v0.2.6 skill and its supporting references.
 
 Use it when a coding, game-development, or research task needs several iterations
 with a stable outcome, reviewable evidence, and a recoverable next step.

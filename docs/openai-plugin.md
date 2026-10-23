@@ -2,7 +2,7 @@
 
 The OpenAI package contains the canonical Goal Instruction Writer skill, its
 four references, UI metadata, license, and icons. Runtime instructions remain
-the v0.2.5 contract. Packaging source is in `packaging/openai/`.
+the v0.2.6 contract. Packaging source is in `packaging/openai/`.
 
 Package preparation, an uploaded draft, review, and public directory publication
 are separate states. The package and its public download do not establish an
@@ -16,7 +16,7 @@ From a Git checkout with Python 3.9 or later:
 python3 scripts/build_openai_plugin.py
 ```
 
-The builder writes `dist/goal-instruction-writer-openai-0.2.5.zip` and a validation
+The builder writes `dist/goal-instruction-writer-openai-0.2.6.zip` and a validation
 report. Runtime files and icons come from committed `HEAD`. Use `--source-ref`
 to select another commit. Packaging metadata and the privacy statement come
 from the current checkout; their hashes are recorded separately in `SOURCE.json`.

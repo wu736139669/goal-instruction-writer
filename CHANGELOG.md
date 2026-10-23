@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.2.6] - 2026-10-23
+
+- Restore the evidence-aware realignment threshold in the loop preview and the Goal contract field guide: two materially equivalent attempts must add neither acceptance progress nor new relevant evidence, or the Anchor/scope must change without approval. A single failing test that yields new evidence is not drift.
+- Carry the fix from the Agent Skill Exchange review of v0.2.5. The narrowed blocked-state rule and the separate "change the hypothesis after two equivalent failures" rule are unchanged.
+
 ## [0.2.5] - 2026-10-21
 
 - Require a blocked claim to name a verifiable dependency, the attempts made, and the unblock condition. Difficulty, slowness, uncertainty, an ambiguous requirement, and a failure another approach could resolve are approach changes or scoped questions, not blockers.
